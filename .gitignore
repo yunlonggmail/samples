@@ -1,0 +1,24 @@
+# Android generated
+bin/
+gen/
+
+# Maven
+pom.xml.*
+release.properties
+
+# Android Studio/InttelliJ
+*.iml
+*.ipr
+*.iws
+*.idea/
+out/
+
+# Ignore gradle files;
+.gradle/
+/local.properties
+/build
+/app/build
+/onedrivesdk/build
+
+# Mac
+.DS_Store
