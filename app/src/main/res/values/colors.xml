@@ -3,4 +3,16 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <!--Normal_color-->
+    <color name="color_normal_0">#000000</color>
+    <color name="color_normal_3">#333333</color>
+    <color name="color_normal_6">#666666</color>
+    <color name="color_normal_7">#777777</color>
+    <color name="color_normal_8">#888888</color>
+    <color name="color_normal_9">#999999</color>
+    <color name="color_normal_f">#ffffff</color>
+
+    <color name="toolbar_bg">#fafafa</color>
 </resources>

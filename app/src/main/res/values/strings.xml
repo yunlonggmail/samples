@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Samples</string>
+
+    <string name="nav_title_main">首页</string>
+    <string name="nav_title_intent_main">意图首页</string>
+    <string name="nav_title_intent_main_desc">意图相关页面的入口页面</string>
 </resources>
