@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.yunlong.samples.R;
 import com.yunlong.samples.base.BaseActivity;
+import com.yunlong.samples.incremental.IncrementalUpdateActivity;
 import com.yunlong.samples.intent.IntentMainActivity;
 import com.yunlong.samples.model.YLMain;
 
@@ -53,10 +54,11 @@ public class MainActivity extends BaseActivity {
 
     protected void setData() {
         addIntentMain();
+        addIncrementUpdateMain();
     }
 
     /**
-     * 添加主界面
+     * 添加Intent主界面
      */
     protected void addIntentMain() {
         YLMain ylMain = new YLMain();
@@ -65,4 +67,16 @@ public class MainActivity extends BaseActivity {
         ylMain.desc = getString(R.string.nav_title_intent_main_desc);
         dataList.add(ylMain);
     }
+
+    /**
+     * 添加增量更新界面
+     */
+    protected void addIncrementUpdateMain() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = IncrementalUpdateActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_increment_update);
+        ylMain.desc = getString(R.string.nav_title_increment_update_desc);
+        dataList.add(ylMain);
+    }
+
 }

@@ -4,4 +4,13 @@
     <string name="nav_title_main">首页</string>
     <string name="nav_title_intent_main">意图首页</string>
     <string name="nav_title_intent_main_desc">意图相关页面的入口页面</string>
+    <string name="nav_title_increment_update">增量更新_OLD</string>
+    <string name="nav_title_increment_update_desc">增量更新功能演示_OLD</string>
+
+    <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>
+    <string name="a_increment_update_install_new_apk">安装新的APK_OLD</string>
+
+    <string name="permission_request_deny_title">因您未开启权限，导致无法打开相机</string>
+    <string name="permission_request_deny_info">"您需要打开设置->应用->选择育果医生->权限，开启%s权限。"</string>
+    <string name="permission_request_open_setting">去开启</string>
 </resources>

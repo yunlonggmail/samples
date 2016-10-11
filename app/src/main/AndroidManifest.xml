@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yunlong.samples">
+    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -20,6 +25,14 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="com.yunlong.samples.IntentMain" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".incremental.IncrementalUpdateActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.IncrementalUpdate" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

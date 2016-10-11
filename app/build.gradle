@@ -10,6 +10,30 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        ndk {
+            moduleName = 'bspatch'
+        }
+
+    }
+    // 签名
+    signingConfigs {
+
+        debug {
+            //no debug config
+            storeFile file("../yunlong_samples.jks")
+            storePassword "SHIyunlong410"
+            keyAlias "yunlong"
+            keyPassword "SHIyunlong410"
+        }
+
+        release {
+            storeFile file("../yunlong_samples.jks")
+            storePassword "SHIyunlong410"
+            keyAlias "yunlong"
+            keyPassword "SHIyunlong410"
+        }
+
     }
     buildTypes {
         release {
@@ -26,4 +50,6 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.android.support:recyclerview-v7:23.3.0'
     compile 'me.henrytao:recyclerview:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
 }

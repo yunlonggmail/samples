@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <shape>
+            <solid android:color="@color/transparent" />
+            <stroke android:width="0dp" android:color="#f9f9f9" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#30000000" />
+            <stroke android:width="0dp" android:color="#f9f9f9" />
+        </shape>
+    </item>
+</selector><!-- From: file:/Users/Jfomt/AndroidStudioProjects/PP/xy-android/PP/app/src/main/res/drawable/cell_round_click_br.xml -->

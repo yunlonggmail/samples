@@ -15,4 +15,6 @@
     <color name="color_normal_f">#ffffff</color>
 
     <color name="toolbar_bg">#fafafa</color>
+
+    <color name="transparent">#00000000</color>
 </resources>
