@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yunlong.samples">
-    
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
@@ -20,6 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--增量更新-->
+        <activity
+            android:name=".incremental.IncrementalUpdateActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.IncrementalUpdate" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--意图页面-->
         <activity
             android:name=".intent.IntentMainActivity"
             android:exported="false">
@@ -29,10 +41,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".incremental.IncrementalUpdateActivity"
+            android:name=".intent.IntentLoginActivity"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.yunlong.samples.IncrementalUpdate" />
+                <action android:name="com.yunlong.samples.IntentLogin" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".intent.IntentWithBundleActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.IntentWithBundle" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".intent.IntentWithoutBundleActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.IntentWithoutBundle" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

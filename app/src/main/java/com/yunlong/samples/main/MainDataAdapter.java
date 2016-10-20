@@ -1,5 +1,6 @@
 package com.yunlong.samples.main;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.text.TextUtilsCompat;
 import android.support.v7.widget.ActivityChooserView;
@@ -33,8 +34,8 @@ public class MainDataAdapter extends BaseAdapter<YLMain> {
     @Bind(R.id.tv_desc)
     TextView tvDesc;
 
-    public MainDataAdapter(List<YLMain> data) {
-        super(data);
+    public MainDataAdapter(Context context,List<YLMain> data) {
+        super(context,data);
     }
 
     @Override

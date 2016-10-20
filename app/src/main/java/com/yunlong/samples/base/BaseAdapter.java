@@ -1,5 +1,6 @@
 package com.yunlong.samples.base;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +16,13 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter<BaseAdapter.Vi
      * 数据
      */
     protected List<T> mData;
+    /**
+     * 上下文
+     */
+    protected Context mContext;
 
-    public BaseAdapter(List<T> data) {
+    public BaseAdapter(Context context, List<T> data) {
+        mContext = context;
         mData = data;
     }
 

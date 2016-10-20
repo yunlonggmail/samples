@@ -37,6 +37,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initTitleBar() {
         toolbar.setTitle(R.string.nav_title_main);
+        super.initTitleBar();
     }
 
     @Override
@@ -47,7 +48,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initData() {
         setData();
-        mainDataAdapter = new MainDataAdapter(dataList);
+        mainDataAdapter = new MainDataAdapter(mContext, dataList);
         rvData.setLayoutManager(new LinearLayoutManager(this));
         rvData.setAdapter(mainDataAdapter);
     }

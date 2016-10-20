@@ -18,7 +18,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * ToolBar
      */
-    @Bind(R.id.toolbar)
     protected Toolbar toolbar;
 
     /**
@@ -41,6 +40,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void init() {
         setContentView(getResourceId());
         ButterKnife.bind(this);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         mContext = this;
     }
 

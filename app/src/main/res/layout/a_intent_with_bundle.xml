@@ -6,9 +6,12 @@
 
     <include layout="@layout/i_tool_bar" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_list"
+    <TextView
+        android:id="@+id/tv_data"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/color_normal_f" />
+        android:background="@color/color_normal_f"
+        android:textColor="@color/color_normal_3"
+        android:textSize="@dimen/text_size_normal_8" />
+
 </LinearLayout>

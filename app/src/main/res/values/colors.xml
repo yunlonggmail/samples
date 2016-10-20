@@ -17,4 +17,7 @@
     <color name="toolbar_bg">#fafafa</color>
 
     <color name="transparent">#00000000</color>
+
+    <color name="a_login_account_hint">#9b9b9b</color>
+    <color name="a_login_et_solid">#d6d6d6</color>
 </resources>

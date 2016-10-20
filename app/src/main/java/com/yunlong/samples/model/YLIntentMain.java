@@ -1,12 +1,12 @@
 package com.yunlong.samples.model;
 
-import com.yunlong.samples.base.BaseActivity;
+import android.os.Bundle;
 
 /**
- * Created by shiyunlong on 2016/10/11.
- * 主页面参数
+ * Created by shiyunlong on 2016/10/19.
+ * 意图主参数
  */
-public class YLMain {
+public class YLIntentMain {
     /**
      * Activity意图
      */
@@ -19,7 +19,9 @@ public class YLMain {
      * 描述
      */
     public String desc;
-
-
+    /**
+     * bundle参数
+     */
+    public Bundle bundle;
 
 }
