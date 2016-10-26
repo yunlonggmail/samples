@@ -1,5 +1,6 @@
 package com.yunlong.samples.base;
 
+import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,11 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     protected Context mContext;
 
+    /**
+     * 应用
+     */
+    protected App app;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +38,13 @@ public abstract class BaseActivity extends AppCompatActivity {
         initTitleBar();
         initView();
         initData();
+        registerActivity();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        removeActivity();
     }
 
     /**
@@ -39,6 +52,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     protected void init() {
         setContentView(getResourceId());
+        checkApp();
         ButterKnife.bind(this);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         mContext = this;
@@ -67,4 +81,30 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 初始化数据
      */
     protected abstract void initData();
+
+    /**
+     * 检查APP
+     */
+    protected void checkApp() {
+        if (app == null)
+            app = App.getApplication();
+        if (app == null)
+            app = (App) getApplicationContext();
+    }
+
+    /**
+     * 注册Activity
+     */
+    private void registerActivity() {
+        if (app != null)
+            app.registerActivity(this);
+    }
+
+    /**
+     * 移除Activity
+     */
+    private void removeActivity() {
+        if (app != null)
+            app.registerActivity(this);
+    }
 }
