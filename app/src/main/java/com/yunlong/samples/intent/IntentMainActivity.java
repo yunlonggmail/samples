@@ -1,16 +1,12 @@
 package com.yunlong.samples.intent;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 
 import com.yunlong.samples.R;
 import com.yunlong.samples.base.BaseActivity;
-import com.yunlong.samples.main.MainDataAdapter;
 import com.yunlong.samples.model.YLIntentMain;
-import com.yunlong.samples.model.YLMain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +39,7 @@ public class IntentMainActivity extends BaseActivity {
 
     @Override
     protected void initTitleBar() {
-        toolbar.setTitle(R.string.nav_title_intent_main);
+        titleBar.setTitle(R.string.nav_title_intent_main);
     }
 
     @Override

@@ -1,6 +1,5 @@
 package com.yunlong.samples.base;
 
-import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +7,6 @@ import android.support.v7.widget.Toolbar;
 
 import com.yunlong.samples.R;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -19,7 +17,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * ToolBar
      */
-    protected Toolbar toolbar;
+    protected Toolbar titleBar;
 
     /**
      * 上下文
@@ -54,7 +52,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(getResourceId());
         checkApp();
         ButterKnife.bind(this);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        titleBar = (Toolbar) findViewById(R.id.toolbar);
         mContext = this;
     }
 
@@ -69,7 +67,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 初始化TitleBar
      */
     protected void initTitleBar() {
-        setSupportActionBar(toolbar);
+        setSupportActionBar(titleBar);
     }
 
     /**

@@ -3,13 +3,13 @@ package com.yunlong.samples.main;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 
 import com.yunlong.samples.R;
 import com.yunlong.samples.base.BaseActivity;
 import com.yunlong.samples.incremental.IncrementalUpdateActivity;
 import com.yunlong.samples.intent.IntentMainActivity;
 import com.yunlong.samples.model.YLMain;
+import com.yunlong.samples.service.ServiceMainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initTitleBar() {
-        toolbar.setTitle(R.string.nav_title_main);
+        titleBar.setTitle(R.string.nav_title_main);
         super.initTitleBar();
     }
 
@@ -56,6 +56,7 @@ public class MainActivity extends BaseActivity {
     protected void setData() {
         addIntentMain();
         addIncrementUpdateMain();
+        addServiceMain();
     }
 
     /**
@@ -77,6 +78,17 @@ public class MainActivity extends BaseActivity {
         ylMain.activityIntent = IncrementalUpdateActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_increment_update);
         ylMain.desc = getString(R.string.nav_title_increment_update_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 添加服务主界面
+     */
+    protected void addServiceMain() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = ServiceMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_service_main);
+        ylMain.desc = getString(R.string.nav_title_service_main_desc);
         dataList.add(ylMain);
     }
 

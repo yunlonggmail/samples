@@ -22,22 +22,24 @@
             </intent-filter>
         </activity>
 
-        <!--增量更新-->
+        <!-- 增量更新 -->
         <activity
             android:name=".incremental.IncrementalUpdateActivity"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.yunlong.samples.IncrementalUpdate" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
-        <!--意图页面-->
+        <!-- 意图页面 -->
         <activity
             android:name=".intent.IntentMainActivity"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.yunlong.samples.IntentMain" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -46,6 +48,7 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="com.yunlong.samples.IntentLogin" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -54,6 +57,7 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="com.yunlong.samples.IntentWithBundle" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -62,9 +66,53 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="com.yunlong.samples.IntentWithoutBundle" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <!-- 服务相关 -->
+        <activity
+            android:name=".service.ServiceMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.ServiceMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".service.local.LocalServiceMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.LocalServiceMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".service.local.LocalServiceSecondActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.LocalServiceSecond" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".service.RemoteServiceMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.RemoteServiceMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.local.LocalService"
+            android:enabled="true"
+            android:exported="false" />
     </application>
 
 </manifest>

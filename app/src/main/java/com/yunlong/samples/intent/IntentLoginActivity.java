@@ -1,6 +1,5 @@
 package com.yunlong.samples.intent;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,7 +9,6 @@ import android.widget.EditText;
 
 import com.yunlong.samples.R;
 import com.yunlong.samples.base.BaseActivity;
-import com.yunlong.samples.model.YLMain;
 import com.yunlong.samples.utils.ToastUtils;
 
 import butterknife.Bind;
@@ -72,7 +70,7 @@ public class IntentLoginActivity extends BaseActivity implements View.OnClickLis
 
     @Override
     protected void initTitleBar() {
-        toolbar.setTitle(R.string.nav_title_intent_login);
+        titleBar.setTitle(R.string.nav_title_intent_login);
         super.initTitleBar();
     }
 

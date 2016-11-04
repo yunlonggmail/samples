@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/i_tool_bar" />
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_width_30"
+        android:background="@drawable/button_bg"
+        android:padding="@dimen/normal_width_10"
+        android:text="@string/a_local_service_main_bind_service"
+        android:textColor="@color/color_normal_3"
+        android:textSize="@dimen/text_size_normal_8" />
+
+</LinearLayout>

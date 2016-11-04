@@ -2,7 +2,6 @@ package com.yunlong.samples.intent;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.widget.TextView;
 
 import com.yunlong.samples.R;
@@ -41,7 +40,7 @@ public class IntentWithBundleActivity extends BaseActivity {
 
     @Override
     protected void initTitleBar() {
-        toolbar.setTitle(R.string.nav_title_intent_with_bundle);
+        titleBar.setTitle(R.string.nav_title_intent_with_bundle);
         super.initTitleBar();
     }
 

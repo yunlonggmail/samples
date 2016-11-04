@@ -6,25 +6,41 @@
     <string name="nav_title_intent_main_desc">意图相关页面的入口页面</string>
     <string name="nav_title_increment_update">增量更新_OLD</string>
     <string name="nav_title_increment_update_desc">增量更新功能演示_OLD</string>
-
-    <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>
-    <string name="a_increment_update_install_new_apk">安装新的APK_OLD</string>
-
     <string name="nav_title_intent_with_bundle">带参数登录跳转</string>
     <string name="nav_title_intent_with_bundle_desc">携带不同的参数,隐式意图登录跳转</string>
-
     <string name="nav_title_intent_without_bundle">不携带参数登录跳转</string>
     <string name="nav_title_intent_without_bundle_desc">不携带参数,隐式意图登录跳转</string>
-
     <string name="nav_title_intent_login">登录</string>
+    <string name="nav_title_service_main">服务</string>
+    <string name="nav_title_service_main_desc">服务功能主界面</string>
+    <string name="nav_title_service_local_service">Local服务</string>
+    <string name="nav_title_service_local_service_desc">Local服务基本功能[start/stop/bind/unbind]</string>
+    <string name="nav_title_service_local_service_second">Local服务第二界面</string>
+    <string name="nav_title_service_remote_service">Remote服务</string>
+    <string name="nav_title_service_remote_service_desc">Remote服务基本功能[start/stop/bind/unbind]</string>
+
 
     <string name="permission_request_deny_title">因您未开启权限，导致无法打开相机</string>
     <string name="permission_request_deny_info">"您需要打开设置->应用->选择育果医生->权限，开启%s权限。"</string>
     <string name="permission_request_open_setting">去开启</string>
 
+    <!--增量更新界面-->
+    <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>
+    <string name="a_increment_update_install_new_apk">安装新的APK_OLD</string>
+
+    <!--登录-->
     <string name="a_login_account_hint">账号</string>
     <string name="a_login_password_hint">密码</string>
     <string name="a_login_login">登录</string>
     <string name="a_login_success">登录成功</string>
     <string name="a_login_fail">登录失败</string>
+
+    <!--服务-->
+    <string name="a_local_service_main_service_info">传入服务的信息</string>
+    <string name="a_local_service_main_start_service">开启服务</string>
+    <string name="a_local_service_main_stop_service">关闭服务</string>
+    <string name="a_local_service_main_bind_service">绑定服务</string>
+    <string name="a_local_service_main_service_sync">同步数据</string>
+    <string name="a_local_service_main_unbind_service">解除绑定服务</string>
+    <string name="a_local_service_main_start_second_activity">开启服务第二个界面</string>
 </resources>
