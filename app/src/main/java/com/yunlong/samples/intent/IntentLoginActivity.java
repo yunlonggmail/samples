@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.yunlong.lib.base.BaseActivity;
+import com.yunlong.lib.utils.ToastUtils;
 import com.yunlong.samples.R;
-import com.yunlong.samples.base.BaseActivity;
-import com.yunlong.samples.utils.ToastUtils;
 
 import butterknife.Bind;
 

@@ -3,7 +3,6 @@ package com.yunlong.samples.service.local;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.text.TextUtils;
 import android.view.View;
@@ -11,10 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.yunlong.lib.base.BaseActivity;
+import com.yunlong.lib.utils.LogUtils;
+import com.yunlong.lib.utils.ToastUtils;
 import com.yunlong.samples.R;
-import com.yunlong.samples.base.BaseActivity;
-import com.yunlong.samples.utils.LogUtils;
-import com.yunlong.samples.utils.ToastUtils;
 
 import butterknife.Bind;
 
@@ -89,6 +88,10 @@ public class LocalServiceMainActivity extends BaseActivity implements View.OnCli
      * Binder
      */
     LocalService.LocalServiceBinder localServiceBinder;
+    /**
+     * 绑定
+     */
+    private boolean mIsBind;
 
 
     @Override
@@ -169,13 +172,15 @@ public class LocalServiceMainActivity extends BaseActivity implements View.OnCli
      * 关闭服务
      */
     public void unBindService() {
-        setServiceTag();
-        unbindService(localServiceConnection);
+        setServiceRunning();
+        if (mIsBind && localServiceConnection != null)
+            unbindService(localServiceConnection);
     }
 
     @Override
     public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         LogUtils.D("LocalServiceMainActivity", " onServiceConnected ");
+        mIsBind = true;
         localServiceBinder = (LocalService.LocalServiceBinder) iBinder;
         setDataChangeListener();
     }
@@ -184,6 +189,7 @@ public class LocalServiceMainActivity extends BaseActivity implements View.OnCli
     public void onServiceDisconnected(ComponentName componentName) {
         LogUtils.D("LocalServiceMainActivity", " onServiceDisconnected ");
         localServiceBinder = null;
+        mIsBind = false;
     }
 
     /**
@@ -232,9 +238,9 @@ public class LocalServiceMainActivity extends BaseActivity implements View.OnCli
     /**
      * 设置服务Tag
      */
-    public void setServiceTag() {
+    public void setServiceRunning() {
         if (localServiceBinder != null)
-            localServiceBinder.setTag(false);
+            localServiceBinder.setRunning(false);
     }
 
     @Override

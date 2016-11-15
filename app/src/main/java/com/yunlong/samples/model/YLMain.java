@@ -1,6 +1,5 @@
 package com.yunlong.samples.model;
 
-import com.yunlong.samples.base.BaseActivity;
 
 /**
  * Created by shiyunlong on 2016/10/11.

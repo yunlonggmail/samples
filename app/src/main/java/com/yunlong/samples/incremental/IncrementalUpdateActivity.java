@@ -9,9 +9,9 @@ import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.Button;
 
+import com.yunlong.lib.base.BaseActivity;
+import com.yunlong.lib.utils.PermissionUtils;
 import com.yunlong.samples.R;
-import com.yunlong.samples.base.BaseActivity;
-import com.yunlong.samples.utils.PermissionUtils;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/i_tool_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_normal_f">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/normal_width_10">
+
+            <TextView
+                android:id="@+id/tv_first_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_10"
+                android:padding="@dimen/normal_width_10"
+                android:textColor="@color/color_normal_3"
+                android:textSize="@dimen/text_size_normal_6" />
+
+            <TextView
+                android:id="@+id/tv_second_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_10"
+                android:padding="@dimen/normal_width_10"
+                android:textColor="@color/color_normal_3"
+                android:textSize="@dimen/text_size_normal_6" />
+
+            <EditText
+                android:id="@+id/et_first_receiver_priority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_30"
+                android:background="@drawable/a_login_et_bg"
+                android:gravity="center_horizontal"
+                android:hint="@string/a_receiver_main_et_register_first_receiver_hint"
+                android:inputType="number"
+                android:lines="1"
+                android:padding="@dimen/normal_width_10"
+                android:textColor="@color/color_normal_3"
+                android:textColorHint="@color/a_login_account_hint"
+                android:textSize="@dimen/text_size_normal_6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_register_first_receiver"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/normal_width_5"
+                    android:layout_marginTop="@dimen/normal_width_30"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_receiver_main_btn_register_first_receiver"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_8" />
+
+                <Button
+                    android:id="@+id/btn_unregister_first_receiver"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_width_5"
+                    android:layout_marginTop="@dimen/normal_width_30"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_receiver_main_btn_unregister_first_receiver"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/et_second_receiver_priority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_30"
+                android:background="@drawable/a_login_et_bg"
+                android:gravity="center_horizontal"
+                android:hint="@string/a_receiver_main_et_register_second_receiver_hint"
+                android:inputType="number"
+                android:lines="1"
+                android:padding="@dimen/normal_width_10"
+                android:textColor="@color/color_normal_3"
+                android:textColorHint="@color/a_login_account_hint"
+                android:textSize="@dimen/text_size_normal_6" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_register_second_receiver"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/normal_width_5"
+                    android:layout_marginTop="@dimen/normal_width_30"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_receiver_main_btn_register_second_receiver"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_8" />
+
+                <Button
+                    android:id="@+id/btn_unregister_second_receiver"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_width_5"
+                    android:layout_marginTop="@dimen/normal_width_30"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_receiver_main_btn_unregister_second_receiver"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btn_send_broadcast"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/normal_width_5"
+                    android:layout_marginTop="@dimen/normal_width_30"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_receiver_main_btn_send_receiver"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_8" />
+
+                <Button
+                    android:id="@+id/btn_send_order_broadcast"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_width_5"
+                    android:layout_marginTop="@dimen/normal_width_30"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_receiver_main_btn_send_order_receiver"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_8" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_send_abort_order_broadcast"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/normal_width_5"
+                    android:layout_marginTop="@dimen/normal_width_30"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_receiver_main_btn_send_abort_receiver"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_8" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

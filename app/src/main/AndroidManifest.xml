@@ -8,12 +8,13 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
-        android:name=".base.App"
+        android:name="com.yunlong.lib.base.App"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -100,10 +101,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".service.RemoteServiceMainActivity"
+            android:name=".service.remote.RemoteServiceMainActivity"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.yunlong.samples.RemoteServiceMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".receiver.ReceiverMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.ReceiverMain" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -113,6 +123,11 @@
             android:name=".service.local.LocalService"
             android:enabled="true"
             android:exported="false" />
+        <service
+            android:name="com.yunlong.samples.service.remote.RemoteService"
+            android:enabled="true"
+            android:exported="true" />
+
     </application>
 
 </manifest>

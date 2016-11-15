@@ -3,11 +3,12 @@ package com.yunlong.samples.service;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
-import com.yunlong.samples.base.BaseActivity;
 import com.yunlong.samples.main.MainDataAdapter;
 import com.yunlong.samples.model.YLMain;
 import com.yunlong.samples.service.local.LocalServiceMainActivity;
+import com.yunlong.samples.service.remote.RemoteServiceMainActivity;
 
 import java.util.ArrayList;
 import java.util.List;

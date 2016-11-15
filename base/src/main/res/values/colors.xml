@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="a_login_account_hint">#9b9b9b</color>
+    <color name="a_login_et_solid">#d6d6d6</color>
+
+    <!--Normal_color-->
+    <color name="color_normal_0">#000000</color>
+    <color name="color_normal_3">#333333</color>
+    <color name="color_normal_6">#666666</color>
+    <color name="color_normal_7">#777777</color>
+    <color name="color_normal_8">#888888</color>
+    <color name="color_normal_9">#999999</color>
+    <color name="color_normal_f">#ffffff</color>
+
+    <color name="toolbar_bg">#fafafa</color>
+    <color name="transparent">#00000000</color>
+
+</resources>

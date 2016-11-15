@@ -13,6 +13,7 @@ ext {
             versionCode      : 1,
             versionName      : "0.1.1",
             multiDexEnabled  : true,
+            publishNonDefault :true
 
     ]
 
@@ -23,7 +24,8 @@ ext {
     build = [
             DEBUG              : rootProject.ext.server.dev ? "true" : "false",
             RELEASE            : rootProject.ext.server.dev ? "false" : "true",
-            RELEASE_SERVER_NAME: rootProject.ext.server.dev ? "测试" : "正式"
+            RELEASE_SERVER_NAME: rootProject.ext.server.dev ? "测试" : "正式",
+            baseIsRelease :"false"
     ]
 
 

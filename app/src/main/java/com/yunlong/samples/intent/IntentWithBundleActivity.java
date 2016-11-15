@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
-import com.yunlong.samples.base.BaseActivity;
 
 import butterknife.Bind;
 

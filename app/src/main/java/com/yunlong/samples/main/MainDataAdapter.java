@@ -2,15 +2,12 @@ package com.yunlong.samples.main;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.text.TextUtilsCompat;
-import android.support.v7.widget.ActivityChooserView;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
+import com.yunlong.lib.base.BaseAdapter;
 import com.yunlong.samples.R;
-import com.yunlong.samples.base.BaseAdapter;
 import com.yunlong.samples.model.YLMain;
 
 import java.util.List;

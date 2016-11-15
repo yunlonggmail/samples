@@ -18,11 +18,8 @@
     <string name="nav_title_service_local_service_second">Local服务第二界面</string>
     <string name="nav_title_service_remote_service">Remote服务</string>
     <string name="nav_title_service_remote_service_desc">Remote服务基本功能[start/stop/bind/unbind]</string>
-
-
-    <string name="permission_request_deny_title">因您未开启权限，导致无法打开相机</string>
-    <string name="permission_request_deny_info">"您需要打开设置->应用->选择育果医生->权限，开启%s权限。"</string>
-    <string name="permission_request_open_setting">去开启</string>
+    <string name="nav_title_receiver_main">广播</string>
+    <string name="nav_title_receiver_main_desc">广播功能主界面</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>
@@ -43,4 +40,16 @@
     <string name="a_local_service_main_service_sync">同步数据</string>
     <string name="a_local_service_main_unbind_service">解除绑定服务</string>
     <string name="a_local_service_main_start_second_activity">开启服务第二个界面</string>
+
+    <!--广播-->
+    <string name="a_receiver_main_et_register_first_receiver_hint">第一个广播的优先级</string>
+    <string name="a_receiver_main_btn_register_first_receiver">注册第一个广播</string>
+    <string name="a_receiver_main_btn_unregister_first_receiver">解除注册第一个广播</string>
+    <string name="a_receiver_main_et_register_second_receiver_hint">第二个广播的优先级</string>
+    <string name="a_receiver_main_btn_register_second_receiver">注册第二个广播</string>
+    <string name="a_receiver_main_btn_unregister_second_receiver">解除注册第二个广播</string>
+    <string name="a_receiver_main_btn_send_receiver">发送广播</string>
+    <string name="a_receiver_main_btn_send_order_receiver">发送有序广播</string>
+    <string name="a_receiver_main_btn_send_abort_receiver">发送拦截广播</string>
+
 </resources>

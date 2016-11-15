@@ -7,10 +7,9 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
+import com.yunlong.lib.base.BaseAdapter;
 import com.yunlong.samples.R;
-import com.yunlong.samples.base.BaseAdapter;
 import com.yunlong.samples.model.YLIntentMain;
-import com.yunlong.samples.model.YLMain;
 
 import java.util.List;
 

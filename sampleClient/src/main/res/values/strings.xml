@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SampleClient</string>
+
+    <string name="nav_title_main">首页</string>
+    <string name="nav_title_service_remote_service">远程服务界面</string>
+    <string name="nav_title_service_remote_service_desc">在远程服务界面，可以打开远程服务功能</string>
+
+    <!--服务-->
+    <string name="a_remote_service_main_service_info">传入服务的信息</string>
+    <string name="a_remote_service_main_start_service">开启服务</string>
+    <string name="a_remote_service_main_stop_service">关闭服务</string>
+    <string name="a_remote_service_main_bind_service">绑定服务</string>
+    <string name="a_remote_service_main_service_sync">同步数据</string>
+    <string name="a_remote_service_main_unbind_service">解除绑定服务</string>
+</resources>

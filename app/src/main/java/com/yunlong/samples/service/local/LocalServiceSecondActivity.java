@@ -10,11 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.yunlong.lib.base.BaseActivity;
+import com.yunlong.lib.utils.LogUtils;
+import com.yunlong.lib.utils.ToastUtils;
 import com.yunlong.samples.R;
-import com.yunlong.samples.base.BaseActivity;
-import com.yunlong.samples.service.local.LocalService;
-import com.yunlong.samples.utils.LogUtils;
-import com.yunlong.samples.utils.ToastUtils;
 
 import butterknife.Bind;
 
@@ -197,7 +196,7 @@ public class LocalServiceSecondActivity extends BaseActivity implements View.OnC
      */
     public void setServiceTag() {
         if (localServiceBinder != null)
-            localServiceBinder.setTag(false);
+            localServiceBinder.setRunning(false);
     }
 
     /**

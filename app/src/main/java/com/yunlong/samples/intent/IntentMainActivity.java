@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
-import com.yunlong.samples.base.BaseActivity;
 import com.yunlong.samples.model.YLIntentMain;
 
 import java.util.ArrayList;

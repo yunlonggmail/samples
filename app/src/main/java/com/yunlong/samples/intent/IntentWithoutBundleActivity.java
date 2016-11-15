@@ -1,7 +1,7 @@
 package com.yunlong.samples.intent;
 
+import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
-import com.yunlong.samples.base.BaseActivity;
 
 /**
  * Created by shiyunlong on 2016/10/19.

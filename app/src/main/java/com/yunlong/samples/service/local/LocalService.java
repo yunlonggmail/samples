@@ -4,13 +4,9 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
-import android.os.IInterface;
-import android.os.Parcel;
-import android.os.RemoteException;
 
-import com.yunlong.samples.utils.LogUtils;
+import com.yunlong.lib.utils.LogUtils;
 
-import java.io.FileDescriptor;
 
 public class LocalService extends Service {
     /**
@@ -26,7 +22,7 @@ public class LocalService extends Service {
     /**
      * 线程运行Tag
      */
-    public boolean mTag = true;
+    public boolean mRunning;
 
     public LocalService() {
     }
@@ -54,8 +50,8 @@ public class LocalService extends Service {
             return count + "," + mData;
         }
 
-        public void setTag(boolean tag) {
-            mTag = tag;
+        public void setRunning(boolean running) {
+            mRunning = running;
         }
     }
 
@@ -75,6 +71,7 @@ public class LocalService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        mRunning = false;
         LogUtils.D("LocalService", " onDestroy " + this);
     }
 
@@ -82,7 +79,8 @@ public class LocalService extends Service {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                while (true) {
+                mRunning = true;
+                while (mRunning) {
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
@@ -93,8 +91,6 @@ public class LocalService extends Service {
                     LogUtils.D("LocalService", text);
                     if (mDataChangeListener != null)
                         mDataChangeListener.dataChange(text);
-                    if (!mTag)
-                        break;
                 }
             }
         }).start();
