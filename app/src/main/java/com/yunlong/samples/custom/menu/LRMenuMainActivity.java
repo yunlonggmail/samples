@@ -14,7 +14,7 @@ public class LRMenuMainActivity extends BaseActivity {
     /**
      * 该界面的隐式意图
      */
-    public static final String INTENT_ACTION = "com.yunlong.samples.LRMenuMain";
+    public static final String INTENT_ACTION = "com.yunlong.samples.custom.LRMenuMain";
     /**
      * LrMenu
      */

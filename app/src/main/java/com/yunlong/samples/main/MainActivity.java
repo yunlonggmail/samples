@@ -12,6 +12,7 @@ import com.yunlong.samples.intent.IntentMainActivity;
 import com.yunlong.samples.model.YLMain;
 import com.yunlong.samples.receiver.ReceiverMainActivity;
 import com.yunlong.samples.service.ServiceMainActivity;
+import com.yunlong.samples.systemfunction.SystemFunctionMainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,6 +62,7 @@ public class MainActivity extends BaseActivity {
         addServiceMain();
         addReceiverMain();
         addCustomMain();
+        addSystemFunction();
     }
 
     /**
@@ -115,6 +117,17 @@ public class MainActivity extends BaseActivity {
         ylMain.activityIntent = CustomMainActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_custom_main);
         ylMain.desc = getString(R.string.nav_title_custom_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 添加系统功能主界面
+     */
+    protected void addSystemFunction() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = SystemFunctionMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_system_function_main);
+        ylMain.desc = getString(R.string.nav_title_system_function_main_desc);
         dataList.add(ylMain);
     }
 

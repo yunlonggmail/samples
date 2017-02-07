@@ -24,6 +24,10 @@
     <string name="nav_title_custom_main_desc">自定义功能主界面</string>
     <string name="nav_title_custom_lrmenu_main">自定义左右菜单</string>
     <string name="nav_title_custom_lrmenu_main_desc">左右两侧菜单，菜单不同布局不同显示</string>
+    <string name="nav_title_system_function_main">系统功能</string>
+    <string name="nav_title_system_function_main_desc">系统的主要功能相关开发</string>
+    <string name="nav_title_system_function_multipoint">多点触摸</string>
+    <string name="nav_title_system_function_multipoint_desc">多点触摸功能</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>

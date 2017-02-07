@@ -1,13 +1,13 @@
-package com.yunlong.samples.custom;
+package com.yunlong.samples.systemfunction;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
-import com.yunlong.samples.custom.menu.LRMenuMainActivity;
 import com.yunlong.samples.main.MainDataAdapter;
 import com.yunlong.samples.model.YLMain;
+import com.yunlong.samples.systemfunction.multipoint.MultipointActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,15 +15,15 @@ import java.util.List;
 import butterknife.Bind;
 
 /**
- * 自定义主界面
- * Created by shiyunlong on 2017/2/6.
+ * 系统功能主界面
+ * Created by shiyunlong on 2017/2/7.
  */
 
-public class CustomMainActivity extends BaseActivity {
+public class SystemFunctionMainActivity extends BaseActivity {
     /**
      * 该界面的隐式意图
      */
-    public static final String INTENT_ACTION = "com.yunlong.samples.CustomMain";
+    public static final String INTENT_ACTION = "com.yunlong.samples.SystemFunctionMain";
     /**
      * 数据
      */
@@ -40,12 +40,12 @@ public class CustomMainActivity extends BaseActivity {
 
     @Override
     protected int getResourceId() {
-        return R.layout.a_custom_main;
+        return R.layout.a_system_function_main;
     }
 
     @Override
     protected void initTitleBar() {
-        titleBar.setTitle(R.string.nav_title_custom_main);
+        titleBar.setTitle(R.string.nav_title_system_function_main);
         super.initTitleBar();
     }
 
@@ -72,9 +72,9 @@ public class CustomMainActivity extends BaseActivity {
      */
     protected void addLRMenuMain() {
         YLMain ylMain = new YLMain();
-        ylMain.activityIntent = LRMenuMainActivity.INTENT_ACTION;
-        ylMain.name = getString(R.string.nav_title_custom_lrmenu_main);
-        ylMain.desc = getString(R.string.nav_title_custom_lrmenu_main_desc);
+        ylMain.activityIntent = MultipointActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_system_function_multipoint);
+        ylMain.desc = getString(R.string.nav_title_system_function_multipoint_desc);
         dataList.add(ylMain);
     }
 

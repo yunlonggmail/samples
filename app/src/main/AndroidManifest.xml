@@ -132,7 +132,27 @@
             android:name=".custom.menu.LRMenuMainActivity"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.yunlong.samples.LRMenuMain" />
+                <action android:name="com.yunlong.samples.custom.LRMenuMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--系统功能相关-->
+        <activity
+            android:name=".systemfunction.SystemFunctionMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.SystemFunctionMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".systemfunction.multipoint.MultipointActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.systemfunction.Multipoint" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
