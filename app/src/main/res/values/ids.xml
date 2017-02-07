@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="rl_menu_l_id" type="id" />
+    <item name="rl_menu_m_id" type="id" />
+    <item name="rl_menu_r_id" type="id" />
+
+</resources>

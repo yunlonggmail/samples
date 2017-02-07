@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
+import com.yunlong.samples.custom.CustomMainActivity;
 import com.yunlong.samples.incremental.IncrementalUpdateActivity;
 import com.yunlong.samples.intent.IntentMainActivity;
 import com.yunlong.samples.model.YLMain;
@@ -59,6 +60,7 @@ public class MainActivity extends BaseActivity {
         addIncrementUpdateMain();
         addServiceMain();
         addReceiverMain();
+        addCustomMain();
     }
 
     /**
@@ -102,6 +104,17 @@ public class MainActivity extends BaseActivity {
         ylMain.activityIntent = ReceiverMainActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_receiver_main);
         ylMain.desc = getString(R.string.nav_title_receiver_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 添加自定义功能主界面
+     */
+    protected void addCustomMain() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = CustomMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_custom_main);
+        ylMain.desc = getString(R.string.nav_title_custom_main_desc);
         dataList.add(ylMain);
     }
 

@@ -31,6 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         initTitleBar();
         initView();
         initData();
+        initFragment();
     }
 
     @Override
@@ -71,5 +72,11 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 初始化数据
      */
     protected abstract void initData();
+
+    /**
+     * 初始化Fragment
+     */
+    protected void initFragment() {
+    }
 
 }

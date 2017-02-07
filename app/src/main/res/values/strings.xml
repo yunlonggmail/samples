@@ -20,6 +20,10 @@
     <string name="nav_title_service_remote_service_desc">Remote服务基本功能[start/stop/bind/unbind]</string>
     <string name="nav_title_receiver_main">广播</string>
     <string name="nav_title_receiver_main_desc">广播功能主界面</string>
+    <string name="nav_title_custom_main">自定义功能</string>
+    <string name="nav_title_custom_main_desc">自定义功能主界面</string>
+    <string name="nav_title_custom_lrmenu_main">自定义左右菜单</string>
+    <string name="nav_title_custom_lrmenu_main_desc">左右两侧菜单，菜单不同布局不同显示</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>
@@ -51,5 +55,11 @@
     <string name="a_receiver_main_btn_send_receiver">发送广播</string>
     <string name="a_receiver_main_btn_send_order_receiver">发送有序广播</string>
     <string name="a_receiver_main_btn_send_abort_receiver">发送拦截广播</string>
+
+    <!--服务-->
+    <string name="a_custom_lrmenu_left_btn">左侧菜单按钮</string>
+    <string name="a_custom_lrmenu_middle_btn">中间菜单按钮</string>
+    <string name="a_custom_lrmenu_right_btn">右侧侧菜单按钮</string>
+
 
 </resources>
