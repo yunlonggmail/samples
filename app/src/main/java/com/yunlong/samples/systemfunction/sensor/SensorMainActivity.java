@@ -1,4 +1,4 @@
-package com.yunlong.samples.systemfunction;
+package com.yunlong.samples.systemfunction.sensor;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -7,8 +7,7 @@ import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
 import com.yunlong.samples.main.MainDataAdapter;
 import com.yunlong.samples.model.YLMain;
-import com.yunlong.samples.systemfunction.multipoint.MultipointActivity;
-import com.yunlong.samples.systemfunction.sensor.SensorMainActivity;
+import com.yunlong.samples.systemfunction.sensor.info.SensorInfoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,15 +15,17 @@ import java.util.List;
 import butterknife.Bind;
 
 /**
- * 系统功能主界面
+ * 传感器主界面
  * Created by shiyunlong on 2017/2/7.
  */
 
-public class SystemFunctionMainActivity extends BaseActivity {
+public class SensorMainActivity extends BaseActivity {
+
     /**
      * 该界面的隐式意图
      */
-    public static final String INTENT_ACTION = "com.yunlong.samples.SystemFunctionMain";
+    public static final String INTENT_ACTION = "com.yunlong.samples.system.function.SensorMain";
+
     /**
      * 数据
      */
@@ -41,7 +42,7 @@ public class SystemFunctionMainActivity extends BaseActivity {
 
     @Override
     protected int getResourceId() {
-        return R.layout.a_system_function_main;
+        return R.layout.a_system_function_sensor_main;
     }
 
     @Override
@@ -65,30 +66,29 @@ public class SystemFunctionMainActivity extends BaseActivity {
 
 
     protected void setData() {
-        addMultiPoint();
-        addSensorMain();
+        addSensorInfo();
+        addMotionSensor();
     }
 
     /**
-     * 多点触摸
+     * 传感器信息界面
      */
-    protected void addMultiPoint() {
+    protected void addSensorInfo() {
         YLMain ylMain = new YLMain();
-        ylMain.activityIntent = MultipointActivity.INTENT_ACTION;
-        ylMain.name = getString(R.string.nav_title_system_function_multipoint);
-        ylMain.desc = getString(R.string.nav_title_system_function_multipoint_desc);
+        ylMain.activityIntent = SensorInfoActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_system_function_sensor_info);
+        ylMain.desc = getString(R.string.nav_title_system_function_sensor_info_desc);
         dataList.add(ylMain);
     }
 
     /**
-     * 传感器主界面
+     * 传感器信息界面
      */
-    protected void addSensorMain() {
+    protected void addMotionSensor() {
         YLMain ylMain = new YLMain();
-        ylMain.activityIntent = SensorMainActivity.INTENT_ACTION;
-        ylMain.name = getString(R.string.nav_title_system_function_sensor_main);
-        ylMain.desc = getString(R.string.nav_title_system_function_sensor_main_desc);
+        ylMain.activityIntent = MotionSensorActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_system_function_motion_sensor);
+        ylMain.desc = getString(R.string.nav_title_system_function_motion_sensor_desc);
         dataList.add(ylMain);
     }
-
 }

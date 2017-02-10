@@ -21,7 +21,7 @@ public class MultipointActivity extends BaseActivity implements View.OnTouchList
     /**
      * 该界面的隐式意图
      */
-    public static final String INTENT_ACTION = "com.yunlong.samples.systemfunction.Multipoint";
+    public static final String INTENT_ACTION = "com.yunlong.samples.system.function.Multipoint";
     /**
      * 根节点
      */

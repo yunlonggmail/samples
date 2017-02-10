@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Samples</string>
+    <string name="common_start_record_log">开始记录日志</string>
+    <string name="common_stop_record_log">停止记录日志</string>
 
     <string name="nav_title_main">首页</string>
     <string name="nav_title_intent_main">意图首页</string>
@@ -28,6 +30,12 @@
     <string name="nav_title_system_function_main_desc">系统的主要功能相关开发</string>
     <string name="nav_title_system_function_multipoint">多点触摸</string>
     <string name="nav_title_system_function_multipoint_desc">多点触摸功能</string>
+    <string name="nav_title_system_function_sensor_main">传感器主界面</string>
+    <string name="nav_title_system_function_sensor_main_desc">系统传感器相关信息</string>
+    <string name="nav_title_system_function_sensor_info">手机上的传感器</string>
+    <string name="nav_title_system_function_sensor_info_desc">手机上的各个传感器信息</string>
+    <string name="nav_title_system_function_motion_sensor">动作传感器</string>
+    <string name="nav_title_system_function_motion_sensor_desc">各个动作传感器的数据操作</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>
@@ -64,6 +72,5 @@
     <string name="a_custom_lrmenu_left_btn">左侧菜单按钮</string>
     <string name="a_custom_lrmenu_middle_btn">中间菜单按钮</string>
     <string name="a_custom_lrmenu_right_btn">右侧侧菜单按钮</string>
-
 
 </resources>

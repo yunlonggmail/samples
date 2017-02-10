@@ -12,12 +12,21 @@
         android:padding="@dimen/normal_width_10">
 
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/tv_sensor_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
             android:textColor="@color/color_normal_3"
             android:textSize="@dimen/text_size_normal_8" />
+
+        <TextView
+            android:id="@+id/tv_sensor_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_width_10"
+            android:layout_marginTop="@dimen/normal_width_10"
+            android:lineSpacingExtra="@dimen/normal_width_8"
+            android:textColor="@color/color_normal_6"
+            android:textSize="@dimen/text_size_normal_6" />
 
         <TextView
             android:id="@+id/tv_desc"
@@ -26,8 +35,9 @@
             android:layout_marginLeft="@dimen/normal_width_10"
             android:layout_marginTop="@dimen/normal_width_10"
             android:lineSpacingExtra="@dimen/normal_width_8"
-            android:textColor="@color/color_normal_6"
-            android:textSize="@dimen/text_size_normal_6" />
+            android:textColor="@color/color_normal_9"
+            android:textSize="@dimen/text_size_normal_4" />
+
     </LinearLayout>
 
     <View

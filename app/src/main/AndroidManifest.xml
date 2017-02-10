@@ -152,11 +152,39 @@
             android:name=".systemfunction.multipoint.MultipointActivity"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.yunlong.samples.systemfunction.Multipoint" />
+                <action android:name="com.yunlong.samples.system.function.Multipoint" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".systemfunction.sensor.SensorMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.system.function.SensorMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".systemfunction.sensor.info.SensorInfoActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.system.function.SensorInfo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".systemfunction.sensor.MotionSensorActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.system.function.MotionSensor" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
 
         <service
             android:name=".service.local.LocalService"
