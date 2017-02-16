@@ -21,6 +21,20 @@
             android:textSize="@dimen/text_size_normal_8" />
 
         <TextView
+            android:id="@+id/tv_sensor_gyroscope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_normal_6"
+            android:textSize="@dimen/text_size_normal_8" />
+
+        <TextView
+            android:id="@+id/tv_sensor_gravity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_normal_6"
+            android:textSize="@dimen/text_size_normal_8" />
+
+        <TextView
             android:id="@+id/tv_sensor_proximity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -36,6 +36,18 @@ public class MotionSensorActivity extends BaseActivity implements SensorEventLis
     TextView tvSensorAccelerometer;
 
     /**
+     * 陀螺仪加速器
+     */
+    @Bind(R.id.tv_sensor_gyroscope)
+    TextView tvSensorGyroscope;
+
+    /**
+     * 重力加速器
+     */
+    @Bind(R.id.tv_sensor_gravity)
+    TextView tvSensorGravity;
+
+    /**
      * 近距离传感器
      */
     @Bind(R.id.tv_sensor_proximity)
@@ -86,6 +98,8 @@ public class MotionSensorActivity extends BaseActivity implements SensorEventLis
         super.onResume();
         sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
         sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY), SensorManager.SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE), SensorManager.SENSOR_DELAY_NORMAL);
+
         sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY), SensorManager.SENSOR_DELAY_NORMAL);
         sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT), SensorManager.SENSOR_DELAY_NORMAL);
     }
@@ -104,6 +118,20 @@ public class MotionSensorActivity extends BaseActivity implements SensorEventLis
                     gravity[0] = event.values[0];
                     gravity[1] = event.values[1];
                     gravity[2] = event.values[2];
+
+                    String sb = "重力加速度\n";
+                    float x = gravity[0];
+                    sb += "X:";
+                    sb += x;
+                    sb += "\n";
+                    float y = gravity[1];
+                    sb += "Y:";
+                    sb += y;
+                    sb += "\n";
+                    float z = gravity[2];
+                    sb += "Z:";
+                    sb += z;
+                    tvSensorGravity.setText(sb);
                 }
                 break;
             case Sensor.TYPE_ACCELEROMETER:
@@ -126,6 +154,25 @@ public class MotionSensorActivity extends BaseActivity implements SensorEventLis
                     sb += "Z:";
                     sb += z;
                     tvSensorAccelerometer.setText(sb);
+                    if (startLog)
+                        LogUtils.D(MotionSensorActivity.this.getClass().getName(), sb);
+                }
+                break;
+            case Sensor.TYPE_GYROSCOPE:
+                if (event.values.length > 0) {
+                    String sb = "陀螺仪加速度\n";
+                    float x = event.values[0];
+                    sb += "X:";
+                    sb += x;
+                    sb += "\n";
+                    float y = event.values[1];
+                    sb += "Y:";
+                    sb += y;
+                    sb += "\n";
+                    float z = event.values[2];
+                    sb += "Z:";
+                    sb += z;
+                    tvSensorGyroscope.setText(sb);
                     if (startLog)
                         LogUtils.D(MotionSensorActivity.this.getClass().getName(), sb);
                 }
