@@ -7,7 +7,9 @@ import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
 import com.yunlong.samples.main.MainDataAdapter;
 import com.yunlong.samples.model.YLMain;
+import com.yunlong.samples.systemfunction.bluetooth.BluetoothMainActivity;
 import com.yunlong.samples.systemfunction.multipoint.MultipointActivity;
+import com.yunlong.samples.systemfunction.nfc.NFCMainActivity;
 import com.yunlong.samples.systemfunction.sensor.SensorMainActivity;
 
 import java.util.ArrayList;
@@ -67,6 +69,8 @@ public class SystemFunctionMainActivity extends BaseActivity {
     protected void setData() {
         addMultiPoint();
         addSensorMain();
+        addNFCMain();
+        addBluetoothMain();
     }
 
     /**
@@ -88,6 +92,28 @@ public class SystemFunctionMainActivity extends BaseActivity {
         ylMain.activityIntent = SensorMainActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_system_function_sensor_main);
         ylMain.desc = getString(R.string.nav_title_system_function_sensor_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * NFC主界面
+     */
+    protected void addNFCMain() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = NFCMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_system_function_nfc_main);
+        ylMain.desc = getString(R.string.nav_title_system_function_nfc_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 蓝牙主界面
+     */
+    protected void addBluetoothMain() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = BluetoothMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_system_function_bluetooth_main);
+        ylMain.desc = getString(R.string.nav_title_system_function_bluetooth_main_desc);
         dataList.add(ylMain);
     }
 

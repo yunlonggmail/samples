@@ -36,6 +36,10 @@
     <string name="nav_title_system_function_sensor_info_desc">手机上的各个传感器信息</string>
     <string name="nav_title_system_function_motion_sensor">动作传感器</string>
     <string name="nav_title_system_function_motion_sensor_desc">各个动作传感器的数据操作</string>
+    <string name="nav_title_system_function_nfc_main">NFC功能主界面</string>
+    <string name="nav_title_system_function_nfc_main_desc">NFC功能的主要急么</string>
+    <string name="nav_title_system_function_bluetooth_main">蓝牙功能主界面</string>
+    <string name="nav_title_system_function_bluetooth_main_desc">蓝牙功能：基本打开蓝牙、静默打开蓝牙、打开蓝牙可被检查、搜索蓝牙</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>
@@ -72,5 +76,22 @@
     <string name="a_custom_lrmenu_left_btn">左侧菜单按钮</string>
     <string name="a_custom_lrmenu_middle_btn">中间菜单按钮</string>
     <string name="a_custom_lrmenu_right_btn">右侧侧菜单按钮</string>
+
+    <!--蓝牙-->
+    <string name="a_bluetooth_not_support">该设备不支持蓝牙功能</string>
+    <string name="a_bluetooth_normal_open">正常打开蓝牙设备</string>
+    <string name="a_bluetooth_normal_open_enabled">蓝牙设备已打开</string>
+    <string name="a_bluetooth_normal_open_disabled">蓝牙设备已关闭</string>
+    <string name="a_bluetooth_silent_open">静默打开蓝牙设备</string>
+    <string name="a_bluetooth_silent_close">静默关闭蓝牙设备</string>
+    <string name="a_bluetooth_start_discovery">开始搜索蓝牙设备</string>
+    <string name="a_bluetooth_cancel_discovery">停止搜索蓝牙设备</string>
+    <string name="a_bluetooth_please_open">请先打开蓝牙设备</string>
+    <string name="a_bluetooth_device_none">未绑定</string>
+    <string name="a_bluetooth_device_boning">已绑定</string>
+    <string name="a_bluetooth_device_bonded">绑定过的</string>
+    <string name="a_bluetooth_create_server">创建蓝牙服务端</string>
+    <string name="a_bluetooth_create_client">创建蓝牙客户端</string>
+    <string name="a_bluetooth_client_msg">蓝牙客户端传递的数据</string>
 
 </resources>
