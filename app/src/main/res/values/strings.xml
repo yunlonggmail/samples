@@ -39,7 +39,9 @@
     <string name="nav_title_system_function_nfc_main">NFC功能主界面</string>
     <string name="nav_title_system_function_nfc_main_desc">NFC功能的主要急么</string>
     <string name="nav_title_system_function_bluetooth_main">蓝牙功能主界面</string>
-    <string name="nav_title_system_function_bluetooth_main_desc">蓝牙功能：基本打开蓝牙、静默打开蓝牙、打开蓝牙可被检查、搜索蓝牙</string>
+    <string name="nav_title_system_function_bluetooth_main_desc">蓝牙功能：基本打开蓝牙、静默打开蓝牙、打开蓝牙可被检查、搜索蓝牙、蓝牙连接及传递数据</string>
+    <string name="nav_title_system_function_wifi_direct">Wi-Fi P2P</string>
+    <string name="nav_title_system_function_wifi_direct_desc">Wi-Fi P2P：两个4.0+设备通过Wi-Fi P2P进行连接，并传递数据</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>
@@ -93,5 +95,10 @@
     <string name="a_bluetooth_create_server">创建蓝牙服务端</string>
     <string name="a_bluetooth_create_client">创建蓝牙客户端</string>
     <string name="a_bluetooth_client_msg">蓝牙客户端传递的数据</string>
+
+    <!--WiFi直连-->
+    <string name="a_wifi_p2p_discover">开始发现周围WiFi P2P设备</string>
+    <string name="a_wifi_p2p_connect">连接两个设备</string>
+    <string name="a_wifi_p2p_send_msg">发送消息</string>
 
 </resources>

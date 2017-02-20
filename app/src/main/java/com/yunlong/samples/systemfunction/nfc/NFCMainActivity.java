@@ -28,7 +28,7 @@ public class NFCMainActivity extends BaseActivity {
 
     @Override
     protected int getResourceId() {
-        return R.layout.a_nfc_main;
+        return R.layout.a_system_function_nfc_main;
     }
 
     @Override

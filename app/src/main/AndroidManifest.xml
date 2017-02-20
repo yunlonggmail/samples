@@ -10,6 +10,11 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name="com.yunlong.lib.base.App"
@@ -208,6 +213,20 @@
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="com.yunlong.samples.system.function.BluetoothMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".systemfunction.wifip2p.WiFiP2PMainActivity"
+            android:exported="false"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.system.function.WiFiP2PMain" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

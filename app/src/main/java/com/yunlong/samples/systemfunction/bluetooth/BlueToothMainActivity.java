@@ -203,7 +203,7 @@ public class BluetoothMainActivity extends BaseActivity implements View.OnClickL
 
     @Override
     protected int getResourceId() {
-        return R.layout.a_bluetooth_main;
+        return R.layout.a_system_function_bluetooth_main;
     }
 
 

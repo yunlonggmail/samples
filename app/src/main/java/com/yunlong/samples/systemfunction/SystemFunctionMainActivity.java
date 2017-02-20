@@ -11,6 +11,7 @@ import com.yunlong.samples.systemfunction.bluetooth.BluetoothMainActivity;
 import com.yunlong.samples.systemfunction.multipoint.MultipointActivity;
 import com.yunlong.samples.systemfunction.nfc.NFCMainActivity;
 import com.yunlong.samples.systemfunction.sensor.SensorMainActivity;
+import com.yunlong.samples.systemfunction.wifip2p.WiFiP2PMainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,6 +72,7 @@ public class SystemFunctionMainActivity extends BaseActivity {
         addSensorMain();
         addNFCMain();
         addBluetoothMain();
+        addWiFiMain();
     }
 
     /**
@@ -114,6 +116,17 @@ public class SystemFunctionMainActivity extends BaseActivity {
         ylMain.activityIntent = BluetoothMainActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_system_function_bluetooth_main);
         ylMain.desc = getString(R.string.nav_title_system_function_bluetooth_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 蓝牙主界面
+     */
+    protected void addWiFiMain() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = WiFiP2PMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_system_function_wifi_direct);
+        ylMain.desc = getString(R.string.nav_title_system_function_wifi_direct_desc);
         dataList.add(ylMain);
     }
 
