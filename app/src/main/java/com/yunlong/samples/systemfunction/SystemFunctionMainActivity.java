@@ -8,6 +8,7 @@ import com.yunlong.samples.R;
 import com.yunlong.samples.main.MainDataAdapter;
 import com.yunlong.samples.model.YLMain;
 import com.yunlong.samples.systemfunction.bluetooth.BluetoothMainActivity;
+import com.yunlong.samples.systemfunction.gps.GPSMainActivity;
 import com.yunlong.samples.systemfunction.multipoint.MultipointActivity;
 import com.yunlong.samples.systemfunction.nfc.NFCMainActivity;
 import com.yunlong.samples.systemfunction.sensor.SensorMainActivity;
@@ -73,6 +74,7 @@ public class SystemFunctionMainActivity extends BaseActivity {
         addNFCMain();
         addBluetoothMain();
         addWiFiMain();
+        addGPSMain();
     }
 
     /**
@@ -127,6 +129,17 @@ public class SystemFunctionMainActivity extends BaseActivity {
         ylMain.activityIntent = WiFiP2PMainActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_system_function_wifi_direct);
         ylMain.desc = getString(R.string.nav_title_system_function_wifi_direct_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * GPS主界面
+     */
+    protected void addGPSMain() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = GPSMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_system_function_gps_main);
+        ylMain.desc = getString(R.string.nav_title_system_function_gps_main_desc);
         dataList.add(ylMain);
     }
 

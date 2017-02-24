@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_normal_f"
+    android:orientation="vertical">
+
+    <include layout="@layout/i_tool_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_gps_location_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal_width_5"
+                android:layout_marginLeft="@dimen/normal_width_10"
+                android:layout_marginRight="@dimen/normal_width_10"
+                android:layout_marginTop="@dimen/normal_width_10"
+                android:textColor="@color/color_normal_3"
+                android:textSize="@dimen/text_size_normal_8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal_width_10"
+                android:layout_marginLeft="@dimen/normal_width_10"
+                android:layout_marginRight="@dimen/normal_width_10"
+                android:layout_marginTop="@dimen/normal_width_5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/normal_width_5"
+                    android:layout_marginLeft="@dimen/normal_width_10"
+                    android:layout_marginRight="@dimen/normal_width_10"
+                    android:layout_marginTop="@dimen/normal_width_10"
+                    android:text="@string/a_gps_location_distance_title"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/et_location_longitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/normal_width_10"
+                            android:background="@drawable/a_login_et_bg"
+                            android:gravity="center_horizontal"
+                            android:hint="@string/a_gps_info_longitude"
+                            android:inputType="numberDecimal"
+                            android:lines="1"
+                            android:padding="@dimen/normal_width_10"
+                            android:textColor="@color/color_normal_3"
+                            android:textColorHint="@color/a_login_account_hint"
+                            android:textSize="@dimen/text_size_normal_6" />
+
+                        <EditText
+                            android:id="@+id/et_location_latitude"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/normal_width_10"
+                            android:background="@drawable/a_login_et_bg"
+                            android:gravity="center_horizontal"
+                            android:hint="@string/a_gps_info_latitude"
+                            android:inputType="numberDecimal"
+                            android:lines="1"
+                            android:padding="@dimen/normal_width_10"
+                            android:textColor="@color/color_normal_3"
+                            android:textColorHint="@color/a_login_account_hint"
+                            android:textSize="@dimen/text_size_normal_6" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_calc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/normal_width_10"
+                        android:background="@drawable/button_bg"
+                        android:padding="@dimen/normal_width_10"
+                        android:text="@string/a_gps_info_calc"
+                        android:textColor="@color/color_normal_3"
+                        android:textSize="@dimen/text_size_normal_8" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_gps_location_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/normal_width_5"
+                    android:layout_marginLeft="@dimen/normal_width_10"
+                    android:layout_marginRight="@dimen/normal_width_10"
+                    android:layout_marginTop="@dimen/normal_width_10"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_8" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

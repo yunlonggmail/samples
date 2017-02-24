@@ -1,5 +1,6 @@
 package com.yunlong.lib.utils;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -8,6 +9,7 @@ import android.os.Build;
 import android.os.Process;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 
 import com.yunlong.base.R;
 
@@ -67,6 +69,25 @@ public class PermissionUtils {
             isOk &= (activity.checkPermission(permission,
                     Process.myPid(),
                     Process.myUid()) == PackageManager.PERMISSION_GRANTED);
+        }
+
+        return isOk;
+    }
+
+    /**
+     * @param activity
+     * @param permissions
+     * @return
+     */
+    @TargetApi(Build.VERSION_CODES.M)
+    public static boolean checkSelfPermissionsOK(Activity activity, @NonNull String[] permissions) {
+        if (activity == null)
+            throw new IllegalArgumentException("illegal argument...");
+        if (permissions.length <= 0)
+            return false;
+        boolean isOk = true;
+        for (String permission : permissions) {
+            isOk &= (ActivityCompat.checkSelfPermission(activity, permission) == PackageManager.PERMISSION_GRANTED);
         }
 
         return isOk;
@@ -142,6 +163,7 @@ public class PermissionUtils {
 
     /**
      * 展示询问对话框
+     *
      * @param activity
      * @param permissions
      */

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_normal_f"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_width_10">
+
+        <TextView
+            android:id="@+id/tv_gps_location_provider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_normal_3"
+            android:textSize="@dimen/text_size_normal_8" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_sensor_type"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/normal_width_10"-->
+        <!--android:layout_marginTop="@dimen/normal_width_10"-->
+        <!--android:lineSpacingExtra="@dimen/normal_width_8"-->
+        <!--android:textColor="@color/color_normal_6"-->
+        <!--android:textSize="@dimen/text_size_normal_6" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_desc"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/normal_width_10"-->
+        <!--android:layout_marginTop="@dimen/normal_width_10"-->
+        <!--android:lineSpacingExtra="@dimen/normal_width_8"-->
+        <!--android:textColor="@color/color_normal_9"-->
+        <!--android:textSize="@dimen/text_size_normal_4" />-->
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_width_1"
+        android:background="@color/color_normal_9" />
+
+</LinearLayout>
