@@ -16,6 +16,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:name="com.yunlong.lib.base.App"
@@ -270,6 +272,50 @@
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="com.yunlong.samples.system.function.GPSLocationInfo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+        </activity>
+
+        <!--照相机相关-->
+        <activity
+            android:name=".systemfunction.camera.CameraMainActivity"
+            android:exported="false"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.system.function.CameraMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".systemfunction.camera.CameraNormalActivity"
+            android:exported="false"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.system.function.CameraNormal" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".systemfunction.camera.CameraCustomActivity"
+            android:exported="false"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.system.function.CameraCustom" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

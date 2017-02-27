@@ -48,6 +48,12 @@
     <string name="nav_title_system_function_gps_location_provider_desc">手机上的GPS提供者信息</string>
     <string name="nav_title_system_function_gps_location_info">GPS位置信息</string>
     <string name="nav_title_system_function_gps_location_info_desc">手机上的GPS位置信息（经度、纬度、高度、速度、方向），两点之间的距离</string>
+    <string name="nav_title_system_function_gps_camera_main">照相机功能主界面</string>
+    <string name="nav_title_system_function_gps_camera_main_desc">快速照相，快速摄像，自定义照相，自省也摄像</string>
+    <string name="nav_title_system_function_gps_camera_normal">照相机普通功能</string>
+    <string name="nav_title_system_function_gps_camera_normal_desc">快速照相，快速摄像</string>
+    <string name="nav_title_system_function_gps_camera_custom">定制照相机功能</string>
+    <string name="nav_title_system_function_gps_camera_custom_desc">定制照相，定制摄像</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>
@@ -112,5 +118,12 @@
     <string name="a_gps_info_longitude">经度</string>
     <string name="a_gps_info_latitude">纬度</string>
     <string name="a_gps_info_calc">计算</string>
+
+    <!--Camera-->
+    <string name="a_camera_normal_photo">拍照</string>
+    <string name="a_camera_normal_video">录像</string>
+    <string name="a_camera_normal_permission_denied">需要的权限被拒绝，该功能无法被使用</string>
+    <string name="a_camera_normal_permission_setting">需要的权限被拒绝，该功能无法被使用，如果需要继续授权请前往设置页面进行授权</string>
+    <string name="a_camera_custom_init">初始化</string>
 
 </resources>

@@ -41,6 +41,7 @@
     <dimen name="normal_width_65">65dp</dimen>
     <dimen name="normal_width_70">70dp</dimen>
     <dimen name="normal_width_100">100dp</dimen>
+    <dimen name="normal_width_200">200dp</dimen>
 
 
     <!-- 基础字体大小 -->

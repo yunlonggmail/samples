@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/i_tool_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_normal_f">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/normal_width_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_init"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_width_10"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_camera_custom_init"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_8" />
+
+
+                <Button
+                    android:id="@+id/btn_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal_width_10"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_camera_normal_photo"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_8" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/normal_width_200" />
+
+                <com.yunlong.samples.systemfunction.camera.CameraView
+                    android:id="@+id/cv_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/normal_width_200" />
+            </LinearLayout>
+
+
+            <!--<Button-->
+            <!--android:id="@+id/btn_video"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_margin="@dimen/normal_width_10"-->
+            <!--android:background="@drawable/button_bg"-->
+            <!--android:padding="@dimen/normal_width_10"-->
+            <!--android:text="@string/a_camera_normal_video"-->
+            <!--android:textColor="@color/color_normal_3"-->
+            <!--android:textSize="@dimen/text_size_normal_8" />-->
+
+            <!--<VideoView-->
+            <!--android:id="@+id/vv_video"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/normal_width_100" />-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
