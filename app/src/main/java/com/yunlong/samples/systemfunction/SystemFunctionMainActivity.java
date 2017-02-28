@@ -10,6 +10,7 @@ import com.yunlong.samples.model.YLMain;
 import com.yunlong.samples.systemfunction.bluetooth.BluetoothMainActivity;
 import com.yunlong.samples.systemfunction.camera.CameraMainActivity;
 import com.yunlong.samples.systemfunction.gps.GPSMainActivity;
+import com.yunlong.samples.systemfunction.media.MediaPlayerActivity;
 import com.yunlong.samples.systemfunction.multipoint.MultipointActivity;
 import com.yunlong.samples.systemfunction.nfc.NFCMainActivity;
 import com.yunlong.samples.systemfunction.sensor.SensorMainActivity;
@@ -77,6 +78,7 @@ public class SystemFunctionMainActivity extends BaseActivity {
         addWiFiMain();
         addGPSMain();
         addCameraMain();
+        addMediaPlayer();
     }
 
     /**
@@ -151,8 +153,19 @@ public class SystemFunctionMainActivity extends BaseActivity {
     protected void addCameraMain() {
         YLMain ylMain = new YLMain();
         ylMain.activityIntent = CameraMainActivity.INTENT_ACTION;
-        ylMain.name = getString(R.string.nav_title_system_function_gps_camera_main);
-        ylMain.desc = getString(R.string.nav_title_system_function_gps_camera_main_desc);
+        ylMain.name = getString(R.string.nav_title_system_function_camera_main);
+        ylMain.desc = getString(R.string.nav_title_system_function_camera_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 音频功能主界面
+     */
+    protected void addMediaPlayer() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = MediaPlayerActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_system_function_media_player);
+        ylMain.desc = getString(R.string.nav_title_system_function_media_player_desc);
         dataList.add(ylMain);
     }
 

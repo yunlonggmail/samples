@@ -47,7 +47,7 @@ public class CameraMainActivity extends BaseActivity {
 
     @Override
     protected void initTitleBar() {
-        titleBar.setTitle(R.string.nav_title_system_function_gps_camera_main);
+        titleBar.setTitle(R.string.nav_title_system_function_camera_main);
         super.initTitleBar();
     }
 
@@ -79,8 +79,8 @@ public class CameraMainActivity extends BaseActivity {
     private void addCameraNormal() {
         YLMain ylMain = new YLMain();
         ylMain.activityIntent = CameraNormalActivity.INTENT_ACTION;
-        ylMain.name = getString(R.string.nav_title_system_function_gps_camera_normal);
-        ylMain.desc = getString(R.string.nav_title_system_function_gps_camera_normal_desc);
+        ylMain.name = getString(R.string.nav_title_system_function_camera_normal);
+        ylMain.desc = getString(R.string.nav_title_system_function_camera_normal_desc);
         dataList.add(ylMain);
     }
 
@@ -90,8 +90,8 @@ public class CameraMainActivity extends BaseActivity {
     private void addCameraCustom() {
         YLMain ylMain = new YLMain();
         ylMain.activityIntent = CameraCustomActivity.INTENT_ACTION;
-        ylMain.name = getString(R.string.nav_title_system_function_gps_camera_custom);
-        ylMain.desc = getString(R.string.nav_title_system_function_gps_camera_custom_desc);
+        ylMain.name = getString(R.string.nav_title_system_function_camera_custom);
+        ylMain.desc = getString(R.string.nav_title_system_function_camera_custom_desc);
         dataList.add(ylMain);
     }
 }

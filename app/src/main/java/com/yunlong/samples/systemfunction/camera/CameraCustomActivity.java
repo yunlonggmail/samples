@@ -76,7 +76,7 @@ public class CameraCustomActivity extends BaseActivity implements View.OnClickLi
 
     @Override
     protected void initTitleBar() {
-        titleBar.setTitle(R.string.nav_title_system_function_gps_camera_custom);
+        titleBar.setTitle(R.string.nav_title_system_function_camera_custom);
         super.initTitleBar();
     }
 

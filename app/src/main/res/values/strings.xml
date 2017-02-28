@@ -48,12 +48,14 @@
     <string name="nav_title_system_function_gps_location_provider_desc">手机上的GPS提供者信息</string>
     <string name="nav_title_system_function_gps_location_info">GPS位置信息</string>
     <string name="nav_title_system_function_gps_location_info_desc">手机上的GPS位置信息（经度、纬度、高度、速度、方向），两点之间的距离</string>
-    <string name="nav_title_system_function_gps_camera_main">照相机功能主界面</string>
-    <string name="nav_title_system_function_gps_camera_main_desc">快速照相，快速摄像，自定义照相，自省也摄像</string>
-    <string name="nav_title_system_function_gps_camera_normal">照相机普通功能</string>
-    <string name="nav_title_system_function_gps_camera_normal_desc">快速照相，快速摄像</string>
-    <string name="nav_title_system_function_gps_camera_custom">定制照相机功能</string>
-    <string name="nav_title_system_function_gps_camera_custom_desc">定制照相，定制摄像</string>
+    <string name="nav_title_system_function_camera_main">照相机功能主界面</string>
+    <string name="nav_title_system_function_camera_main_desc">快速照相，快速摄像，自定义照相，自定义摄像</string>
+    <string name="nav_title_system_function_camera_normal">照相机普通功能</string>
+    <string name="nav_title_system_function_camera_normal_desc">快速照相，快速摄像</string>
+    <string name="nav_title_system_function_camera_custom">定制照相机功能</string>
+    <string name="nav_title_system_function_camera_custom_desc">定制照相，定制摄像</string>
+    <string name="nav_title_system_function_media_player">音频操作</string>
+    <string name="nav_title_system_function_media_player_desc">音频的播放和录制</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>
@@ -125,5 +127,15 @@
     <string name="a_camera_normal_permission_denied">需要的权限被拒绝，该功能无法被使用</string>
     <string name="a_camera_normal_permission_setting">需要的权限被拒绝，该功能无法被使用，如果需要继续授权请前往设置页面进行授权</string>
     <string name="a_camera_custom_init">初始化</string>
+
+    <!--Media-->
+    <string name="a_media_player_play">播放%s</string>
+    <string name="a_media_player_pause">暂停%s</string>
+    <string name="a_media_player_stop">停止%s</string>
+    <string name="a_media_player_raw">资源文件</string>
+    <string name="a_media_player_sd">SD卡文件</string>
+    <string name="a_media_player_record">录音</string>
+    <string name="a_media_player_record_file">录音文件</string>
+    <string name="a_media_player_stop_record">停止录音</string>
 
 </resources>
