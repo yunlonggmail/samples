@@ -56,6 +56,10 @@
     <string name="nav_title_system_function_camera_custom_desc">定制照相，定制摄像</string>
     <string name="nav_title_system_function_media_player">音频操作</string>
     <string name="nav_title_system_function_media_player_desc">音频的播放和录制</string>
+    <string name="nav_title_system_function_tts">TTS操作</string>
+    <string name="nav_title_system_function_tts_desc">TextToSpeech 只识别英文</string>
+    <string name="nav_title_system_function_ringtone">铃声设置</string>
+    <string name="nav_title_system_function_ringtone_desc">设置来电，闹钟，通知的铃声</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>
@@ -137,5 +141,15 @@
     <string name="a_media_player_record">录音</string>
     <string name="a_media_player_record_file">录音文件</string>
     <string name="a_media_player_stop_record">停止录音</string>
+
+    <!--TextToSpeech-->
+    <string name="a_tts_et_hint">只识别英文</string>
+    <string name="a_tts_start">开始朗读</string>
+
+    <!--TextToSpeech-->
+    <string name="a_ringtone_call">设置来电铃声</string>
+    <string name="a_ringtone_alarm">设置闹钟铃声</string>
+    <string name="a_ringtone_notification">设置通知铃声</string>
+
 
 </resources>

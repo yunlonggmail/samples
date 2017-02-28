@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_normal_f"
+    android:orientation="vertical">
+
+    <include layout="@layout/i_tool_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/normal_width_10">
+
+        <Button
+            android:id="@+id/btn_ringtone_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_width_30"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg"
+            android:padding="@dimen/normal_width_10"
+            android:text="@string/a_ringtone_call"
+            android:textColor="@color/color_normal_3"
+            android:textSize="@dimen/text_size_normal_8" />
+
+        <Button
+            android:id="@+id/btn_ringtone_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_width_30"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg"
+            android:padding="@dimen/normal_width_10"
+            android:text="@string/a_ringtone_alarm"
+            android:textColor="@color/color_normal_3"
+            android:textSize="@dimen/text_size_normal_8" />
+
+        <Button
+            android:id="@+id/btn_ringtone_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_width_30"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg"
+            android:padding="@dimen/normal_width_10"
+            android:text="@string/a_ringtone_notification"
+            android:textColor="@color/color_normal_3"
+            android:textSize="@dimen/text_size_normal_8" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -11,9 +11,11 @@ import com.yunlong.samples.systemfunction.bluetooth.BluetoothMainActivity;
 import com.yunlong.samples.systemfunction.camera.CameraMainActivity;
 import com.yunlong.samples.systemfunction.gps.GPSMainActivity;
 import com.yunlong.samples.systemfunction.media.MediaPlayerActivity;
-import com.yunlong.samples.systemfunction.multipoint.MultipointActivity;
+import com.yunlong.samples.systemfunction.multitouch.MultitouchActivity;
 import com.yunlong.samples.systemfunction.nfc.NFCMainActivity;
+import com.yunlong.samples.systemfunction.ringtone.RingtoneManagerActivity;
 import com.yunlong.samples.systemfunction.sensor.SensorMainActivity;
+import com.yunlong.samples.systemfunction.tts.TTSActivity;
 import com.yunlong.samples.systemfunction.wifip2p.WiFiP2PMainActivity;
 
 import java.util.ArrayList;
@@ -79,6 +81,8 @@ public class SystemFunctionMainActivity extends BaseActivity {
         addGPSMain();
         addCameraMain();
         addMediaPlayer();
+        addTTS();
+        addRingtoneManager();
     }
 
     /**
@@ -86,7 +90,7 @@ public class SystemFunctionMainActivity extends BaseActivity {
      */
     protected void addMultiPoint() {
         YLMain ylMain = new YLMain();
-        ylMain.activityIntent = MultipointActivity.INTENT_ACTION;
+        ylMain.activityIntent = MultitouchActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_system_function_multipoint);
         ylMain.desc = getString(R.string.nav_title_system_function_multipoint_desc);
         dataList.add(ylMain);
@@ -166,6 +170,28 @@ public class SystemFunctionMainActivity extends BaseActivity {
         ylMain.activityIntent = MediaPlayerActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_system_function_media_player);
         ylMain.desc = getString(R.string.nav_title_system_function_media_player_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * TextToSpeech功能主界面
+     */
+    protected void addTTS() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = TTSActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_system_function_tts);
+        ylMain.desc = getString(R.string.nav_title_system_function_tts_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * TextToSpeech功能主界面
+     */
+    protected void addRingtoneManager() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = RingtoneManagerActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_system_function_ringtone);
+        ylMain.desc = getString(R.string.nav_title_system_function_ringtone_desc);
         dataList.add(ylMain);
     }
 

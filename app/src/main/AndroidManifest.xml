@@ -161,10 +161,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".systemfunction.multipoint.MultipointActivity"
+            android:name=".systemfunction.multitouch.MultitouchActivity"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.yunlong.samples.system.function.Multipoint" />
+                <action android:name="com.yunlong.samples.system.function.Multitouch" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -331,6 +331,36 @@
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="com.yunlong.samples.system.function.MediaPlayer" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+        </activity>
+        <!--TTS，TextToSpeech-->
+        <activity
+            android:name=".systemfunction.tts.TTSActivity"
+            android:exported="false"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.system.function.TTS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+        </activity>
+        <!--TTS，TextToSpeech-->
+        <activity
+            android:name=".systemfunction.ringtone.RingtoneManagerActivity"
+            android:exported="false"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.system.function.RingtoneManager" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
