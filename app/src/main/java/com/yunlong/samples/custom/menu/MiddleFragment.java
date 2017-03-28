@@ -25,8 +25,13 @@ public class MiddleFragment extends BaseFragment implements View.OnClickListener
     }
 
     @Override
-    protected void viewDidLoad() {
+    protected void initView() {
         btnMiddleMenu.setOnClickListener(this);
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     @Override

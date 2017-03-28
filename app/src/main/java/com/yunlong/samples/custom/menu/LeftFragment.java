@@ -25,8 +25,13 @@ public class LeftFragment extends BaseFragment implements View.OnClickListener {
     }
 
     @Override
-    protected void viewDidLoad() {
+    protected void initView() {
         btnLeftMenu.setOnClickListener(this);
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     @Override

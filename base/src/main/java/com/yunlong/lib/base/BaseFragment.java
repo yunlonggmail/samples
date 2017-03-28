@@ -57,5 +57,12 @@ public abstract class BaseFragment extends Fragment {
     /**
      * View加载
      */
-    protected abstract void viewDidLoad();
+    protected void viewDidLoad() {
+        initView();
+        initData();
+    }
+
+    protected abstract void initView();
+
+    protected abstract void initData();
 }

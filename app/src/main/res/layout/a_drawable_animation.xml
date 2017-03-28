@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_normal_f"
+    android:orientation="vertical">
+
+    <include layout="@layout/i_tool_bar" />
+
+    <ImageView
+        android:id="@+id/iv_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/drawable_anim_rotate" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_width_10">
+
+        <ImageView
+            android:id="@+id/iv_xml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_frame_anim" />
+
+        <Button
+            android:id="@+id/btn_start_xml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:padding="@dimen/normal_width_10"
+            android:text="@string/a_drawable_animation_btn_xml"
+            android:textColor="@color/color_normal_3"
+            android:textSize="@dimen/text_size_normal_8" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_width_10">
+
+        <ImageView
+            android:id="@+id/iv_java"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_frame_anim" />
+
+
+        <Button
+            android:id="@+id/btn_start_java"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:padding="@dimen/normal_width_10"
+            android:text="@string/a_drawable_animation_btn_java"
+            android:textColor="@color/color_normal_3"
+            android:textSize="@dimen/text_size_normal_8" />
+
+    </LinearLayout>
+</LinearLayout>

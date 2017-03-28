@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_normal_f"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/normal_width_10">
+
+            <include layout="@layout/i_animation_tween_top" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/normal_width_10"
+                android:paddingTop="@dimen/normal_width_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_animation_tween_alpha_from"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <EditText
+                    android:id="@+id/et_from_alpha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/a_login_et_bg"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:padding="@dimen/normal_width_10"
+                    android:textColor="@color/color_normal_3"
+                    android:textColorHint="@color/a_login_account_hint"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_animation_tween_alpha_to"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <EditText
+                    android:id="@+id/et_to_alpha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/a_login_et_bg"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:padding="@dimen/normal_width_10"
+                    android:textColor="@color/color_normal_3"
+                    android:textColorHint="@color/a_login_account_hint"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+            </LinearLayout>
+
+            <include layout="@layout/i_animation_tween_bottom" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

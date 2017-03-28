@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_normal_f"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/normal_width_10">
+
+            <include layout="@layout/i_animation_tween_top" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_constructor_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/a_animation_tween_constructor_4"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <RadioButton
+                    android:id="@+id/rb_constructor_6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/a_animation_tween_constructor_6"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <RadioButton
+                    android:id="@+id/rb_constructor_8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/a_animation_tween_constructor_8"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/normal_width_10"
+                android:paddingTop="@dimen/normal_width_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_animation_tween_scale_from_x"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <EditText
+                    android:id="@+id/et_from_x"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/a_login_et_bg"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:padding="@dimen/normal_width_10"
+                    android:textColor="@color/color_normal_3"
+                    android:textColorHint="@color/a_login_account_hint"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_animation_tween_scale_from_y"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <EditText
+                    android:id="@+id/et_from_y"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/a_login_et_bg"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:padding="@dimen/normal_width_10"
+                    android:textColor="@color/color_normal_3"
+                    android:textColorHint="@color/a_login_account_hint"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/normal_width_10"
+                android:paddingTop="@dimen/normal_width_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_animation_tween_scale_to_x"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <EditText
+                    android:id="@+id/et_to_x"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/a_login_et_bg"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:padding="@dimen/normal_width_10"
+                    android:textColor="@color/color_normal_3"
+                    android:textColorHint="@color/a_login_account_hint"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_animation_tween_scale_to_y"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <EditText
+                    android:id="@+id/et_to_y"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/a_login_et_bg"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:padding="@dimen/normal_width_10"
+                    android:textColor="@color/color_normal_3"
+                    android:textColorHint="@color/a_login_account_hint"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/normal_width_10"
+                        android:text="@string/a_animation_tween_pivot_x_type"
+                        android:textColor="@color/color_normal_3"
+                        android:textSize="@dimen/text_size_normal_6" />
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_x_absolute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/a_animation_tween_pivot_type_absolute"
+                            android:textColor="@color/color_normal_3"
+                            android:textSize="@dimen/text_size_normal_6" />
+
+                        <RadioButton
+                            android:id="@+id/rb_x_self"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/a_animation_tween_pivot_type_self"
+                            android:textColor="@color/color_normal_3"
+                            android:textSize="@dimen/text_size_normal_6" />
+
+                        <RadioButton
+                            android:id="@+id/rb_x_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/a_animation_tween_pivot_type_parent"
+                            android:textColor="@color/color_normal_3"
+                            android:textSize="@dimen/text_size_normal_6" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/normal_width_10"
+                        android:text="@string/a_animation_tween_pivot_y_type"
+                        android:textColor="@color/color_normal_3"
+                        android:textSize="@dimen/text_size_normal_6" />
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_y_absolute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/a_animation_tween_pivot_type_absolute"
+                            android:textColor="@color/color_normal_3"
+                            android:textSize="@dimen/text_size_normal_6" />
+
+                        <RadioButton
+                            android:id="@+id/rb_y_self"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/a_animation_tween_pivot_type_self"
+                            android:textColor="@color/color_normal_3"
+                            android:textSize="@dimen/text_size_normal_6" />
+
+                        <RadioButton
+                            android:id="@+id/rb_y_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/a_animation_tween_pivot_type_parent"
+                            android:textColor="@color/color_normal_3"
+                            android:textSize="@dimen/text_size_normal_6" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/normal_width_10"
+                android:paddingTop="@dimen/normal_width_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_animation_tween_pivot_x"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <EditText
+                    android:id="@+id/et_pivot_x"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/a_login_et_bg"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:padding="@dimen/normal_width_10"
+                    android:textColor="@color/color_normal_3"
+                    android:textColorHint="@color/a_login_account_hint"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/normal_width_10"
+                    android:text="@string/a_animation_tween_pivot_y"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+                <EditText
+                    android:id="@+id/et_pivot_y"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/a_login_et_bg"
+                    android:gravity="center_horizontal"
+                    android:inputType="numberDecimal"
+                    android:lines="1"
+                    android:padding="@dimen/normal_width_10"
+                    android:textColor="@color/color_normal_3"
+                    android:textColorHint="@color/a_login_account_hint"
+                    android:textSize="@dimen/text_size_normal_6" />
+
+            </LinearLayout>
+
+            <include layout="@layout/i_animation_tween_bottom" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

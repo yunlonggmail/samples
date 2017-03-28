@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_normal_f"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/normal_width_10"
+        android:paddingTop="@dimen/normal_width_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/normal_width_10"
+            android:text="@string/a_animation_tween_all_duration"
+            android:textColor="@color/color_normal_3"
+            android:textSize="@dimen/text_size_normal_6" />
+
+        <EditText
+            android:id="@+id/et_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/a_login_et_bg"
+            android:gravity="center_horizontal"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:padding="@dimen/normal_width_10"
+            android:textColor="@color/color_normal_3"
+            android:textColorHint="@color/a_login_account_hint"
+            android:textSize="@dimen/text_size_normal_6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/normal_width_10"
+            android:text="@string/a_animation_tween_all_start_offset"
+            android:textColor="@color/color_normal_3"
+            android:textSize="@dimen/text_size_normal_6" />
+
+        <EditText
+            android:id="@+id/et_start_offset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/a_login_et_bg"
+            android:gravity="center_horizontal"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:padding="@dimen/normal_width_10"
+            android:textColor="@color/color_normal_3"
+            android:textColorHint="@color/a_login_account_hint"
+            android:textSize="@dimen/text_size_normal_6" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/normal_width_10"
+        android:paddingTop="@dimen/normal_width_10">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_reverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a_animation_tween_all_repeat_reverse"
+                android:textColor="@color/color_normal_3"
+                android:textSize="@dimen/text_size_normal_6" />
+
+            <RadioButton
+                android:id="@+id/rb_restart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/a_animation_tween_all_repeat_restart"
+                android:textColor="@color/color_normal_3"
+                android:textSize="@dimen/text_size_normal_6" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/normal_width_10"
+            android:text="@string/a_animation_tween_all_repeat_count"
+            android:textColor="@color/color_normal_3"
+            android:textSize="@dimen/text_size_normal_6" />
+
+        <EditText
+            android:id="@+id/et_repeat_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/a_login_et_bg"
+            android:gravity="center_horizontal"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:padding="@dimen/normal_width_10"
+            android:textColor="@color/color_normal_3"
+            android:textColorHint="@color/a_login_account_hint"
+            android:textSize="@dimen/text_size_normal_6" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/normal_width_10"
+        android:paddingTop="@dimen/normal_width_10">
+
+        <CheckBox
+            android:id="@+id/cb_fill_before"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/a_animation_tween_all_fill_before"
+            android:textColor="@color/color_normal_3"
+            android:textSize="@dimen/text_size_normal_6" />
+
+        <CheckBox
+            android:id="@+id/cb_fill_after"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/a_animation_tween_all_fill_after"
+            android:textColor="@color/color_normal_3"
+            android:textSize="@dimen/text_size_normal_6" />
+
+        <CheckBox
+            android:id="@+id/cb_fill_enabled"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/a_animation_tween_all_fill_enabled"
+            android:textColor="@color/color_normal_3"
+            android:textSize="@dimen/text_size_normal_6" />
+
+    </LinearLayout>
+
+</LinearLayout>

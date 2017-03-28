@@ -21,7 +21,6 @@
     <color name="magenta">#ffff00ff</color>
 
     <!--Normal_color-->
-
     <color name="color_normal_0">#000000</color>
     <color name="color_normal_3">#333333</color>
     <color name="color_normal_6">#666666</color>
@@ -29,8 +28,14 @@
     <color name="color_normal_8">#888888</color>
     <color name="color_normal_9">#999999</color>
     <color name="color_normal_f">#ffffff</color>
+    <color name="translate">#00000000</color>
+
+    <!--PagerSlidingTabStrip-->
+    <color name="v_psts_title_bg">#f9f9f9</color>
+    <color name="v_psts_divider_line">#00000000</color>
+    <color name="v_psts_indicator_line">#FF06B5C9</color>
+    <color name="v_psts_under_line">#e4e4e4</color>
 
     <color name="toolbar_bg">#fafafa</color>
     <color name="transparent">#00000000</color>
-
 </resources>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_normal_f"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/normal_width_10">
+
+            <EditText
+                android:id="@+id/et_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/a_login_et_bg"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:lines="1"
+                android:padding="@dimen/normal_width_10"
+                android:textColor="@color/color_normal_3"
+                android:textColorHint="@color/a_login_account_hint"
+                android:textSize="@dimen/text_size_normal_6" />
+
+            <Button
+                android:id="@+id/btn_start_anim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_10"
+                android:background="@drawable/button_bg"
+                android:padding="@dimen/normal_width_10"
+                android:text="@string/a_animation_tween_interpolator_start_anim"
+                android:textColor="@color/color_normal_3"
+                android:textSize="@dimen/text_size_normal_8" />
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_20"
+                android:background="@color/a_animation_tween_interpolator_text_1"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_animation_tween_interpolator_text_1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_2" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_5"
+                android:background="@color/a_animation_tween_interpolator_text_2"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_animation_tween_interpolator_text_2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal_2" />
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_5"
+                android:background="@color/a_animation_tween_interpolator_text_3"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_animation_tween_interpolator_text_3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_2" />
+
+            <TextView
+                android:id="@+id/tv_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_5"
+                android:background="@color/a_animation_tween_interpolator_text_4"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_animation_tween_interpolator_text_4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_2" />
+
+            <TextView
+                android:id="@+id/tv_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_5"
+                android:background="@color/a_animation_tween_interpolator_text_5"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_animation_tween_interpolator_text_5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/normal_width_5"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/v_left"
+                    android:layout_width="@dimen/normal_width_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/black" />
+
+                <View
+                    android:layout_width="@dimen/normal_width_20"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tv_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/a_animation_tween_interpolator_text_6"
+                    android:padding="@dimen/normal_width_5"
+                    android:text="@string/a_animation_tween_interpolator_text_6"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal_2" />
+
+                <View
+                    android:layout_width="@dimen/normal_width_20"
+                    android:layout_height="match_parent" />
+
+                <View
+                    android:id="@+id/v_right"
+                    android:layout_width="@dimen/normal_width_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/black" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_5"
+                android:background="@color/a_animation_tween_interpolator_text_7"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_animation_tween_interpolator_text_7"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal_2" />
+
+            <TextView
+                android:id="@+id/tv_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_10"
+                android:background="@color/a_animation_tween_interpolator_text_8"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_animation_tween_interpolator_text_9"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_2" />
+
+            <TextView
+                android:id="@+id/tv_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_5"
+                android:background="@color/a_animation_tween_interpolator_text_9"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_animation_tween_interpolator_text_9"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_2" />
+
+            <TextView
+                android:id="@+id/tv_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_5"
+                android:background="@color/a_animation_tween_interpolator_text_10"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_animation_tween_interpolator_text_10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_2" />
+
+            <TextView
+                android:id="@+id/tv_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_5"
+                android:background="@color/a_animation_tween_interpolator_text_11"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_animation_tween_interpolator_text_11"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal_2" />
+
+            <TextView
+                android:id="@+id/tv_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_5"
+                android:background="@color/a_animation_tween_interpolator_text_12"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_animation_tween_interpolator_text_12"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_2" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

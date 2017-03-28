@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_normal_f"
+    android:orientation="vertical">
+
+    <include layout="@layout/i_tool_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yunlong.lib.widget.PagerSlidingTabStrip
+            android:id="@+id/psts_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_width_50"
+            android:background="@color/color_normal_f"
+            app:pstsDividerColor="@color/v_psts_divider_line"
+            app:pstsIndicatorColor="@color/v_psts_indicator_line"
+            app:pstsIndicatorHeight="4dp"
+            app:pstsShouldExpand="true"
+            app:pstsTabBackground="@drawable/psts_tab_bg"
+            app:pstsTabPaddingLeftRight="14dp"
+            app:pstsUnderlineColor="@color/v_psts_under_line"
+            app:pstsUnderlineHeight="1dp"
+            app:zmsSelectedTabTextColor="@color/v_psts_indicator_line"
+            app:zmsSelectedTabTextSize="@dimen/text_size_normal_6"
+            app:zmsTabTextColor="@color/color_normal_6"
+            app:zmsTabTextSize="@dimen/text_size_normal_6" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>

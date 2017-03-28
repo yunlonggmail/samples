@@ -5,4 +5,19 @@
 
 
     <color name="lr_menu_masked_color">#88ffff00</color>
+
+
+    <color name="a_animation_tween_interpolator_text_1">#ff000000</color>
+    <color name="a_animation_tween_interpolator_text_2">#ffffff00</color>
+    <color name="a_animation_tween_interpolator_text_3">#ff444444</color>
+    <color name="a_animation_tween_interpolator_text_4">#ff06b5c9</color>
+    <color name="a_animation_tween_interpolator_text_5">#ff888888</color>
+    <color name="a_animation_tween_interpolator_text_6">#ff00ffff</color>
+    <color name="a_animation_tween_interpolator_text_7">#ffcccccc</color>
+    <color name="a_animation_tween_interpolator_text_8">#ffff00ff</color>
+    <color name="a_animation_tween_interpolator_text_9">#ffff0000</color>
+    <color name="a_animation_tween_interpolator_text_10">#ff3f51b5</color>
+    <color name="a_animation_tween_interpolator_text_11">#ff00ff00</color>
+    <color name="a_animation_tween_interpolator_text_12">#ff0000ff</color>
+
 </resources>

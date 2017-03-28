@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
+import com.yunlong.samples.animation.AnimationMainActivity;
 import com.yunlong.samples.custom.CustomMainActivity;
 import com.yunlong.samples.incremental.IncrementalUpdateActivity;
 import com.yunlong.samples.intent.IntentMainActivity;
@@ -63,6 +64,7 @@ public class MainActivity extends BaseActivity {
         addReceiverMain();
         addCustomMain();
         addSystemFunction();
+        addAnimation();
     }
 
     /**
@@ -128,6 +130,17 @@ public class MainActivity extends BaseActivity {
         ylMain.activityIntent = SystemFunctionMainActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_system_function_main);
         ylMain.desc = getString(R.string.nav_title_system_function_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 动画功能主界面
+     */
+    protected void addAnimation() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = AnimationMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_animation_main);
+        ylMain.desc = getString(R.string.nav_title_animation_main_desc);
         dataList.add(ylMain);
     }
 

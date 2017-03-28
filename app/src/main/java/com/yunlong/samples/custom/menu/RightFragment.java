@@ -25,8 +25,13 @@ public class RightFragment extends BaseFragment implements View.OnClickListener 
     }
 
     @Override
-    protected void viewDidLoad() {
+    protected void initView() {
         btnRightMenu.setOnClickListener(this);
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     @Override

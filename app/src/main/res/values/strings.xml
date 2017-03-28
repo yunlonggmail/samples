@@ -60,6 +60,19 @@
     <string name="nav_title_system_function_tts_desc">TextToSpeech 只识别英文</string>
     <string name="nav_title_system_function_ringtone">铃声设置</string>
     <string name="nav_title_system_function_ringtone_desc">设置来电，闹钟，通知的铃声</string>
+    <string name="nav_title_animation_main">动画主界面</string>
+    <string name="nav_title_animation_main_desc">Tween动画，Drawable动画，Property动画，MaterialDesign动画</string>
+    <string name="nav_title_animation_tween_main">补间动画主界面</string>
+    <string name="nav_title_animation_tween_main_desc">所有补间动画，自定义补间动画，动画合集</string>
+    <string name="nav_title_animation_tween_animation_all">所有的补间动画</string>
+    <string name="nav_title_animation_tween_animation_all_desc">AlphaAnimation，RotateAnimation, ScaleAnimation, TranslateAnimtation,AnimationSet</string>
+    <string name="nav_title_drawable_animation">帧动画界面</string>
+    <string name="nav_title_drawable_animation_desc">帧动画页面XML和java代码实现帧动画</string>
+
+    <string name="nav_title_copy_main">复制主页面</string>
+    <string name="nav_title_copy_main_desc">复制主页面</string>
+    <string name="nav_title_copy">复制页面</string>
+    <string name="nav_title_copy_desc">复制页面</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>
@@ -150,6 +163,82 @@
     <string name="a_ringtone_call">设置来电铃声</string>
     <string name="a_ringtone_alarm">设置闹钟铃声</string>
     <string name="a_ringtone_notification">设置通知铃声</string>
+
+
+    <!--TweenAnimationAll-->
+    <string name="a_animation_tween_all_btn_start_java">执行Java动画</string>
+    <string name="a_animation_tween_all_btn_start_xml">执行XML动画</string>
+    <string name="a_animation_tween_all_duration">Duration</string>
+    <string name="a_animation_tween_all_start_offset">StartOffset</string>
+    <string name="a_animation_tween_all_repeat_count">RepeatCount</string>
+    <string name="a_animation_tween_all_repeat_reverse">Reverse</string>
+    <string name="a_animation_tween_all_repeat_restart">Restart</string>
+    <string name="a_animation_tween_all_fill_before">FillBefore</string>
+    <string name="a_animation_tween_all_fill_after">FillAfter</string>
+    <string name="a_animation_tween_all_fill_enabled">FillEnabled</string>
+
+    <string name="a_animation_tween_alpha_from">FromAlpha</string>
+    <string name="a_animation_tween_alpha_to">ToAlpha</string>
+    <string name="a_animation_tween_degree_from">FromDegree</string>
+    <string name="a_animation_tween_degree_to">ToDegree</string>
+
+    <string name="a_animation_tween_pivot_x_type">PivotXType</string>
+    <string name="a_animation_tween_pivot_y_type">PivotYType</string>
+
+    <string name="a_animation_tween_pivot_x">PivotX</string>
+    <string name="a_animation_tween_pivot_y">PivotY</string>
+
+    <string name="a_animation_tween_pivot_type_absolute">Absolute</string>
+    <string name="a_animation_tween_pivot_type_self">Self</string>
+    <string name="a_animation_tween_pivot_type_parent">Parent</string>
+
+    <string name="a_animation_tween_translate_from_x_delta">FromXDelta</string>
+    <string name="a_animation_tween_translate_from_y_delta">FromYDelta</string>
+    <string name="a_animation_tween_translate_to_x_delta">ToXDelta</string>
+    <string name="a_animation_tween_translate_to_y_delta">ToYDelta</string>
+    <string name="a_animation_tween_translate_from_x_type">FromXType</string>
+    <string name="a_animation_tween_translate_from_y_type">FromYType</string>
+    <string name="a_animation_tween_translate_to_x_type">ToXType</string>
+    <string name="a_animation_tween_translate_to_y_type">ToYType</string>
+
+    <string name="a_animation_tween_type_absolute">Absolute</string>
+    <string name="a_animation_tween_type_self">Self</string>
+    <string name="a_animation_tween_type_parent">Parent</string>
+
+
+    <string name="a_animation_tween_scale_from_x">fromX</string>
+    <string name="a_animation_tween_scale_to_x">toX</string>
+    <string name="a_animation_tween_scale_from_y">fromY</string>
+    <string name="a_animation_tween_scale_to_y">toY</string>
+
+    <string name="a_animation_tween_constructor_2">2个参数构造方法</string>
+    <string name="a_animation_tween_constructor_4">4个参数构造方法</string>
+    <string name="a_animation_tween_constructor_6">6个参数构造方法</string>
+    <string name="a_animation_tween_constructor_8">8个参数构造方法</string>
+
+    <string name="a_animation_tween_interpolator_start_anim">开始执行</string>
+    <string name="a_animation_tween_interpolator_text_1">差值器1</string>
+    <string name="a_animation_tween_interpolator_text_2">差值器2</string>
+    <string name="a_animation_tween_interpolator_text_3">差值器3</string>
+    <string name="a_animation_tween_interpolator_text_4">差值器4</string>
+    <string name="a_animation_tween_interpolator_text_5">差值器5</string>
+    <string name="a_animation_tween_interpolator_text_6">差值器6</string>
+    <string name="a_animation_tween_interpolator_text_7">差值器7</string>
+    <string name="a_animation_tween_interpolator_text_8">差值器8</string>
+    <string name="a_animation_tween_interpolator_text_9">差值器9</string>
+    <string name="a_animation_tween_interpolator_text_10">差值器10</string>
+    <string name="a_animation_tween_interpolator_text_11">差值器11</string>
+    <string name="a_animation_tween_interpolator_text_12">差值器12</string>
+
+
+    <!--帧动画-->
+    <string name="a_drawable_animation_btn_xml">XML帧动画</string>
+    <string name="a_drawable_animation_btn_java">Java帧动画</string>
+
+    <!--Copy复制页面-->
+    <string name="a_copy_tv">文本</string>
+    <string name="a_copy_et_hint">默认文本</string>
+    <string name="a_copy_btn_text">按钮</string>
 
 
 </resources>
