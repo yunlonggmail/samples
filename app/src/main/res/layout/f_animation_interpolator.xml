@@ -202,6 +202,17 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_normal_2" />
 
+            <TextView
+                android:id="@+id/tv_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_width_5"
+                android:background="@color/a_animation_tween_interpolator_text_1"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_animation_tween_interpolator_text_13"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal_2" />
+
 
         </LinearLayout>
     </ScrollView>

@@ -202,8 +202,21 @@ pivotYType：该参数在XML中有三种情况，分别是num，num%，num%p，�
 |LinearInterpolator|linear_interpolator|直线插补器|
 |OvershootInterpolator|overshoot_interpolator|超出插补器|
 |FastOutLinearInInterpolator|accelerate_interpolator|MaterialDesign基于贝塞尔曲线的插补器 效果：依次 慢慢快|
-|FastOutSlowInInterpolator|accelerate_interpolator|MaterialDesign基于贝塞尔曲线的插补器 效果：依次 慢慢快|
-|LinearOutSlowInInterpolator|accelerate_interpolator|MaterialDesign基于贝塞尔曲线的插补器 效果：依次 慢慢快|
+|FastOutSlowInInterpolator|accelerate_interpolator|MaterialDesign基于贝塞尔曲线的插补器 效果：依次 慢快慢|
+|LinearOutSlowInInterpolator|accelerate_interpolator|MaterialDesign基于贝塞尔曲线的插补器 效果：依次 快慢慢|
+
+
+### 8.2 自定义差值器
+
+在API22及以后自定义差值器需要继承BaseInterpolator
+
+在其他API中自定义差值器需要实现Interpolator
+
+### 8.3 特殊说明
+
+在3.0之前所有的差值器都是基于Interpolator，在3.0之后所有的差值器都是基于TimeInterpolator。
+
+
 
 
 

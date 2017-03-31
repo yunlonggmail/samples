@@ -23,6 +23,7 @@ import com.yunlong.lib.base.BaseFragment;
 import com.yunlong.lib.utils.DisplayUtils;
 import com.yunlong.lib.utils.StringsUtils;
 import com.yunlong.samples.R;
+import com.yunlong.samples.animation.tween.interpolator.YLInterpolator;
 
 import butterknife.Bind;
 
@@ -75,6 +76,8 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
 
     @Bind(R.id.tv_12)
     TextView tv12;
+    @Bind(R.id.tv_13)
+    TextView tv13;
 
     @Bind(R.id.v_right)
     View vRight;
@@ -149,6 +152,9 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
             case 12:
                 start12();
                 break;
+            case 13:
+                start13();
+                break;
             default:
                 startAll();
         }
@@ -170,10 +176,11 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
         start10();
         start11();
         start12();
+        start13();
     }
 
     /**
-     * 开启1动画
+     * 开启加速减速插补器动画
      */
     private void start1() {
         Animation animation = getAnimation();
@@ -182,7 +189,7 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
     }
 
     /**
-     * 开启1动画
+     * 开启加速插补器动画
      */
     private void start2() {
         Animation animation = getAnimation();
@@ -191,7 +198,7 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
     }
 
     /**
-     * 开启1动画
+     * 开启向前插补器动画
      */
     private void start3() {
         Animation animation = getAnimation();
@@ -200,7 +207,7 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
     }
 
     /**
-     * 开启1动画
+     * 开启向前向后插补器动画
      */
     private void start4() {
         Animation animation = getAnimation();
@@ -209,7 +216,7 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
     }
 
     /**
-     * 开启1动画
+     * 开启反弹插补器动画
      */
     private void start5() {
         Animation animation = getAnimation();
@@ -218,10 +225,10 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
     }
 
     /**
-     * 开启1动画
+     * 开启循环插补器动画
      */
     private void start6() {
-        int dis = vRight.getLeft()-tv6.getLeft();
+        int dis = vRight.getLeft() - tv6.getLeft();
         TranslateAnimation translateAnimation = new TranslateAnimation(0, dis, 0, 0);
         translateAnimation.setDuration(3000);
         translateAnimation.setFillAfter(true);
@@ -230,7 +237,7 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
     }
 
     /**
-     * 开启1动画
+     * 开启减速插补器动画
      */
     private void start7() {
         Animation animation = getAnimation();
@@ -239,7 +246,7 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
     }
 
     /**
-     * 开启1动画
+     * 开启直线插补器动画
      */
     private void start8() {
         Animation animation = getAnimation();
@@ -248,7 +255,7 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
     }
 
     /**
-     * 开启1动画
+     * 开启超出插补器动画
      */
     private void start9() {
         Animation animation = getAnimation();
@@ -257,7 +264,7 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
     }
 
     /**
-     * 开启1动画
+     * 开启MaterialDesign基于贝塞尔曲线的插补器动画
      */
     private void start10() {
         Animation animation = getAnimation();
@@ -266,7 +273,7 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
     }
 
     /**
-     * 开启1动画
+     * 开启MaterialDesign基于贝塞尔曲线的插补器动画
      */
     private void start11() {
         Animation animation = getAnimation();
@@ -275,12 +282,21 @@ public class InterpolatorSetFragment extends BaseFragment implements View.OnClic
     }
 
     /**
-     * 开启1动画
+     * 开启MaterialDesign基于贝塞尔曲线的插补器动画
      */
     private void start12() {
         Animation animation = getAnimation();
         animation.setInterpolator(new LinearOutSlowInInterpolator());
         tv12.startAnimation(animation);
+    }
+
+    /**
+     * 开启自定义动画
+     */
+    private void start13() {
+        Animation animation = getAnimation();
+        animation.setInterpolator(new YLInterpolator());
+        tv13.startAnimation(animation);
     }
 
     private Animation getAnimation() {

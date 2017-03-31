@@ -65,9 +65,11 @@
     <string name="nav_title_animation_tween_main">补间动画主界面</string>
     <string name="nav_title_animation_tween_main_desc">所有补间动画，自定义补间动画，动画合集</string>
     <string name="nav_title_animation_tween_animation_all">所有的补间动画</string>
-    <string name="nav_title_animation_tween_animation_all_desc">AlphaAnimation，RotateAnimation, ScaleAnimation, TranslateAnimtation,AnimationSet</string>
+    <string name="nav_title_animation_tween_animation_all_desc">AlphaAnimation，RotateAnimation, ScaleAnimation, TranslateAnimation,AnimationSet</string>
     <string name="nav_title_drawable_animation">帧动画界面</string>
     <string name="nav_title_drawable_animation_desc">帧动画页面XML和java代码实现帧动画</string>
+    <string name="nav_title_animator_all">属性动画</string>
+    <string name="nav_title_animator_all_desc">Animator,ValueAnimator,ObjectAnimator,TimeAnimator</string>
 
     <string name="nav_title_copy_main">复制主页面</string>
     <string name="nav_title_copy_main_desc">复制主页面</string>
@@ -229,11 +231,23 @@
     <string name="a_animation_tween_interpolator_text_10">差值器10</string>
     <string name="a_animation_tween_interpolator_text_11">差值器11</string>
     <string name="a_animation_tween_interpolator_text_12">差值器12</string>
+    <string name="a_animation_tween_interpolator_text_13">差值器13</string>
 
 
     <!--帧动画-->
     <string name="a_drawable_animation_btn_xml">XML帧动画</string>
     <string name="a_drawable_animation_btn_java">Java帧动画</string>
+
+    <!--Animator-->
+    <string name="a_animator_start_set">执行动画集合</string>
+    <string name="a_animator_btn_int">OfInt(%d)</string>
+    <string name="a_animator_btn_float">OfFloat(%f)</string>
+    <string name="a_animator_btn_argb">OfArgb</string>
+    <string name="a_animator_pk_p">PropertyValueHolder</string>
+    <string name="a_animator_pk_k">KeyFrame</string>
+    <string name="a_animator_extra_view">ViewAnimator</string>
+    <string name="a_animator_extra_layout_add">add</string>
+    <string name="a_animator_extra_layout_remove">remove</string>
 
     <!--Copy复制页面-->
     <string name="a_copy_tv">文本</string>
