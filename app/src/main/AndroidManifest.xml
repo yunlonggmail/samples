@@ -219,10 +219,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".systemfunction.wifip2p.WiFiP2PMainActivity"
@@ -232,10 +228,6 @@
                 <action android:name="com.yunlong.samples.system.function.WiFiP2PMain" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
             </intent-filter>
         </activity>
         <activity
@@ -247,10 +239,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".systemfunction.gps.GPSLocationProviderActivity"
@@ -261,10 +249,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".systemfunction.gps.GPSLocationInfoActivity"
@@ -274,10 +258,6 @@
                 <action android:name="com.yunlong.samples.system.function.GPSLocationInfo" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
             </intent-filter>
         </activity>
 
@@ -291,10 +271,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".systemfunction.camera.CameraNormalActivity"
@@ -304,10 +280,6 @@
                 <action android:name="com.yunlong.samples.system.function.CameraNormal" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
             </intent-filter>
         </activity>
         <activity
@@ -319,10 +291,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
-            </intent-filter>
         </activity>
         <!--音频录制-->
         <activity
@@ -333,10 +301,6 @@
                 <action android:name="com.yunlong.samples.system.function.MediaPlayer" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
             </intent-filter>
         </activity>
         <!--TTS，TextToSpeech-->
@@ -350,9 +314,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
-            </intent-filter>
         </activity>
         <!--TTS，TextToSpeech-->
         <activity
@@ -363,10 +324,6 @@
                 <action android:name="com.yunlong.samples.system.function.RingtoneManager" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
             </intent-filter>
         </activity>
         <!--Animation-->
@@ -379,10 +336,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".animation.tween.TweenAnimationMainActivity"
@@ -392,10 +345,6 @@
                 <action android:name="com.yunlong.samples.animation.TweenAnimationMain" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
             </intent-filter>
         </activity>
         <activity
@@ -408,10 +357,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".animation.drawable.DrawableAnimationActivity"
@@ -423,10 +368,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.nfc.action.TECH_DISCOVERED" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".animation.property.PropertyAnimatorAllActivity"
@@ -435,6 +376,28 @@
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <action android:name="com.yunlong.samples.animation.PropertyAnimator" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".request.RequestMainActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.request.RequestMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".request.ok.OkHttpActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.request.OKHttp" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

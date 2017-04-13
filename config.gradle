@@ -13,7 +13,7 @@ ext {
             versionCode      : 1,
             versionName      : "0.1.1",
             multiDexEnabled  : true,
-            publishNonDefault :true
+            publishNonDefault: true
 
     ]
 
@@ -25,7 +25,7 @@ ext {
             DEBUG              : rootProject.ext.server.dev ? "true" : "false",
             RELEASE            : rootProject.ext.server.dev ? "false" : "true",
             RELEASE_SERVER_NAME: rootProject.ext.server.dev ? "测试" : "正式",
-            baseIsRelease :"false"
+            baseIsRelease      : "false"
     ]
 
 
@@ -34,6 +34,9 @@ ext {
             "com.android.support:recyclerview-v7": 'com.android.support:recyclerview-v7:23.3.0',
             "com.android.support:design"         : 'com.android.support:design:23.3.0',
             "com.android.support:cardview-v7"    : 'com.android.support:cardview-v7:23.3.0',
-            "com.jakewharton:butterknife"        : 'com.jakewharton:butterknife:7.0.1'
+            "com.jakewharton:butterknife"        : 'com.jakewharton:butterknife:7.0.1',
+            "com.squareup.okhttp"                : 'com.squareup.okhttp3:okhttp:3.6.0',
+            "com.google.gson"                    : 'com.google.code.gson:gson:2.3.1'
+
     ]
 }

@@ -12,6 +12,7 @@ import com.yunlong.samples.incremental.IncrementalUpdateActivity;
 import com.yunlong.samples.intent.IntentMainActivity;
 import com.yunlong.samples.model.YLMain;
 import com.yunlong.samples.receiver.ReceiverMainActivity;
+import com.yunlong.samples.request.RequestMainActivity;
 import com.yunlong.samples.service.ServiceMainActivity;
 import com.yunlong.samples.systemfunction.SystemFunctionMainActivity;
 
@@ -58,6 +59,7 @@ public class MainActivity extends BaseActivity {
     }
 
     protected void setData() {
+        addRequest();
         addIntentMain();
         addIncrementUpdateMain();
         addServiceMain();
@@ -65,6 +67,17 @@ public class MainActivity extends BaseActivity {
         addCustomMain();
         addSystemFunction();
         addAnimation();
+    }
+
+    /**
+     * 添加Request请求
+     */
+    protected void addRequest() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = RequestMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_request);
+        ylMain.desc = getString(R.string.nav_title_request_desc);
+        dataList.add(ylMain);
     }
 
     /**

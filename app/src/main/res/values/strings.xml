@@ -70,6 +70,10 @@
     <string name="nav_title_drawable_animation_desc">帧动画页面XML和java代码实现帧动画</string>
     <string name="nav_title_animator_all">属性动画</string>
     <string name="nav_title_animator_all_desc">Animator,ValueAnimator,ObjectAnimator,TimeAnimator</string>
+    <string name="nav_title_request">网络请求页面</string>
+    <string name="nav_title_request_desc">所有的网络OKHttp、Refit</string>
+    <string name="nav_title_request_ok">OKHttp请求</string>
+    <string name="nav_title_request_ok_desc">OKHttp请求</string>
 
     <string name="nav_title_copy_main">复制主页面</string>
     <string name="nav_title_copy_main_desc">复制主页面</string>
@@ -248,6 +252,10 @@
     <string name="a_animator_extra_view">ViewAnimator</string>
     <string name="a_animator_extra_layout_add">add</string>
     <string name="a_animator_extra_layout_remove">remove</string>
+
+    <!--Request-->
+    <!--OKHttp-->
+    <string name="a_request_ok_btn_get">GET请求</string>
 
     <!--Copy复制页面-->
     <string name="a_copy_tv">文本</string>
