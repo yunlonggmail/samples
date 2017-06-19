@@ -6,6 +6,10 @@
 
     <color name="lr_menu_masked_color">#88ffff00</color>
 
+    <color name="md_ripple_normal_color">#06b5c9</color>
+    <color name="md_ripple_ripple_color">#33000000</color>
+    <color name="md_ripple_mask_color">#66000000</color>
+
 
     <color name="a_animation_tween_interpolator_text_1">#ff000000</color>
     <color name="a_animation_tween_interpolator_text_2">#ffffff00</color>

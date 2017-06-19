@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
 import com.yunlong.samples.animation.drawable.DrawableAnimationActivity;
+import com.yunlong.samples.animation.md.MDActivity;
 import com.yunlong.samples.animation.property.PropertyAnimatorAllActivity;
 import com.yunlong.samples.animation.tween.TweenAnimationMainActivity;
 import com.yunlong.samples.main.MainDataAdapter;
@@ -68,6 +69,7 @@ public class AnimationMainActivity extends BaseActivity {
         addTweenMain();
         addDrawableAnim();
         addAnimator();
+        addMDAnimation();
     }
 
     /**
@@ -100,6 +102,17 @@ public class AnimationMainActivity extends BaseActivity {
         ylMain.activityIntent = PropertyAnimatorAllActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_animator_all);
         ylMain.desc = getString(R.string.nav_title_animator_all_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * MD动画
+     */
+    protected void addMDAnimation() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = MDActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_animation_md);
+        ylMain.desc = getString(R.string.nav_title_animation_md_desc);
         dataList.add(ylMain);
     }
 }

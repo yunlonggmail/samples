@@ -381,6 +381,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".animation.md.MDActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.animation.MD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".request.RequestMainActivity"
             android:exported="false"
             android:launchMode="singleTask"

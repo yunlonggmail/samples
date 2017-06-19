@@ -74,6 +74,8 @@
     <string name="nav_title_request_desc">所有的网络OKHttp、Refit</string>
     <string name="nav_title_request_ok">OKHttp请求</string>
     <string name="nav_title_request_ok_desc">OKHttp请求</string>
+    <string name="nav_title_animation_md">MD动画</string>
+    <string name="nav_title_animation_md_desc">MD动画：涟漪效果</string>
 
     <string name="nav_title_copy_main">复制主页面</string>
     <string name="nav_title_copy_main_desc">复制主页面</string>
@@ -252,6 +254,9 @@
     <string name="a_animator_extra_view">ViewAnimator</string>
     <string name="a_animator_extra_layout_add">add</string>
     <string name="a_animator_extra_layout_remove">remove</string>
+
+    <!--MD动画-->
+    <string name="a_animation_md_ripple">涟漪效果</string>
 
     <!--Request-->
     <!--OKHttp-->

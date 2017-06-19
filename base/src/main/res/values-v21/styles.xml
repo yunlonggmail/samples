@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="AppTheme.Base">
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:colorControlHighlight">#ffff0000</item>
+        <item name="android:colorAccent">#ffffff00</item>
+        <item name="android:colorControlActivated">#ff00ffff</item>
+        <item name="android:colorPrimary">#ff0000ff</item>
+    </style>
+
+</resources>

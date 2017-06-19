@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/a_animation_tween_interpolator_text_1">
+
+    <!--涟漪图形-->
+    <item
+        android:id="@android:id/mask"
+        android:drawable="@mipmap/ic_launcher" />
+
+    <item android:drawable="@color/white" />
+
+</ripple>
