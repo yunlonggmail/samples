@@ -15,6 +15,7 @@ import com.yunlong.samples.receiver.ReceiverMainActivity;
 import com.yunlong.samples.request.RequestMainActivity;
 import com.yunlong.samples.service.ServiceMainActivity;
 import com.yunlong.samples.systemfunction.SystemFunctionMainActivity;
+import com.yunlong.samples.test.TestMainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +68,7 @@ public class MainActivity extends BaseActivity {
         addCustomMain();
         addSystemFunction();
         addAnimation();
+        addTest();
     }
 
     /**
@@ -154,6 +156,17 @@ public class MainActivity extends BaseActivity {
         ylMain.activityIntent = AnimationMainActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_animation_main);
         ylMain.desc = getString(R.string.nav_title_animation_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 测试功能主界面
+     */
+    protected void addTest() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = TestMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_test_main);
+        ylMain.desc = getString(R.string.nav_title_test_main_desc);
         dataList.add(ylMain);
     }
 

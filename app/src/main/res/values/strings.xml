@@ -77,6 +77,15 @@
     <string name="nav_title_animation_md">MD动画</string>
     <string name="nav_title_animation_md_desc">MD动画：涟漪效果</string>
 
+
+    <!--测试-->
+    <string name="nav_title_test_main">测试主页面</string>
+    <string name="nav_title_test_main_desc">复制主页面</string>
+    <string name="nav_title_test_a">A界面</string>
+    <string name="nav_title_test_a_desc">测试A界面</string>
+    <string name="nav_title_test_b">B界面</string>
+    <string name="nav_title_test_b_desc">测试B界面</string>
+
     <string name="nav_title_copy_main">复制主页面</string>
     <string name="nav_title_copy_main_desc">复制主页面</string>
     <string name="nav_title_copy">复制页面</string>
@@ -266,6 +275,12 @@
     <string name="a_copy_tv">文本</string>
     <string name="a_copy_et_hint">默认文本</string>
     <string name="a_copy_btn_text">按钮</string>
+
+    <!--测试页面-->
+    <string name="a_test_a_start_b">Start B</string>
+    <string name="a_test_a_start_b_for_result">Start B For Result</string>
+    <string name="a_test_b_finish_b">Finish B</string>
+    <string name="a_test_b_finish_b_for_result">Finish B For Result</string>
 
 
 </resources>
