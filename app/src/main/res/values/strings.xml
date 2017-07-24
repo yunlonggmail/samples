@@ -26,6 +26,8 @@
     <string name="nav_title_custom_main_desc">自定义功能主界面</string>
     <string name="nav_title_custom_lrmenu_main">自定义左右菜单</string>
     <string name="nav_title_custom_lrmenu_main_desc">左右两侧菜单，菜单不同布局不同显示</string>
+    <string name="nav_title_custom_trebling_view">测试三重View</string>
+    <string name="nav_title_custom_trebling_view_desc">三重View左右两侧不同背景，不同文字</string>
     <string name="nav_title_system_function_main">系统功能</string>
     <string name="nav_title_system_function_main_desc">系统的主要功能相关开发</string>
     <string name="nav_title_system_function_multipoint">多点触摸</string>
@@ -76,7 +78,6 @@
     <string name="nav_title_request_ok_desc">OKHttp请求</string>
     <string name="nav_title_animation_md">MD动画</string>
     <string name="nav_title_animation_md_desc">MD动画：涟漪效果</string>
-
 
     <!--测试-->
     <string name="nav_title_test_main">测试主页面</string>

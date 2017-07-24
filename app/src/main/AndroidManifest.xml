@@ -135,7 +135,7 @@
             android:name=".custom.CustomMainActivity"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.yunlong.samples.CustomMain" />
+                <action android:name="com.yunlong.samples.custom.Main" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -145,6 +145,18 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="com.yunlong.samples.custom.LRMenuMain" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".custom.trebling.TreblingViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.custom.TreblingView" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -451,7 +463,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
 
         <service
             android:name=".service.local.LocalService"

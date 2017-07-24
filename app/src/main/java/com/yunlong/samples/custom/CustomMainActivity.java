@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
 import com.yunlong.samples.custom.menu.LRMenuMainActivity;
+import com.yunlong.samples.custom.trebling.TreblingViewActivity;
 import com.yunlong.samples.main.MainDataAdapter;
 import com.yunlong.samples.model.YLMain;
 
@@ -23,7 +24,7 @@ public class CustomMainActivity extends BaseActivity {
     /**
      * 该界面的隐式意图
      */
-    public static final String INTENT_ACTION = "com.yunlong.samples.CustomMain";
+    public static final String INTENT_ACTION = "com.yunlong.samples.custom.Main";
     /**
      * 数据
      */
@@ -65,6 +66,7 @@ public class CustomMainActivity extends BaseActivity {
 
     protected void setData() {
         addLRMenuMain();
+        addTreblingView();
     }
 
     /**
@@ -75,6 +77,17 @@ public class CustomMainActivity extends BaseActivity {
         ylMain.activityIntent = LRMenuMainActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_custom_lrmenu_main);
         ylMain.desc = getString(R.string.nav_title_custom_lrmenu_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 添加复制页面
+     */
+    protected void addTreblingView() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = TreblingViewActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_custom_trebling_view);
+        ylMain.desc = getString(R.string.nav_title_custom_trebling_view_desc);
         dataList.add(ylMain);
     }
 
