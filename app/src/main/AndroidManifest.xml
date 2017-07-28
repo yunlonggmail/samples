@@ -35,6 +35,33 @@
             </intent-filter>
         </activity>
 
+        <!--设计模式-->
+        <activity
+            android:name=".design.main.DesignPatternMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.Main" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".design.main.activity.LoadFileFromAssetsActivity" />
+        <activity
+            android:name=".design.singleton.SingletonMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.singleton.Main" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".design.singleton.SingletonImplListActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.singleton.SingletonImplList" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <!-- 增量更新 -->
         <activity
             android:name=".incremental.IncrementalUpdateActivity"

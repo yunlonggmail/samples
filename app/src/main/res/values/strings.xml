@@ -79,6 +79,14 @@
     <string name="nav_title_animation_md">MD动画</string>
     <string name="nav_title_animation_md_desc">MD动画：涟漪效果</string>
 
+    <!--设计模式-->
+    <string name="nav_title_design_pattern_main">设计模式主页面</string>
+    <string name="nav_title_design_pattern_main_desc">23中设计模式介绍</string>
+    <string name="nav_title_design_pattern_singleton_main">单例模式设计模式主页面</string>
+    <string name="nav_title_design_pattern_singleton_main_desc">确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例</string>
+    <string name="nav_title_design_pattern_singleton_impl_list">单例模式设计模式具体实现列表</string>
+    <string name="nav_title_design_pattern_singleton_impl_list_desc">单例设计模式具体实现的相关代码</string>
+
     <!--测试-->
     <string name="nav_title_test_main">测试主页面</string>
     <string name="nav_title_test_main_desc">复制主页面</string>
@@ -91,6 +99,20 @@
     <string name="nav_title_copy_main_desc">复制主页面</string>
     <string name="nav_title_copy">复制页面</string>
     <string name="nav_title_copy_desc">复制页面</string>
+
+
+    <!--设计模式-->
+    <string name="a_design_pattern_file_empty">文件不存在</string>
+    <string name="a_design_pattern_singleton_dcl_title">DCL单例</string>
+    <string name="a_design_pattern_singleton_dcl_title_desc">双重锁判定(Double CheckLock)实现单例设计模式</string>
+    <string name="a_design_pattern_singleton_enum_title">enum单例</string>
+    <string name="a_design_pattern_singleton_enum_title_desc">使用enum实现单例设计模式</string>
+    <string name="a_design_pattern_singleton_hungry_title">饿汉式单例</string>
+    <string name="a_design_pattern_singleton_hungry_title_desc">饿汉式实现单例设计模式</string>
+    <string name="a_design_pattern_singleton_lazy_title">懒汉式单例</string>
+    <string name="a_design_pattern_singleton_lazy_title_desc">懒汉式实现单例设计模式</string>
+    <string name="a_design_pattern_singleton_sic_title">SIC单例</string>
+    <string name="a_design_pattern_singleton_sic_title_desc">静态内部类(Static Inner Class)实现单例设计模式</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>

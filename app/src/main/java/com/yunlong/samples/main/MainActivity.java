@@ -8,6 +8,7 @@ import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
 import com.yunlong.samples.animation.AnimationMainActivity;
 import com.yunlong.samples.custom.CustomMainActivity;
+import com.yunlong.samples.design.main.DesignPatternMainActivity;
 import com.yunlong.samples.incremental.IncrementalUpdateActivity;
 import com.yunlong.samples.intent.IntentMainActivity;
 import com.yunlong.samples.model.YLMain;
@@ -60,6 +61,7 @@ public class MainActivity extends BaseActivity {
     }
 
     protected void setData() {
+        addDesignPattern();
         addRequest();
         addIntentMain();
         addIncrementUpdateMain();
@@ -69,6 +71,17 @@ public class MainActivity extends BaseActivity {
         addSystemFunction();
         addAnimation();
         addTest();
+    }
+
+    /**
+     * 添加设计模式
+     */
+    protected void addDesignPattern() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = DesignPatternMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_design_pattern_main);
+        ylMain.desc = getString(R.string.nav_title_design_pattern_main_desc);
+        dataList.add(ylMain);
     }
 
     /**
