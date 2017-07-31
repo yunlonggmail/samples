@@ -22,12 +22,17 @@
     <string name="nav_title_service_remote_service_desc">Remote服务基本功能[start/stop/bind/unbind]</string>
     <string name="nav_title_receiver_main">广播</string>
     <string name="nav_title_receiver_main_desc">广播功能主界面</string>
+
+    <!--自定义功能-->
     <string name="nav_title_custom_main">自定义功能</string>
     <string name="nav_title_custom_main_desc">自定义功能主界面</string>
     <string name="nav_title_custom_lrmenu_main">自定义左右菜单</string>
     <string name="nav_title_custom_lrmenu_main_desc">左右两侧菜单，菜单不同布局不同显示</string>
     <string name="nav_title_custom_trebling_view">测试三重View</string>
     <string name="nav_title_custom_trebling_view_desc">三重View左右两侧不同背景，不同文字</string>
+    <string name="nav_title_custom_wave_view">波浪View</string>
+    <string name="nav_title_custom_wave_view_desc">波浪View</string>
+
     <string name="nav_title_system_function_main">系统功能</string>
     <string name="nav_title_system_function_main_desc">系统的主要功能相关开发</string>
     <string name="nav_title_system_function_multipoint">多点触摸</string>

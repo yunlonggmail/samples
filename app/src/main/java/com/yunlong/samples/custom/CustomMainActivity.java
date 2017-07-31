@@ -7,6 +7,7 @@ import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
 import com.yunlong.samples.custom.menu.LRMenuMainActivity;
 import com.yunlong.samples.custom.trebling.TreblingViewActivity;
+import com.yunlong.samples.custom.wave.WaveViewActivity;
 import com.yunlong.samples.main.MainDataAdapter;
 import com.yunlong.samples.model.YLMain;
 
@@ -67,6 +68,7 @@ public class CustomMainActivity extends BaseActivity {
     protected void setData() {
         addLRMenuMain();
         addTreblingView();
+        addWaveView();
     }
 
     /**
@@ -88,6 +90,17 @@ public class CustomMainActivity extends BaseActivity {
         ylMain.activityIntent = TreblingViewActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_custom_trebling_view);
         ylMain.desc = getString(R.string.nav_title_custom_trebling_view_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 添加复制页面
+     */
+    protected void addWaveView() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = WaveViewActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_custom_wave_view);
+        ylMain.desc = getString(R.string.nav_title_custom_wave_view_desc);
         dataList.add(ylMain);
     }
 

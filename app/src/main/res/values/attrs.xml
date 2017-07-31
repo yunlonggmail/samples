@@ -17,4 +17,14 @@
         <attr name="top_text" format="string" />
         <attr name="top_text_color" format="color" />
     </declare-styleable>
+    <declare-styleable name="WaveView">
+        <attr name="above_color" format="color" />
+        <attr name="above_alpha" format="integer" />
+        <attr name="below_color" format="color" />
+        <attr name="below_alpha" format="integer" />
+        <attr name="amplitude" format="float" />
+        <attr name="x_offset_step" format="float" />
+        <attr name="y_offset" format="float" />
+        <attr name="post_delay" format="integer" />
+    </declare-styleable>
 </resources>
