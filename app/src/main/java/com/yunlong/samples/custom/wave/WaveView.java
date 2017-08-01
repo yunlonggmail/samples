@@ -183,7 +183,6 @@ public class WaveView extends View {
         canvas.drawPath(mBelowPath, mBelowPaint);
 
         postInvalidateDelayed(mPostDelayedTime);
-
     }
 
     /**

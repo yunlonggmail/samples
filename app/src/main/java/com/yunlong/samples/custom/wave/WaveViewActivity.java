@@ -38,7 +38,7 @@ public class WaveViewActivity extends BaseActivity {
 
     @Override
     protected void initTitleBar() {
-        titleBar.setTitle(R.string.nav_title_copy);
+        titleBar.setTitle(R.string.nav_title_custom_wave_view);
         super.initTitleBar();
     }
 

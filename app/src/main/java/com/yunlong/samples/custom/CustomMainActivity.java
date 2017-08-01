@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
 import com.yunlong.samples.custom.menu.LRMenuMainActivity;
+import com.yunlong.samples.custom.stroke.StrokeTextViewActivity;
 import com.yunlong.samples.custom.trebling.TreblingViewActivity;
 import com.yunlong.samples.custom.wave.WaveViewActivity;
 import com.yunlong.samples.main.MainDataAdapter;
@@ -69,6 +70,7 @@ public class CustomMainActivity extends BaseActivity {
         addLRMenuMain();
         addTreblingView();
         addWaveView();
+        addStrokeTextView();
     }
 
     /**
@@ -94,13 +96,24 @@ public class CustomMainActivity extends BaseActivity {
     }
 
     /**
-     * 添加复制页面
+     * 添加波浪View展示页面
      */
     protected void addWaveView() {
         YLMain ylMain = new YLMain();
         ylMain.activityIntent = WaveViewActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_custom_wave_view);
         ylMain.desc = getString(R.string.nav_title_custom_wave_view_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 添加描边TextView展示页面
+     */
+    protected void addStrokeTextView() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = StrokeTextViewActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_custom_stroke_text_view);
+        ylMain.desc = getString(R.string.nav_title_custom_stroke_text_view_desc);
         dataList.add(ylMain);
     }
 

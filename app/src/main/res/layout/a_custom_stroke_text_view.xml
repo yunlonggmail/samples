@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_normal_f"
+    android:orientation="vertical">
+
+    <include layout="@layout/i_tool_bar" />
+
+    <com.yunlong.samples.custom.stroke.StrokeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nav_title_custom_stroke_text_view"
+        android:textColor="@color/color_normal_9"
+        android:textSize="@dimen/text_size_big_5" />
+
+    <com.yunlong.samples.custom.stroke.StrokeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nav_title_custom_stroke_text_view_desc"
+        android:textColor="@color/color_normal_f"
+        android:textSize="@dimen/text_size_big_5" />
+
+</LinearLayout>
