@@ -91,8 +91,14 @@
     <string name="nav_title_design_pattern_main_desc">23中设计模式介绍</string>
     <string name="nav_title_design_pattern_singleton_main">单例模式设计模式主页面</string>
     <string name="nav_title_design_pattern_singleton_main_desc">确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例</string>
-    <string name="nav_title_design_pattern_singleton_impl_list">单例模式设计模式具体实现列表</string>
-    <string name="nav_title_design_pattern_singleton_impl_list_desc">单例设计模式具体实现的相关代码</string>
+    <string name="nav_title_design_pattern_singleton_impl_list">单例模式模式具体实现列表</string>
+    <string name="nav_title_design_pattern_singleton_impl_list_desc">单例模式具体实现的相关代码</string>
+    <string name="nav_title_design_pattern_strategy_main">策略模式设计模式主页面</string>
+    <string name="nav_title_design_pattern_strategy_main_desc">根据客户需求，执行不同策略</string>
+    <string name="nav_title_design_pattern_strategy_impl_list">策略模式具体实现列表</string>
+    <string name="nav_title_design_pattern_strategy_impl_list_desc">策略模式具体实现的相关代码</string>
+    <string name="nav_title_design_pattern_strategy_uml">策略模式UML类图</string>
+    <string name="nav_title_design_pattern_strategy_uml_desc">策略模式UML类图图片展示</string>
 
     <!--测试-->
     <string name="nav_title_test_main">测试主页面</string>
@@ -110,6 +116,9 @@
 
     <!--设计模式-->
     <string name="a_design_pattern_file_empty">文件不存在</string>
+    <string name="a_design_pattern_uml_image_empty">UML类图不存在，请仔细检查链接</string>
+
+    <!--单例设计模式-->
     <string name="a_design_pattern_singleton_dcl_title">DCL单例</string>
     <string name="a_design_pattern_singleton_dcl_title_desc">双重锁判定(Double CheckLock)实现单例设计模式</string>
     <string name="a_design_pattern_singleton_enum_title">enum单例</string>
@@ -120,6 +129,22 @@
     <string name="a_design_pattern_singleton_lazy_title_desc">懒汉式实现单例设计模式</string>
     <string name="a_design_pattern_singleton_sic_title">SIC单例</string>
     <string name="a_design_pattern_singleton_sic_title_desc">静态内部类(Static Inner Class)实现单例设计模式</string>
+
+    <!--策略设计模式-->
+    <string name="a_design_pattern_strategy_test_title">测试类</string>
+    <string name="a_design_pattern_strategy_test_title_desc">一些简单的测代码，不是Junit</string>
+    <string name="a_design_pattern_strategy_strategy_context_title">环境类</string>
+    <string name="a_design_pattern_strategy_strategy_context_title_desc">环境类的主题代码，可以注入策略</string>
+    <string name="a_design_pattern_strategy_strategy_context_a_title">具体的环境类A</string>
+    <string name="a_design_pattern_strategy_strategy_context_a_title_desc">使用策略A的环境类</string>
+    <string name="a_design_pattern_strategy_strategy_context_b_title">具体的环境类B</string>
+    <string name="a_design_pattern_strategy_strategy_context_b_title_desc">使用策略B的环境类</string>
+    <string name="a_design_pattern_strategy_strategy_abstract_title">抽象策略类</string>
+    <string name="a_design_pattern_strategy_strategy_abstract_title_desc">主要是抽象出策略类的变化的代码</string>
+    <string name="a_design_pattern_strategy_strategy_concrete_a_title">具体策略类A</string>
+    <string name="a_design_pattern_strategy_strategy_concrete_a_title_desc">执行策略A的算法</string>
+    <string name="a_design_pattern_strategy_strategy_concrete_b_title">具体策略类B</string>
+    <string name="a_design_pattern_strategy_strategy_concrete_b_title_desc">执行策略B的算法</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>

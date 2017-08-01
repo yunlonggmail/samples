@@ -1455,7 +1455,7 @@ BZFILE * bzopen_or_bzdopen
 /*--
    open file for read or write.
       ex) bzopen("file","w9")
-      case path="" or NULL => use stdin or stdout.
+      case assertPath="" or NULL => use stdin or stdout.
 --*/
 BZFILE * BZ_API(BZ2_bzopen)
                ( const char *path,

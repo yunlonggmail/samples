@@ -18,9 +18,13 @@ public class YLDesignPatternModel implements Parcelable {
      */
     public String desc;
     /**
-     * 路径
+     * 资源路径
      */
-    public String path;
+    public String assertPath;
+    /**
+     * 类图路径
+     */
+    public String umlPath;
 
     public YLDesignPatternModel() {
     }
@@ -28,14 +32,16 @@ public class YLDesignPatternModel implements Parcelable {
     private YLDesignPatternModel(Parcel in) {
         title = in.readString();
         desc = in.readString();
-        path = in.readString();
+        assertPath = in.readString();
+        umlPath = in.readString();
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(title);
         dest.writeString(desc);
-        dest.writeString(path);
+        dest.writeString(assertPath);
+        dest.writeString(umlPath);
     }
 
     @Override

@@ -31,8 +31,8 @@ public class MainDataAdapter extends BaseAdapter<YLMain> {
     @Bind(R.id.tv_desc)
     TextView tvDesc;
 
-    public MainDataAdapter(Context context,List<YLMain> data) {
-        super(context,data);
+    public MainDataAdapter(Context context, List<YLMain> data) {
+        super(context, data);
     }
 
     @Override
@@ -45,6 +45,8 @@ public class MainDataAdapter extends BaseAdapter<YLMain> {
                     return;
                 Intent intent = new Intent();
                 intent.setAction(ylMain.activityIntent);
+                if (ylMain.extras != null)
+                    intent.putExtras(ylMain.extras);
                 intent.addCategory(Intent.CATEGORY_DEFAULT);
                 view.getContext().startActivity(intent);
             }

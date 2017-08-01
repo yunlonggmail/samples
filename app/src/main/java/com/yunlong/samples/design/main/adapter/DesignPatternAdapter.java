@@ -1,16 +1,14 @@
 package com.yunlong.samples.design.main.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
 import com.yunlong.lib.base.BaseAdapter;
 import com.yunlong.samples.R;
-import com.yunlong.samples.design.main.activity.LoadFileFromAssetsActivity;
-import com.yunlong.samples.design.main.config.LoadFileConfig;
 import com.yunlong.samples.design.main.model.YLDesignPatternModel;
+import com.yunlong.samples.design.main.utils.LoadFileUtils;
 
 import java.util.List;
 
@@ -44,12 +42,10 @@ public class DesignPatternAdapter extends BaseAdapter<YLDesignPatternModel> {
             @Override
             public void onItemClick(View view, int position) {
                 YLDesignPatternModel ylDesignPatternModel = getItem(position);
-                if (ylDesignPatternModel == null || TextUtils.isEmpty(ylDesignPatternModel.path)) {
+                if (ylDesignPatternModel == null || TextUtils.isEmpty(ylDesignPatternModel.assertPath)) {
                     return;
                 }
-                Intent intent = new Intent(mContext, LoadFileFromAssetsActivity.class);
-                intent.putExtra(LoadFileConfig.ASSETS_FILE_INFO, ylDesignPatternModel);
-                mContext.startActivity(intent);
+                LoadFileUtils.loadAssertFile(mContext, ylDesignPatternModel);
             }
         };
     }

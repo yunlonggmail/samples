@@ -43,13 +43,13 @@ public class LoadFileFromAssetsActivity extends BaseActivity {
     protected void initData() {
         Intent intent = getIntent();
         if (intent != null) {
-            ylDesignPatternModel = intent.getParcelableExtra(LoadFileConfig.ASSETS_FILE_INFO);
+            ylDesignPatternModel = intent.getParcelableExtra(LoadFileConfig.DESIGN_PATTERN_FILE_INFO);
             if (ylDesignPatternModel != null) {
                 if (!TextUtils.isEmpty(ylDesignPatternModel.title)) {
                     setTitleBar(ylDesignPatternModel.title);
                 }
-                if (!TextUtils.isEmpty(ylDesignPatternModel.path))
-                    loadFileFromAssets(ylDesignPatternModel.path);
+                if (!TextUtils.isEmpty(ylDesignPatternModel.assertPath))
+                    loadFileFromAssets(ylDesignPatternModel.assertPath);
             }
         }
     }

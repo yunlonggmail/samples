@@ -37,7 +37,7 @@ public class SingletonImplListActivity extends BaseLoadFileListActivity {
         YLDesignPatternModel ylDesignPatternModel = new YLDesignPatternModel();
         ylDesignPatternModel.title = getString(R.string.a_design_pattern_singleton_dcl_title);
         ylDesignPatternModel.desc = getString(R.string.a_design_pattern_singleton_dcl_title_desc);
-        ylDesignPatternModel.path = "design/singleton/SingletonDCL.java";
+        ylDesignPatternModel.assertPath = "design/singleton/SingletonDCL.java";
         addData(ylDesignPatternModel);
     }
 
@@ -48,7 +48,7 @@ public class SingletonImplListActivity extends BaseLoadFileListActivity {
         YLDesignPatternModel ylDesignPatternModel = new YLDesignPatternModel();
         ylDesignPatternModel.title = getString(R.string.a_design_pattern_singleton_enum_title);
         ylDesignPatternModel.desc = getString(R.string.a_design_pattern_singleton_enum_title_desc);
-        ylDesignPatternModel.path = "design/singleton/SingletonEnum.java";
+        ylDesignPatternModel.assertPath = "design/singleton/SingletonEnum.java";
         addData(ylDesignPatternModel);
     }
 
@@ -59,7 +59,7 @@ public class SingletonImplListActivity extends BaseLoadFileListActivity {
         YLDesignPatternModel ylDesignPatternModel = new YLDesignPatternModel();
         ylDesignPatternModel.title = getString(R.string.a_design_pattern_singleton_hungry_title);
         ylDesignPatternModel.desc = getString(R.string.a_design_pattern_singleton_hungry_title_desc);
-        ylDesignPatternModel.path = "design/singleton/SingletonHungry.java";
+        ylDesignPatternModel.assertPath = "design/singleton/SingletonHungry.java";
         addData(ylDesignPatternModel);
     }
 
@@ -70,7 +70,7 @@ public class SingletonImplListActivity extends BaseLoadFileListActivity {
         YLDesignPatternModel ylDesignPatternModel = new YLDesignPatternModel();
         ylDesignPatternModel.title = getString(R.string.a_design_pattern_singleton_lazy_title);
         ylDesignPatternModel.desc = getString(R.string.a_design_pattern_singleton_lazy_title_desc);
-        ylDesignPatternModel.path = "design/singleton/SingletonLazy.java";
+        ylDesignPatternModel.assertPath = "design/singleton/SingletonLazy.java";
         addData(ylDesignPatternModel);
     }
 
@@ -81,7 +81,7 @@ public class SingletonImplListActivity extends BaseLoadFileListActivity {
         YLDesignPatternModel ylDesignPatternModel = new YLDesignPatternModel();
         ylDesignPatternModel.title = getString(R.string.a_design_pattern_singleton_sic_title);
         ylDesignPatternModel.desc = getString(R.string.a_design_pattern_singleton_sic_title_desc);
-        ylDesignPatternModel.path = "design/singleton/SingletonSIC.java";
+        ylDesignPatternModel.assertPath = "design/singleton/SingletonSIC.java";
         addData(ylDesignPatternModel);
     }
 }

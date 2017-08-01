@@ -9,5 +9,5 @@ public class LoadFileConfig {
     /**
      * 资源文件的路径
      */
-    public static final String ASSETS_FILE_INFO = "ASSETS_FILE_INFO";
+    public static final String DESIGN_PATTERN_FILE_INFO = "assets_file_info";
 }

@@ -46,6 +46,16 @@
         </activity>
         <activity android:name=".design.main.activity.LoadFileFromAssetsActivity" />
         <activity
+            android:name=".design.main.activity.LoadUMLActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.LoadUML" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--单例设计模式-->
+        <activity
             android:name=".design.singleton.SingletonMainActivity"
             android:exported="false">
             <intent-filter>
@@ -58,6 +68,24 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="com.yunlong.samples.design.pattern.singleton.SingletonImplList" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--策略模式-->
+        <activity
+            android:name=".design.strategy.StrategyMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.strategy.Main" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".design.strategy.StrategyImplListActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.strategy.StrategyImplList" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

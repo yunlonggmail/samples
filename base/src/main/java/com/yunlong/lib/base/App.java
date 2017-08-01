@@ -7,6 +7,7 @@ import android.content.res.Configuration;
 import android.support.multidex.MultiDex;
 
 import com.yunlong.lib.utils.DisplayUtils;
+import com.yunlong.lib.utils.GlideUtils;
 import com.yunlong.lib.utils.LogUtils;
 
 import java.util.ArrayList;
@@ -43,6 +44,7 @@ public class App extends Application {
         LogUtils.D("Application", "onCreate");
         super.onCreate();
         initWithoutNetWork();
+        initGlide();
     }
 
     /**
@@ -148,9 +150,18 @@ public class App extends Application {
 
     /**
      * 获取APp
+     *
      * @return
      */
     public static App getApplication() {
         return app;
     }
+
+    /**
+     * 初始化Glide
+     */
+    private void initGlide() {
+        GlideUtils.INSTANCE.init(this);
+    }
+
 }
