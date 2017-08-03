@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
@@ -23,33 +24,46 @@ import com.yunlong.samples.R;
 
 public class TreblingView extends TextView {
     /**
-     * 上下文
+     * 宽度
      */
-    private Context mContext;
+    private float mStrokeWidth = 1;
     /**
      * 边框的颜色
      */
-    private int strokeColor;
-    /**
-     * 默认文字大小
-     */
-    private int textSize = 15;
+    private int mStrokeColor = Color.BLACK;
     /**
      * 边框的弧度
      */
-    private float strokeRadius;
+    private float mStrokeRadius = 0;
     /**
      * StrokeRadius的数组
      */
-    private float[] strokeRadiusArray = new float[8];
+    private float[] mMiddleFillRadiusArray = new float[8];
+
+    /**
+     * 顶层文字
+     */
+    private CharSequence mTopText;
+    /**
+     * 顶层文字颜色
+     */
+    private int mTopTextColor = Color.BLACK;
+    /**
+     * 中间的填充色，默认透明色
+     */
+    private int mMiddleFillColor = Color.TRANSPARENT;
+    /**
+     * 中间填充百分比
+     */
+    private int mMiddleFillPercent = 0;
     /**
      * 底层文字
      */
-    private String bottomText;
+    private CharSequence mBottomText;
     /**
      * 底层文字颜色
      */
-    private int bottomTextColor;
+    private int mBottomTextColor = Color.BLACK;
     /**
      * 默认画笔
      */
@@ -58,7 +72,10 @@ public class TreblingView extends TextView {
      * 文字画笔
      */
     private Paint mTextPaint;
-
+    /**
+     * 立马重绘
+     */
+    private boolean mMustInvalidate = true;
 
     public TreblingView(Context context) {
         this(context, null);
@@ -75,59 +92,78 @@ public class TreblingView extends TextView {
     }
 
     private void init(Context context, AttributeSet attrs) {
-        this.mContext = context;
         if (attrs != null) {
             TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.TreblingView);
-            strokeColor = array.getColor(R.styleable.TreblingView_stroke_color, Color.TRANSPARENT);
-            strokeRadius = array.getDimension(R.styleable.TreblingView_stroke_radius, 0.0f);
-            for (int i = 0; i < strokeRadiusArray.length; i++) {
-                strokeRadiusArray[i] = strokeRadius;
-            }
-
-            textSize = array.getDimensionPixelSize(R.styleable.TreblingView_text_size, textSize);
-
-            bottomText = array.getString(R.styleable.TreblingView_bottom_text);
-            bottomTextColor = array.getColor(R.styleable.TreblingView_bottom_text_color, Color.BLACK);
+            mStrokeWidth = array.getDimension(R.styleable.TreblingView_stroke_width, 0);
+            mStrokeColor = array.getColor(R.styleable.TreblingView_stroke_color, Color.BLACK);
+            mStrokeRadius = array.getDimension(R.styleable.TreblingView_stroke_radius, 0);
+            mTopTextColor = array.getColor(R.styleable.TreblingView_top_text_color, Color.BLACK);
+            mMiddleFillColor = array.getColor(R.styleable.TreblingView_middle_fill_color, Color.TRANSPARENT);
+            mMiddleFillPercent = array.getInt(R.styleable.TreblingView_middle_fill_percent, 0);
+            mMiddleFillPercent = mMiddleFillPercent > 100 ? 100 : mMiddleFillPercent;
+            mBottomTextColor = array.getColor(R.styleable.TreblingView_bottom_text_color, Color.BLACK);
+            fillMiddleRadiusArray(mStrokeRadius);
             array.recycle();
         }
 
         //图形及路径填充画笔（抗锯齿、填充、防抖动）
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setColor(strokeColor);
+        mPaint.setColor(mStrokeColor);
         mPaint.setDither(true);
 
-        //图形及路径填充画笔（抗锯齿、填充、防抖动）
+        //文字及路径填充画笔（抗锯齿、填充、防抖动）
         mTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mTextPaint.setColor(Color.BLACK);
+        mTextPaint.setColor(mTopTextColor);
         mTextPaint.setDither(true);
     }
 
 
     @Override
     protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-        canvas.save();
+        initText();
+        drawBottomText(canvas);
         drawStroke(canvas);
-        mTextPaint.setTextSize(textSize);
-        mTextPaint.setColor(bottomTextColor);
-        drawCenterText(canvas, mTextPaint, bottomText);
-        canvas.restore();
-
+        drawMiddleFill(canvas);
+        drawTopText(canvas);
     }
 
     /**
-     * 画Stroke
-     *
-     * @param canvas
+     * 初始化Text
      */
-    private void drawStroke(Canvas canvas) {
-        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
-        canvas.drawRoundRect(new RectF(0, 0, getWidth(), getHeight()), strokeRadius, strokeRadius, mPaint);
-        mPaint.setXfermode(null);
+    private void initText() {
+        mTopText = getText();
+        mBottomText = getText();
     }
 
-    private void drawCenterText(Canvas canvas, Paint textPaint, String text) {
+    /**
+     * 画底层文字
+     */
+    private void drawBottomText(Canvas canvas) {
+        mTextPaint.setTextSize(getTextSize());
+        mTextPaint.setColor(mBottomTextColor);
+        drawTextAtCenter(canvas, mTextPaint, mBottomText);
+    }
+
+    /**
+     * 画顶层文字
+     *
+     * @param canvas：画布
+     */
+    private void drawTopText(Canvas canvas) {
+        mTextPaint.setTextSize(getTextSize());
+        mTextPaint.setColor(mTopTextColor);
+        drawTextAtCenter(canvas, mTextPaint, mTopText);
+    }
+
+    /**
+     * 在画板中间画APP
+     *
+     * @param canvas：画布
+     * @param textPaint：画笔
+     * @param text：文字
+     */
+    private void drawTextAtCenter(Canvas canvas, Paint textPaint, CharSequence text) {
         if (StringsUtils.isEmpty(text)) {
             return;
         }
@@ -140,7 +176,194 @@ public class TreblingView extends TextView {
 
         int centerY = rect.centerY() - (int) (top / 2 + bottom / 2);
 
-        canvas.drawText(text, rect.centerX(), centerY, textPaint);
+        canvas.drawText(text.toString(), rect.centerX(), centerY, textPaint);
+    }
+
+    /**
+     * 画Stroke
+     *
+     * @param canvas：画布
+     */
+    private void drawStroke(Canvas canvas) {
+        if (mStrokeWidth <= 0) {
+            return;
+        }
+        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setColor(mStrokeColor);
+        mPaint.setStrokeWidth(mStrokeWidth);
+        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
+        //画圆角矩形的时候如果线有宽度，那么圆角矩形的定点向中间移动画笔线的宽的一半
+        //可以使用粗笔头感受一下
+        canvas.drawRoundRect(new RectF(mStrokeWidth / 2, mStrokeWidth / 2, getWidth() - mStrokeWidth / 2, getHeight() - mStrokeWidth / 2), mStrokeRadius, mStrokeRadius, mPaint);
+        mPaint.setXfermode(null);
+    }
+
+    /**
+     * 获取中间填充Path
+     *
+     * @return：路径信息
+     */
+    private Path getMiddleFillPath() {
+        Path path = new Path();
+        //填充中间块的时候避免压住Stroke，向中间移动
+        RectF rectF = new RectF(mStrokeWidth, mStrokeWidth, getWidth() * mMiddleFillPercent / 100 - (mMiddleFillPercent == 100 ? mStrokeWidth : 0), getHeight() - mStrokeWidth);
+        path.addRoundRect(rectF, mMiddleFillRadiusArray, Path.Direction.CW);
+        return path;
+    }
+
+    /**
+     * 画中间填充
+     *
+     * @param canvas：画布
+     */
+    private void drawMiddleFill(Canvas canvas) {
+        if (mMiddleFillPercent <= 0 || mMiddleFillColor == Color.TRANSPARENT) {
+            return;
+        }
+        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setColor(mMiddleFillColor);
+        Path path = getMiddleFillPath();
+        canvas.clipPath(path);
+        canvas.drawPath(path, mPaint);
+        //图形画完之后将画笔方式设为Stroke
+        mPaint.setXfermode(null);
+    }
+
+
+    @Override
+    public void setText(CharSequence text, BufferType type) {
+        if (StringsUtils.isEmpty(text)) {
+            text = "";
+            mTopText = "";
+            mBottomText = "";
+        } else {
+            mTopText = text;
+            mBottomText = text;
+        }
+        super.setText(text, type);
+    }
+
+    /**
+     * 设置
+     *
+     * @param mustInvalidate ：立即重绘，重新设置参数后会立即重绘
+     */
+    public void setMustInvalidate(boolean mustInvalidate) {
+        mMustInvalidate = mustInvalidate;
+    }
+
+    /**
+     * 重绘
+     */
+    public void doInvalidate() {
+        if (!mMustInvalidate)
+            invalidate();
+    }
+
+    /**
+     * 设置顶层文字颜色
+     *
+     * @param topTextColor：顶层文字颜色
+     */
+    public void setTopTextColor(int topTextColor) {
+        this.mTopTextColor = topTextColor;
+        if (this.mMustInvalidate)
+            invalidate();
+    }
+
+    /**
+     * 设置中间填充百分比
+     *
+     * @param middleFilePercent：[0,100]之间的数字
+     */
+    public void setMiddleFillPercent(int middleFilePercent) {
+        this.mMiddleFillPercent = middleFilePercent;
+        if (this.mMustInvalidate)
+            invalidate();
+    }
+
+    /**
+     * 设置中间填充区域颜色
+     *
+     * @param middleFillColor：中间填充区颜色
+     */
+    public void setMiddleFillColor(int middleFillColor) {
+        this.mMiddleFillColor = middleFillColor;
+        if (this.mMustInvalidate)
+            invalidate();
+    }
+
+    /**
+     * 设置边框宽度
+     *
+     * @param strokeWidth：边框宽度
+     */
+    public void setStrokeWidth(float strokeWidth) {
+        this.mStrokeWidth = strokeWidth;
+        if (this.mMustInvalidate)
+            invalidate();
+    }
+
+    /**
+     * 设置边框颜色
+     *
+     * @param strokeColor：边框颜色
+     */
+    public void setStrokeColor(int strokeColor) {
+        this.mStrokeColor = strokeColor;
+        if (this.mMustInvalidate)
+            invalidate();
+    }
+
+    /**
+     * 设置边框颜色
+     *
+     * @param strokeRadius：边框弧度
+     */
+    public void setStrokeRadius(float strokeRadius) {
+        this.mStrokeRadius = strokeRadius;
+        fillMiddleRadiusArray(strokeRadius);
+        if (this.mMustInvalidate)
+            invalidate();
+    }
+
+    /**
+     * 中间填充器的弧度
+     *
+     * @param radius：弧度
+     */
+    private void fillMiddleRadiusArray(float radius) {
+        for (int i = 0; i < mMiddleFillRadiusArray.length; i++) {
+            switch (i) {
+                case 0:
+                case 1:
+                case 6:
+                case 7:
+                    mMiddleFillRadiusArray[i] = radius;
+                    break;
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                    if (mMiddleFillPercent == 100) {
+                        mMiddleFillRadiusArray[i] = radius;
+                    } else
+                        mMiddleFillRadiusArray[i] = 0;
+                    break;
+            }
+        }
+    }
+
+    /**
+     * 设置顶层文字颜色
+     *
+     * @param bottomTextColor：底层文字颜色
+     */
+    public void setBottomTextColor(int bottomTextColor) {
+        this.mBottomTextColor = bottomTextColor;
+        if (this.mMustInvalidate)
+            invalidate();
     }
 
 

@@ -11,16 +11,31 @@
     <com.yunlong.samples.custom.trebling.TreblingView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_info"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/normal_width_50"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:padding="@dimen/normal_width_3"
+        android:text="我是张三"
+        android:textSize="@dimen/text_size_normal_8"
+        app:bottom_text_color="@color/red"
+        app:middle_fill_color="@color/green"
+        app:middle_fill_percent="45"
+        app:stroke_color="@color/blue"
+        app:stroke_radius="@dimen/normal_width_3"
+        app:stroke_width="@dimen/normal_width_1"
+        app:top_text_color="@color/color_normal_f" />
+
+    <com.yunlong.samples.custom.trebling.TreblingView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="@color/transparent"
         android:gravity="center"
-        android:text="文件"
-        android:textColor="@color/green"
-        android:textSize="@dimen/text_size_normal_8"
-        app:bottom_text="文件"
-        app:bottom_text_color="@color/black"
-        app:stroke_color="@color/blue"
-        app:stroke_radius="@dimen/normal_width_5"
-        app:text_size="@dimen/text_size_normal_8" />
+        android:padding="@dimen/normal_width_3"
+        android:text="我是张三"
+        android:textSize="@dimen/text_size_normal_8" />
 
 </RelativeLayout>

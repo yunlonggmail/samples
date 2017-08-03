@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 /**
  * Created by shiyunlong on 2017/7/31.
+ * 带有描边的View
  */
 
 public class StrokeTextView extends TextView {

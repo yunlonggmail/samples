@@ -7,14 +7,12 @@
     </declare-styleable>
 
     <declare-styleable name="TreblingView">
-        <attr name="text_size" format="dimension" />
+        <attr name="stroke_width" format="dimension" />
         <attr name="stroke_color" format="color" />
         <attr name="stroke_radius" format="dimension" />
-        <attr name="bottom_text" format="string" />
         <attr name="bottom_text_color" format="color" />
         <attr name="middle_fill_color" format="color" />
-        <attr name="middle_fill_percent" format="float" />
-        <attr name="top_text" format="string" />
+        <attr name="middle_fill_percent" format="integer" />
         <attr name="top_text_color" format="color" />
     </declare-styleable>
     <declare-styleable name="WaveView">
