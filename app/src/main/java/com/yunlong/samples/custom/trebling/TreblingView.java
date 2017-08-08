@@ -206,7 +206,8 @@ public class TreblingView extends TextView {
     private Path getMiddleFillPath() {
         Path path = new Path();
         //填充中间块的时候避免压住Stroke，向中间移动
-        RectF rectF = new RectF(mStrokeWidth, mStrokeWidth, getWidth() * mMiddleFillPercent / 100 - (mMiddleFillPercent == 100 ? mStrokeWidth : 0), getHeight() - mStrokeWidth);
+        float offset = mStrokeColor == mMiddleFillColor ? mStrokeWidth / 2 : mStrokeWidth;
+        RectF rectF = new RectF(offset, offset, getWidth() * mMiddleFillPercent / 100 - (mMiddleFillPercent == 100 ? offset : 0), getHeight() - offset);
         path.addRoundRect(rectF, mMiddleFillRadiusArray, Path.Direction.CW);
         return path;
     }
