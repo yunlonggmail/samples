@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/i_tool_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_normal_f"
+        android:padding="@dimen/normal_width_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/normal_width_5"
+                android:textColor="@color/color_normal_3"
+                android:textSize="@dimen/text_size_normal_4" />
+
+            <Button
+                android:id="@+id/btn_power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button_bg"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_design_pattern_state_test_power"
+                android:textColor="@color/color_normal_3"
+                android:textSize="@dimen/text_size_normal_4" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/normal_width_10"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_pre_channel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_5"
+                    android:text="@string/a_design_pattern_state_test_minus"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_4" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/normal_width_5"
+                    android:text="@string/a_design_pattern_state_test_channel"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_4" />
+
+                <Button
+                    android:id="@+id/btn_next_channel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_5"
+                    android:text="@string/a_design_pattern_state_test_plus"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/normal_width_10"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_minus_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_5"
+                    android:text="@string/a_design_pattern_state_test_minus"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_4" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/normal_width_5"
+                    android:text="@string/a_design_pattern_state_test_sound"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_4" />
+
+                <Button
+                    android:id="@+id/btn_plus_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:padding="@dimen/normal_width_5"
+                    android:text="@string/a_design_pattern_state_test_plus"
+                    android:textColor="@color/color_normal_3"
+                    android:textSize="@dimen/text_size_normal_4" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_magnifier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/normal_width_5"
+                android:textColor="@color/color_normal_3"
+                android:textSize="@dimen/text_size_normal_4" />
+
+            <Button
+                android:id="@+id/btn_magnifier_enlarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button_bg"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_design_pattern_state_test_magnifier_enlarge"
+                android:textColor="@color/color_normal_3"
+                android:textSize="@dimen/text_size_normal_4" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

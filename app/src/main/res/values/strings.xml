@@ -89,16 +89,35 @@
     <!--设计模式-->
     <string name="nav_title_design_pattern_main">设计模式主页面</string>
     <string name="nav_title_design_pattern_main_desc">23中设计模式介绍</string>
+
+    <!--单例设计模式-->
     <string name="nav_title_design_pattern_singleton_main">单例模式设计模式主页面</string>
     <string name="nav_title_design_pattern_singleton_main_desc">确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例</string>
     <string name="nav_title_design_pattern_singleton_impl_list">单例模式模式具体实现列表</string>
     <string name="nav_title_design_pattern_singleton_impl_list_desc">单例模式具体实现的相关代码</string>
+
+    <!--策略设计模式-->
     <string name="nav_title_design_pattern_strategy_main">策略模式设计模式主页面</string>
     <string name="nav_title_design_pattern_strategy_main_desc">根据客户需求，执行不同策略</string>
     <string name="nav_title_design_pattern_strategy_impl_list">策略模式具体实现列表</string>
     <string name="nav_title_design_pattern_strategy_impl_list_desc">策略模式具体实现的相关代码</string>
     <string name="nav_title_design_pattern_strategy_uml">策略模式UML类图</string>
     <string name="nav_title_design_pattern_strategy_uml_desc">策略模式UML类图图片展示</string>
+
+    <!--状态设计模式-->
+    <string name="nav_title_design_pattern_state_main">状态模式设计模式主页面</string>
+    <string name="nav_title_design_pattern_state_main_desc">环境具有不同的状态，不同的状态有不同的行为</string>
+    <string name="nav_title_design_pattern_state_uml">状态模式UML类图</string>
+    <string name="nav_title_design_pattern_state_uml_desc">状态模式UML类图图片展示</string>
+    <string name="nav_title_design_pattern_state_impl_main">状态模式实现主页面</string>
+    <string name="nav_title_design_pattern_state_impl_main_desc">状态模式两种不同的实现，以及实现的展示页面</string>
+    <string name="nav_title_design_pattern_state_impl_test">状态模式测试主页面</string>
+    <string name="nav_title_design_pattern_state_impl_test_desc">测试状态模式的展现</string>
+    <string name="nav_title_design_pattern_state_first_impl_list">第一种状态设计模式实现方式</string>
+    <string name="nav_title_design_pattern_state_first_impl_list_desc">第一种：环境类控制状态的流转，执行某种操作控制状态流转</string>
+    <string name="nav_title_design_pattern_state_second_impl_list">第二种状态设计模式实现方式</string>
+    <string name="nav_title_design_pattern_state_second_impl_list_desc">第一种：状态知道执行某种操作之后进入某种状态</string>
+
 
     <!--测试-->
     <string name="nav_title_test_main">测试主页面</string>
@@ -145,6 +164,33 @@
     <string name="a_design_pattern_strategy_strategy_concrete_a_title_desc">执行策略A的算法</string>
     <string name="a_design_pattern_strategy_strategy_concrete_b_title">具体策略类B</string>
     <string name="a_design_pattern_strategy_strategy_concrete_b_title_desc">执行策略B的算法</string>
+
+    <!--状态设计模式-->
+    <string name="a_design_pattern_state_first_impl_context">环境类</string>
+    <string name="a_design_pattern_state_first_impl_context_desc">电视类：打开关闭电源，调整界面，调整声音</string>
+    <string name="a_design_pattern_state_first_impl_state">状态类</string>
+    <string name="a_design_pattern_state_first_impl_state_desc">状态类：不同的状态的抽象类，抽象操作有：调整界面，调整声音</string>
+    <string name="a_design_pattern_state_first_impl_state_tv_power_on_state">电源打开状态类</string>
+    <string name="a_design_pattern_state_first_impl_state_tv_power_on_state_desc">电源打开状态类：具体的操作</string>
+    <string name="a_design_pattern_state_first_impl_state_tv_power_off_state">电源关闭状态类</string>
+    <string name="a_design_pattern_state_first_impl_state_tv_power_off_state_desc">电源关闭状态类：具体的操作</string>
+
+    <string name="a_design_pattern_state_second_impl_context">环境类</string>
+    <string name="a_design_pattern_state_second_impl_context_desc">放大镜类：放大镜，点击进入不同的放大状态</string>
+    <string name="a_design_pattern_state_second_impl_state">状态类</string>
+    <string name="a_design_pattern_state_second_impl_state_desc">状态类：不同的状态的抽象类，抽象操作有：放大，展示</string>
+    <string name="a_design_pattern_state_second_impl_state_normal_state">正常状态</string>
+    <string name="a_design_pattern_state_second_impl_state_normal_state_desc">放大镜正常状态类：正常显示，点击后变成两倍状态</string>
+    <string name="a_design_pattern_state_second_impl_state_twice_state">两倍状态</string>
+    <string name="a_design_pattern_state_second_impl_state_twice_state_desc">放大镜两倍状态状态类：两倍显示，点击后变成4倍状态</string>
+    <string name="a_design_pattern_state_second_impl_state_4_times_state">4倍状态</string>
+    <string name="a_design_pattern_state_second_impl_state_4_times_state_desc">放大镜4倍状态类：4倍显示，点击后变成正常状态</string>
+    <string name="a_design_pattern_state_test_power">电源</string>
+    <string name="a_design_pattern_state_test_sound">声音</string>
+    <string name="a_design_pattern_state_test_channel">节目</string>
+    <string name="a_design_pattern_state_test_minus">-</string>
+    <string name="a_design_pattern_state_test_plus">+</string>
+    <string name="a_design_pattern_state_test_magnifier_enlarge">放大</string>
 
     <!--增量更新界面-->
     <string name="a_increment_update_generate_new_apk">生成新的APK_OLD</string>

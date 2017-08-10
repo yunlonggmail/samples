@@ -76,8 +76,11 @@ public class LoadFileFromAssetsActivity extends BaseActivity {
             StringBuilder sb = new StringBuilder();
             inputStream = assetManager.open(path);
             byte[] buffer = new byte[1024];
-            while (inputStream.read(buffer) > 0) {
-                sb.append(new String(buffer));
+            int len = -1;
+            while ((len = inputStream.read(buffer)) > 0) {
+                String str = new String(buffer, 0, len);
+                sb.append(str);
+//                LogUtils.E(this.getClass().getSimpleName(), str);
             }
             tvInfo.setText(sb.toString());
         } catch (IOException e) {
@@ -91,6 +94,5 @@ public class LoadFileFromAssetsActivity extends BaseActivity {
                 e.printStackTrace();
             }
         }
-
     }
 }
