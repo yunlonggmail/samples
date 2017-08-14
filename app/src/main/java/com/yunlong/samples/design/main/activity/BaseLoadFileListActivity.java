@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
 import com.yunlong.samples.design.main.adapter.DesignPatternAdapter;
-import com.yunlong.samples.design.main.model.YLDesignPatternModel;
+import com.yunlong.samples.model.YLEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,7 @@ public abstract class BaseLoadFileListActivity extends BaseActivity {
     /**
      * 数据集合
      */
-    private List<YLDesignPatternModel> dataList = new ArrayList<>();
+    private List<YLEntity> dataList = new ArrayList<>();
 
     @Override
     protected int getResourceId() {
@@ -56,7 +56,7 @@ public abstract class BaseLoadFileListActivity extends BaseActivity {
      */
     protected abstract void setData();
 
-    protected void addData(YLDesignPatternModel ylDesignPatternModel) {
-        dataList.add(ylDesignPatternModel);
+    protected void addData(YLEntity ylEntity) {
+        dataList.add(ylEntity);
     }
 }

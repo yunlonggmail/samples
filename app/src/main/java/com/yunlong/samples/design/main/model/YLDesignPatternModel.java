@@ -3,12 +3,14 @@ package com.yunlong.samples.design.main.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.yunlong.samples.model.YLEntity;
+
 /**
  * Created by shiyunlong on 2017/7/24.
  * 单例模式模型
  */
 
-public class YLDesignPatternModel implements Parcelable {
+public class YLDesignPatternModel extends YLEntity implements Parcelable {
     /**
      * 标题
      */

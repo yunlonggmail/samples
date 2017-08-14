@@ -72,6 +72,60 @@
             </intent-filter>
         </activity>
 
+        <!--工厂设计模式-->
+        <activity
+            android:name=".design.factory.FactoryMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.factory.Main" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--简单工厂-->
+        <activity
+            android:name=".design.factory.simple.SimpleFactoryMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.factory.simple.Main" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".design.factory.simple.SimpleFactoryImplMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.factory.simple.ImplMain" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".design.factory.simple.SimpleFactoryImplTestActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.factory.simple.ImplTest" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--工厂方法-->
+        <activity
+            android:name=".design.factory.method.FactoryMethodMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.factory.method.Main" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--抽象工厂-->
+        <activity
+            android:name=".design.factory.abstraction.AbstractFactoryMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.factory.abstract.Main" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <!--策略模式-->
         <activity
             android:name=".design.strategy.StrategyMainActivity"
