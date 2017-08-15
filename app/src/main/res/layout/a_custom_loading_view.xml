@@ -12,20 +12,20 @@
         android:layout_width="@dimen/normal_width_50"
         android:layout_height="@dimen/normal_width_50"
         android:layout_gravity="center"
-        app:bottom_text_fill_color="@color/red"
-        app:bottom_text_stroke_color="@color/blue"
-        app:circle_fill_color="@color/yellow"
-        app:circle_stroke_color="@color/gray"
-        app:circle_stroke_width="@dimen/normal_width_1"
-        app:text="云龙"
-        app:text_size="@dimen/text_size_normal_2"
-        app:text_width="@dimen/normal_width_1"
-        app:top_text_fill_color="@color/green"
-        app:top_text_stroke_color="@color/red" />
+        app:lv_bottom_text_fill_color="@color/red"
+        app:lv_bottom_text_stroke_color="@color/blue"
+        app:lv_fill_color="@color/yellow"
+        app:lv_stroke_color="@color/gray"
+        app:lv_text_stroke_width="@dimen/normal_width_1"
+        app:lv_text="云龙"
+        app:lv_text_size="@dimen/text_size_normal_2"
+        app:lv_text_width="@dimen/normal_width_1"
+        app:lv_top_text_fill_color="@color/green"
+        app:lv_top_text_stroke_color="@color/red" />
 
     <com.yunlong.samples.custom.loading.LoadingView
         android:id="@+id/lv"
-        android:layout_width="@dimen/normal_width_50"
+        android:layout_width="@dimen/normal_width_100"
         android:layout_height="@dimen/normal_width_50"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/normal_width_10" />

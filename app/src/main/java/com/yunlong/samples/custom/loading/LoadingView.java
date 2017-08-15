@@ -12,6 +12,7 @@ import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
+import android.graphics.RectF;
 import android.graphics.Shader;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -35,7 +36,7 @@ public class LoadingView extends View {
     /**
      * 文字
      */
-    private CharSequence mText = "龙";
+    private CharSequence mText = "云龙";
     /**
      * 文字大小
      */
@@ -87,11 +88,11 @@ public class LoadingView extends View {
     /**
      * 填充颜色
      */
-    private int mCircleStrokeColor = Color.BLACK;
+    private int mStrokeColor = Color.TRANSPARENT;
     /**
      * 中间填充颜色
      */
-    private int mCircleFillColor = Color.BLACK;
+    private int mFillColor = Color.BLACK;
     /**
      * 中间创建图形
      */
@@ -111,16 +112,15 @@ public class LoadingView extends View {
     /**
      * 边线的宽度
      */
-    private float mCircleStrokeWidth = DisplayUtils.dp2px(1);
+    private float mStrokeWidth = DisplayUtils.dp2px(1);
     /**
      * 动画
      */
     private ValueAnimator mValueAnimator;
-
     /**
-     * 是否必须重绘
+     * 边线弧度
      */
-    private boolean mMustInvalidate = false;
+    private float mStrokeRadius = 0;
 
     public LoadingView(Context context) {
         this(context, null);
@@ -144,18 +144,17 @@ public class LoadingView extends View {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.LoadingView);
-            mBottomTextFillColor = array.getColor(R.styleable.LoadingView_bottom_text_fill_color, Color.BLACK);
-            mBottomTextStrokeColor = array.getColor(R.styleable.LoadingView_bottom_text_stroke_color, Color.BLACK);
-            mTopTextFillColor = array.getColor(R.styleable.LoadingView_top_text_fill_color, Color.BLACK);
-            mTopTextStrokeColor = array.getColor(R.styleable.LoadingView_top_text_stroke_color, Color.BLACK);
-            mText = array.getText(R.styleable.LoadingView_text);
-            if (!StringsUtils.isEmpty(mText) && mText.length() > 1)
-                mText = mText.subSequence(0, 1);
-            mTextSize = array.getDimension(R.styleable.LoadingView_text_size, mTextSize);
-            mTextStrokeWidth = array.getDimension(R.styleable.LoadingView_text_width, mTextStrokeWidth);
-            mCircleStrokeColor = array.getColor(R.styleable.LoadingView_circle_stroke_color, Color.BLACK);
-            mCircleStrokeWidth = array.getDimension(R.styleable.LoadingView_circle_stroke_width, mCircleStrokeWidth);
-            mCircleFillColor = array.getColor(R.styleable.LoadingView_circle_fill_color, Color.BLACK);
+            mBottomTextFillColor = array.getColor(R.styleable.LoadingView_lv_bottom_text_fill_color, Color.BLACK);
+            mBottomTextStrokeColor = array.getColor(R.styleable.LoadingView_lv_bottom_text_stroke_color, Color.BLACK);
+            mTopTextFillColor = array.getColor(R.styleable.LoadingView_lv_top_text_fill_color, Color.BLACK);
+            mTopTextStrokeColor = array.getColor(R.styleable.LoadingView_lv_top_text_stroke_color, Color.BLACK);
+            mText = array.getText(R.styleable.LoadingView_lv_text);
+            mTextSize = array.getDimension(R.styleable.LoadingView_lv_text_size, mTextSize);
+            mTextStrokeWidth = array.getDimension(R.styleable.LoadingView_lv_text_width, mTextStrokeWidth);
+            mStrokeColor = array.getColor(R.styleable.LoadingView_lv_stroke_color, Color.TRANSPARENT);
+            mStrokeWidth = array.getDimension(R.styleable.LoadingView_lv_stroke_width, mStrokeWidth);
+            mFillColor = array.getColor(R.styleable.LoadingView_lv_fill_color, Color.BLACK);
+            mStrokeRadius = array.getDimension(R.styleable.LoadingView_lv_stroke_radius, mStrokeRadius);
             array.recycle();
         }
 
@@ -177,7 +176,7 @@ public class LoadingView extends View {
         //中部画笔
         mMiddlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mMiddlePaint.setStyle(Paint.Style.FILL);
-        mMiddlePaint.setColor(mCircleFillColor);
+        mMiddlePaint.setColor(mFillColor);
         mMiddlePaint.setDither(true);
 
         mValueAnimator = ValueAnimator.ofFloat(0, 1);
@@ -204,9 +203,12 @@ public class LoadingView extends View {
         setMeasuredDimension(mWidth, mHeight);
         mBitMap = Bitmap.createBitmap(mWidth, mHeight, Bitmap.Config.ARGB_8888);
         mCanvas = new Canvas(mBitMap);
-        int textMaxSize = Math.min(mWidth, mHeight) / 2;
-        if (mTextSize > textMaxSize)
-            mTextSize = textMaxSize;
+
+        if (!StringsUtils.isEmpty(mText)) {
+            int textMaxSize = mWidth / mText.length() * 2;
+            if (mTextSize > textMaxSize)
+                mTextSize = textMaxSize;
+        }
     }
 
     @Override
@@ -221,10 +223,12 @@ public class LoadingView extends View {
      * 画上部文字
      */
     private void drawTopText(Canvas canvas) {
-        mTextStrokePaint.setTextSize(mTextSize);
-        mTextStrokePaint.setColor(mTopTextStrokeColor);
-        mTextStrokePaint.setStrokeWidth(mTextStrokeWidth);
-        drawTextAtCenter(canvas, mTextStrokePaint, mText);
+        if (mTextStrokeWidth > 0 && mTopTextStrokeColor != Color.TRANSPARENT) {
+            mTextStrokePaint.setTextSize(mTextSize);
+            mTextStrokePaint.setColor(mTopTextStrokeColor);
+            mTextStrokePaint.setStrokeWidth(mTextStrokeWidth);
+            drawTextAtCenter(canvas, mTextStrokePaint, mText);
+        }
 
         mTextPaint.setTextSize(mTextSize);
         mTextPaint.setColor(mTopTextFillColor);
@@ -236,11 +240,12 @@ public class LoadingView extends View {
      * 画下部文字
      */
     private void drawBottomText(Canvas canvas) {
-        mTextStrokePaint.setTextSize(mTextSize);
-        mTextStrokePaint.setColor(mBottomTextStrokeColor);
-        mTextStrokePaint.setStrokeWidth(mTextStrokeWidth);
-        drawTextAtCenter(canvas, mTextStrokePaint, mText);
-
+        if (mTextStrokeWidth > 0 && mBottomTextStrokeColor != Color.TRANSPARENT) {
+            mTextStrokePaint.setTextSize(mTextSize);
+            mTextStrokePaint.setColor(mBottomTextStrokeColor);
+            mTextStrokePaint.setStrokeWidth(mTextStrokeWidth);
+            drawTextAtCenter(canvas, mTextStrokePaint, mText);
+        }
         mTextPaint.setTextSize(mTextSize);
         mTextPaint.setColor(mBottomTextFillColor);
         drawTextAtCenter(canvas, mTextPaint, mText);
@@ -252,19 +257,48 @@ public class LoadingView extends View {
      * @param canvas
      */
     private void drawMiddleGraphics(Canvas canvas) {
+        drawMiddleStroke(canvas);
+        drawMiddleFill(canvas);
+    }
+
+    /**
+     * 画边框
+     */
+    private void drawMiddleStroke(Canvas canvas) {
+        if (mStrokeColor == Color.TRANSPARENT || mStrokeWidth <= 0)
+            return;
         int r = Math.min(mWidth, mHeight) / 2;
-        mMiddlePaint.setColor(mCircleStrokeColor);
+        mMiddlePaint.setColor(mStrokeColor);
         mMiddlePaint.setStyle(Paint.Style.STROKE);
-        mMiddlePaint.setStrokeWidth(mCircleStrokeWidth);
+        mMiddlePaint.setStrokeWidth(mStrokeWidth);
         mMiddlePaint.setXfermode(mPorterDuffXfermode);
-        canvas.drawCircle(mWidth / 2, mHeight / 2, r - mCircleStrokeWidth, mMiddlePaint);
+        if (mWidth == mHeight) {
+            canvas.drawCircle(mWidth / 2, mHeight / 2, r - mStrokeWidth, mMiddlePaint);
+        } else {
+            canvas.drawRoundRect(new RectF(mStrokeWidth / 2, mStrokeWidth / 2, getWidth() - mStrokeWidth / 2, getHeight() - mStrokeWidth / 2), mStrokeRadius, mStrokeRadius, mMiddlePaint);
+        }
         mMiddlePaint.setXfermode(null);
-        mMiddlePaint.setColor(mCircleFillColor);
+    }
+
+    /**
+     * 画中间填充
+     *
+     * @param canvas：画布
+     */
+    private void drawMiddleFill(Canvas canvas) {
+        int r = Math.min(mWidth, mHeight) / 2;
+        mMiddlePaint.setColor(mFillColor);
         mMiddlePaint.setStyle(Paint.Style.FILL);
         mMiddlePaint.setShader(getBitmapShader());
         //圆向内缩的距离
-        float dx = mCircleStrokeWidth * 3 / 2;
-        canvas.drawCircle(mWidth / 2, mHeight / 2, r - dx, mMiddlePaint);
+        float dx = mStrokeWidth * 3 / 2;
+
+        if (mWidth == mHeight) {
+            canvas.drawCircle(mWidth / 2, mHeight / 2, r - dx, mMiddlePaint);
+        } else {
+            canvas.drawRoundRect(new RectF(mStrokeWidth / 2, mStrokeWidth / 2, getWidth() - mStrokeWidth / 2, getHeight() - mStrokeWidth / 2), mStrokeRadius, mStrokeRadius, mMiddlePaint);
+        }
+
         mMiddlePaint.setShader(null);
     }
 
@@ -334,31 +368,12 @@ public class LoadingView extends View {
 
 
     /**
-     * 设置
-     *
-     * @param mustInvalidate ：立即重绘，重新设置参数后会立即重绘
-     */
-    public void setMustInvalidate(boolean mustInvalidate) {
-        mMustInvalidate = mustInvalidate;
-    }
-
-    /**
-     * 重绘
-     */
-    public void doInvalidate() {
-        if (!mMustInvalidate)
-            invalidate();
-    }
-
-    /**
      * 设置底部文字边框颜色
      *
      * @param bottomTextStrokeColor：底部边框颜色
      */
     public void setBottomTextStrokeColor(int bottomTextStrokeColor) {
         this.mBottomTextStrokeColor = bottomTextStrokeColor;
-        if (this.mMustInvalidate)
-            invalidate();
     }
 
     /**
@@ -368,8 +383,6 @@ public class LoadingView extends View {
      */
     public void setBottomTextFillColor(int bottomTextFillColor) {
         this.mBottomTextFillColor = bottomTextFillColor;
-        if (this.mMustInvalidate)
-            invalidate();
     }
 
     /**
@@ -398,7 +411,7 @@ public class LoadingView extends View {
     public void setText(CharSequence text) {
         if (StringsUtils.isEmpty(text))
             return;
-        this.mText = text.length() > 1 ? text.subSequence(0, 1) : text;
+        this.mText = text;
     }
 
     /**
@@ -420,21 +433,21 @@ public class LoadingView extends View {
     }
 
     /**
-     * 设置圆边框颜色
+     * 设置边框颜色
      *
-     * @param mCircleStrokeColor：圆边框颜色
+     * @param mStrokeColor：圆边框颜色
      */
-    public void setCircleStrokeColor(int mCircleStrokeColor) {
-        this.mCircleStrokeColor = mCircleStrokeColor;
+    public void setStrokeColor(int mStrokeColor) {
+        this.mStrokeColor = mStrokeColor;
     }
 
     /**
-     * 设置圆填充颜色
+     * 设置填充颜色
      *
-     * @param mCircleFillColor：填充颜色
+     * @param mFillColor：填充颜色
      */
-    public void setCircleFillColor(int mCircleFillColor) {
-        this.mCircleFillColor = mCircleFillColor;
+    public void setFillColor(int mFillColor) {
+        this.mFillColor = mFillColor;
     }
 
     /**
@@ -450,12 +463,21 @@ public class LoadingView extends View {
     }
 
     /**
-     * 设置圆边框宽度
+     * 设置边框宽度
      *
-     * @param mCircleStrokeWidth：边框宽度
+     * @param mStrokeWidth：边框宽度
      */
-    public void setCircleStrokeWidth(float mCircleStrokeWidth) {
-        this.mCircleStrokeWidth = mCircleStrokeWidth;
+    public void setStrokeWidth(float mStrokeWidth) {
+        this.mStrokeWidth = mStrokeWidth;
+    }
+
+    /**
+     * 设置边框宽度
+     *
+     * @param radius：边框弧度
+     */
+    public void setStrokeRadius(float radius) {
+        this.mStrokeRadius = radius;
     }
 
 
