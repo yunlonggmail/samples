@@ -39,7 +39,6 @@ public class TreblingView extends TextView {
      * StrokeRadius的数组
      */
     private float[] mMiddleFillRadiusArray = new float[8];
-
     /**
      * 顶层文字
      */

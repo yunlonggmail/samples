@@ -34,6 +34,8 @@
     <string name="nav_title_custom_wave_view_desc">波浪View</string>
     <string name="nav_title_custom_stroke_text_view">描边文本View</string>
     <string name="nav_title_custom_stroke_text_view_desc">带有描边的文字</string>
+    <string name="nav_title_custom_loading_view">加载View</string>
+    <string name="nav_title_custom_loading_view_desc">波纹加载页面</string>
 
     <string name="nav_title_system_function_main">系统功能</string>
     <string name="nav_title_system_function_main_desc">系统的主要功能相关开发</string>

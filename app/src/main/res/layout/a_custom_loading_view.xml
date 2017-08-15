@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_normal_f"
+    android:orientation="vertical">
+
+    <include layout="@layout/i_tool_bar" />
+
+    <com.yunlong.samples.custom.loading.LoadingView
+        android:layout_width="@dimen/normal_width_50"
+        android:layout_height="@dimen/normal_width_50"
+        android:layout_gravity="center"
+        app:bottom_text_fill_color="@color/red"
+        app:bottom_text_stroke_color="@color/blue"
+        app:circle_fill_color="@color/yellow"
+        app:circle_stroke_color="@color/gray"
+        app:circle_stroke_width="@dimen/normal_width_1"
+        app:text="云龙"
+        app:text_size="@dimen/text_size_normal_2"
+        app:text_width="@dimen/normal_width_1"
+        app:top_text_fill_color="@color/green"
+        app:top_text_stroke_color="@color/red" />
+
+    <com.yunlong.samples.custom.loading.LoadingView
+        android:id="@+id/lv"
+        android:layout_width="@dimen/normal_width_50"
+        android:layout_height="@dimen/normal_width_50"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/normal_width_10" />
+
+</LinearLayout>

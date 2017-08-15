@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
+import com.yunlong.samples.custom.loading.LoadingViewActivity;
 import com.yunlong.samples.custom.menu.LRMenuMainActivity;
 import com.yunlong.samples.custom.stroke.StrokeTextViewActivity;
 import com.yunlong.samples.custom.trebling.TreblingViewActivity;
@@ -71,6 +72,7 @@ public class CustomMainActivity extends BaseActivity {
         addTreblingView();
         addWaveView();
         addStrokeTextView();
+        addLoadingView();
     }
 
     /**
@@ -114,6 +116,17 @@ public class CustomMainActivity extends BaseActivity {
         ylMain.activityIntent = StrokeTextViewActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_custom_stroke_text_view);
         ylMain.desc = getString(R.string.nav_title_custom_stroke_text_view_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 添加加载界面
+     */
+    protected void addLoadingView() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = LoadingViewActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_custom_loading_view);
+        ylMain.desc = getString(R.string.nav_title_custom_loading_view_desc);
         dataList.add(ylMain);
     }
 
