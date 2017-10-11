@@ -125,12 +125,12 @@
     <!--抽象工厂-->
     <string name="nav_title_design_pattern_factory_abstract_main">抽象工厂设计模式页面</string>
     <string name="nav_title_design_pattern_factory_abstract_main_desc">抽象工厂设计模式的UML类图、具体实现等</string>
-    <string name="nav_title_design_pattern_factory_abstract_uml">简单工厂模式UML类图</string>
-    <string name="nav_title_design_pattern_factory_abstract_uml_desc">简单工厂模式UML类图图片展示</string>
-    <string name="nav_title_design_pattern_factory_abstract_impl_main">简单工厂模式实现主页面</string>
-    <string name="nav_title_design_pattern_factory_abstract_impl_main_desc">简单工厂模式的实现</string>
-    <string name="nav_title_design_pattern_factory_abstract_impl_test">简单工厂模式测试主页面</string>
-    <string name="nav_title_design_pattern_factory_abstract_impl_test_desc">简单工厂模式测试的页面，测试简单工厂功能</string>
+    <string name="nav_title_design_pattern_factory_abstract_uml">抽象工厂模式UML类图</string>
+    <string name="nav_title_design_pattern_factory_abstract_uml_desc">抽象工厂模式UML类图图片展示</string>
+    <string name="nav_title_design_pattern_factory_abstract_impl_main">抽象工厂模式实现主页面</string>
+    <string name="nav_title_design_pattern_factory_abstract_impl_main_desc">抽象工厂模式的实现</string>
+    <string name="nav_title_design_pattern_factory_abstract_impl_test">抽象工厂模式测试主页面</string>
+    <string name="nav_title_design_pattern_factory_abstract_impl_test_desc">抽象工厂模式测试的页面，测试抽象工厂功能</string>
 
     <!--策略设计模式-->
     <string name="nav_title_design_pattern_strategy_main">策略模式设计模式主页面</string>
@@ -220,17 +220,30 @@
     <string name="a_design_pattern_factory_method_impl_concrete_product_b_desc">具体产品类B：生产出来的具体产品B</string>
 
     <!--抽象工厂设计模式-->
-    <string name="a_design_pattern_factory_abstract_test_product_concrete_a">具体产品A</string>
-    <string name="a_design_pattern_factory_abstract_test_product_concrete_b">具体产品B</string>
+    <string name="a_design_pattern_factory_abstract_test_produce_product_1">生产产品1</string>
+    <string name="a_design_pattern_factory_abstract_test_produce_product_2">生产产品2</string>
     <string name="a_design_pattern_factory_abstract_test_product_concrete_null">还没有生产具体的产品</string>
+
     <string name="a_design_pattern_factory_abstract_impl_factory">工厂角色类</string>
     <string name="a_design_pattern_factory_abstract_impl_factory_desc">工厂角色类：使用静态方法，根据需求生产不同的产品</string>
-    <string name="a_design_pattern_factory_abstract_impl_product">抽象产品类</string>
-    <string name="a_design_pattern_factory_abstract_impl_product_desc">抽象产品类：抽象产品，所有需要生产产品的抽象出来的父类</string>
-    <string name="a_design_pattern_factory_abstract_impl_concrete_product_a">具体产品类A</string>
-    <string name="a_design_pattern_factory_abstract_impl_concrete_product_a_desc">具体产品类A：生产出来的具体产品A</string>
-    <string name="a_design_pattern_factory_abstract_impl_concrete_product_b">具体产品类B</string>
-    <string name="a_design_pattern_factory_abstract_impl_concrete_product_b_desc">具体产品类B：生产出来的具体产品B</string>
+    <string name="a_design_pattern_factory_abstract_impl_factory_concrete_1">具体工厂类1</string>
+    <string name="a_design_pattern_factory_abstract_impl_factory_concrete_1_desc">具体工厂类1：生产具体产品类1，每种产品只生产产品类1</string>
+    <string name="a_design_pattern_factory_abstract_impl_factory_concrete_2">具体工厂类2</string>
+    <string name="a_design_pattern_factory_abstract_impl_factory_concrete_2_desc">具体工厂类2：生产具体产品类1，每种产品只生产产品类1</string>
+
+    <string name="a_design_pattern_factory_abstract_impl_abstract_product_a">抽象产品类A</string>
+    <string name="a_design_pattern_factory_abstract_impl_abstract_product_a_desc">抽象产品类A：A类产品，产品族中的A类产品</string>
+    <string name="a_design_pattern_factory_abstract_impl_concrete_product_a_1">具体产品类A1</string>
+    <string name="a_design_pattern_factory_abstract_impl_concrete_product_a_1_desc">具体产品类A1：生产出来的具体产品A1</string>
+    <string name="a_design_pattern_factory_abstract_impl_concrete_product_a_2">具体产品类A2</string>
+    <string name="a_design_pattern_factory_abstract_impl_concrete_product_a_2_desc">具体产品类A2：生产出来的具体产品A2</string>
+
+    <string name="a_design_pattern_factory_abstract_impl_abstract_product_b">抽象产品类B</string>
+    <string name="a_design_pattern_factory_abstract_impl_abstract_product_b_desc">抽象产品类B：B类产品，产品族中的B类产品</string>
+    <string name="a_design_pattern_factory_abstract_impl_concrete_product_b_1">具体产品类B1</string>
+    <string name="a_design_pattern_factory_abstract_impl_concrete_product_b_1_desc">具体产品类B1：生产出来的具体产品B1</string>
+    <string name="a_design_pattern_factory_abstract_impl_concrete_product_b_2">具体产品类B2</string>
+    <string name="a_design_pattern_factory_abstract_impl_concrete_product_b_2_desc">具体产品类B2：生产出来的具体产品B2</string>
 
     <!--策略设计模式-->
     <string name="a_design_pattern_strategy_test_title">测试类</string>

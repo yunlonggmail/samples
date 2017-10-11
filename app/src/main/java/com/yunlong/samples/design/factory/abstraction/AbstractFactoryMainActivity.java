@@ -9,7 +9,6 @@ import com.yunlong.samples.R;
 import com.yunlong.samples.design.main.activity.LoadUMLActivity;
 import com.yunlong.samples.design.main.config.LoadFileConfig;
 import com.yunlong.samples.design.main.model.YLDesignPatternModel;
-import com.yunlong.samples.design.state.StateImplMainActivity;
 import com.yunlong.samples.main.MainDataAdapter;
 import com.yunlong.samples.model.YLMain;
 
@@ -28,7 +27,7 @@ public class AbstractFactoryMainActivity extends BaseActivity {
     /**
      * 隐式意图
      */
-    public static final String INTENT_ACTION = "com.yunlong.samples.design.pattern.factory.abstract.Main";
+    public static final String INTENT_ACTION = "com.yunlong.samples.design.pattern.factory.abstraction.Main";
     /**
      * 数据
      */
@@ -69,23 +68,23 @@ public class AbstractFactoryMainActivity extends BaseActivity {
     }
 
     protected void setData() {
-//        addSimpleFactoryUML();
-//        addStrategyImpl();
+        addAbstractionFactoryUML();
+        addAbstractionFactoryImpl();
     }
 
     /**
-     * 添加UML代码
+     * 添加抽象工厂UML查看
      */
-    protected void addStrategyUML() {
+    protected void addAbstractionFactoryUML() {
         YLDesignPatternModel ylDesignPatternModel = new YLDesignPatternModel();
-        ylDesignPatternModel.title = getString(R.string.nav_title_design_pattern_state_uml);
-        ylDesignPatternModel.desc = getString(R.string.nav_title_design_pattern_state_uml_desc);
-        ylDesignPatternModel.umlPath = "design_pattern/state_uml.png";
+        ylDesignPatternModel.title = getString(R.string.nav_title_design_pattern_factory_abstract_uml);
+        ylDesignPatternModel.desc = getString(R.string.nav_title_design_pattern_factory_abstract_uml_desc);
+        ylDesignPatternModel.umlPath = "design_pattern/factory_abstract_uml.png";
 
         YLMain ylMain = new YLMain();
         ylMain.activityIntent = LoadUMLActivity.INTENT_ACTION;
-        ylMain.name = getString(R.string.nav_title_design_pattern_state_uml);
-        ylMain.desc = getString(R.string.nav_title_design_pattern_state_uml_desc);
+        ylMain.name = getString(R.string.nav_title_design_pattern_factory_abstract_uml);
+        ylMain.desc = getString(R.string.nav_title_design_pattern_factory_abstract_uml_desc);
         Bundle extras = new Bundle();
         extras.putParcelable(LoadFileConfig.DESIGN_PATTERN_FILE_INFO, ylDesignPatternModel);
         ylMain.extras = extras;
@@ -93,13 +92,13 @@ public class AbstractFactoryMainActivity extends BaseActivity {
     }
 
     /**
-     * 添加策略模式列表代码
+     * 添加抽象工厂模式代码具体实现
      */
-    protected void addStrategyImpl() {
+    protected void addAbstractionFactoryImpl() {
         YLMain ylMain = new YLMain();
-        ylMain.activityIntent = StateImplMainActivity.INTENT_ACTION;
-        ylMain.name = getString(R.string.nav_title_design_pattern_state_impl_main);
-        ylMain.desc = getString(R.string.nav_title_design_pattern_state_impl_main_desc);
+        ylMain.activityIntent = AbstractFactoryImplMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_design_pattern_factory_abstract_impl_main);
+        ylMain.desc = getString(R.string.nav_title_design_pattern_factory_abstract_impl_main_desc);
         dataList.add(ylMain);
     }
 

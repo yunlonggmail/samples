@@ -137,7 +137,23 @@
             android:name=".design.factory.abstraction.AbstractFactoryMainActivity"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.yunlong.samples.design.pattern.factory.abstract.Main" />
+                <action android:name="com.yunlong.samples.design.pattern.factory.abstraction.Main" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".design.factory.abstraction.AbstractFactoryImplMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.factory.abstraction.ImplMain" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".design.factory.abstraction.AbstractFactoryImplTestActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.factory.abstraction.ImplTest" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
