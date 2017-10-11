@@ -7,6 +7,9 @@ import android.widget.TextView;
 
 import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
+import com.yunlong.samples.model.YLMain;
+
+import java.util.TreeMap;
 
 import butterknife.Bind;
 
@@ -45,6 +48,8 @@ public class CopyActivity extends BaseActivity implements View.OnClickListener {
     protected void initView() {
 
         btnCopy.setOnClickListener(this);
+        TreeMap<YLMain,String> tmp = new TreeMap<>();
+        tmp.put(null,"null");
     }
 
     @Override

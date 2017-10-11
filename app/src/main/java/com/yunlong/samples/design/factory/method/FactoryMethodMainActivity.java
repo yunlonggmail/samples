@@ -9,7 +9,6 @@ import com.yunlong.samples.R;
 import com.yunlong.samples.design.main.activity.LoadUMLActivity;
 import com.yunlong.samples.design.main.config.LoadFileConfig;
 import com.yunlong.samples.design.main.model.YLDesignPatternModel;
-import com.yunlong.samples.design.state.StateImplMainActivity;
 import com.yunlong.samples.main.MainDataAdapter;
 import com.yunlong.samples.model.YLMain;
 
@@ -69,23 +68,23 @@ public class FactoryMethodMainActivity extends BaseActivity {
     }
 
     protected void setData() {
-//        addSimpleFactoryUML();
-//        addStrategyImpl();
+        addFactoryMethodUML();
+        addFactoryMethodImpl();
     }
 
     /**
-     * 添加UML代码
+     * 添加工厂方法UML代码
      */
-    protected void addStrategyUML() {
+    protected void addFactoryMethodUML() {
         YLDesignPatternModel ylDesignPatternModel = new YLDesignPatternModel();
-        ylDesignPatternModel.title = getString(R.string.nav_title_design_pattern_state_uml);
-        ylDesignPatternModel.desc = getString(R.string.nav_title_design_pattern_state_uml_desc);
-        ylDesignPatternModel.umlPath = "design_pattern/state_uml.png";
+        ylDesignPatternModel.title = getString(R.string.nav_title_design_pattern_factory_method_uml);
+        ylDesignPatternModel.desc = getString(R.string.nav_title_design_pattern_factory_method_uml_desc);
+        ylDesignPatternModel.umlPath = "design_pattern/factory_method_uml.png";
 
         YLMain ylMain = new YLMain();
         ylMain.activityIntent = LoadUMLActivity.INTENT_ACTION;
-        ylMain.name = getString(R.string.nav_title_design_pattern_state_uml);
-        ylMain.desc = getString(R.string.nav_title_design_pattern_state_uml_desc);
+        ylMain.name = getString(R.string.nav_title_design_pattern_factory_method_uml);
+        ylMain.desc = getString(R.string.nav_title_design_pattern_factory_method_uml_desc);
         Bundle extras = new Bundle();
         extras.putParcelable(LoadFileConfig.DESIGN_PATTERN_FILE_INFO, ylDesignPatternModel);
         ylMain.extras = extras;
@@ -93,13 +92,13 @@ public class FactoryMethodMainActivity extends BaseActivity {
     }
 
     /**
-     * 添加策略模式列表代码
+     * 添加工厂方法设计模式列表代码
      */
-    protected void addStrategyImpl() {
+    protected void addFactoryMethodImpl() {
         YLMain ylMain = new YLMain();
-        ylMain.activityIntent = StateImplMainActivity.INTENT_ACTION;
-        ylMain.name = getString(R.string.nav_title_design_pattern_state_impl_main);
-        ylMain.desc = getString(R.string.nav_title_design_pattern_state_impl_main_desc);
+        ylMain.activityIntent = FactoryMethodImplMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_design_pattern_factory_method_impl_main);
+        ylMain.desc = getString(R.string.nav_title_design_pattern_factory_method_impl_main_desc);
         dataList.add(ylMain);
     }
 

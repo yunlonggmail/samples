@@ -150,7 +150,7 @@ public class LoadingView extends View {
             mTopTextStrokeColor = array.getColor(R.styleable.LoadingView_lv_top_text_stroke_color, Color.BLACK);
             mText = array.getText(R.styleable.LoadingView_lv_text);
             mTextSize = array.getDimension(R.styleable.LoadingView_lv_text_size, mTextSize);
-            mTextStrokeWidth = array.getDimension(R.styleable.LoadingView_lv_text_width, mTextStrokeWidth);
+            mTextStrokeWidth = array.getDimension(R.styleable.LoadingView_lv_text_stroke_width, mTextStrokeWidth);
             mStrokeColor = array.getColor(R.styleable.LoadingView_lv_stroke_color, Color.TRANSPARENT);
             mStrokeWidth = array.getDimension(R.styleable.LoadingView_lv_stroke_width, mStrokeWidth);
             mFillColor = array.getColor(R.styleable.LoadingView_lv_fill_color, Color.BLACK);

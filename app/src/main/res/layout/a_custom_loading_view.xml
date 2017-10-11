@@ -16,10 +16,9 @@
         app:lv_bottom_text_stroke_color="@color/blue"
         app:lv_fill_color="@color/yellow"
         app:lv_stroke_color="@color/gray"
-        app:lv_text_stroke_width="@dimen/normal_width_1"
         app:lv_text="云龙"
         app:lv_text_size="@dimen/text_size_normal_2"
-        app:lv_text_width="@dimen/normal_width_1"
+        app:lv_text_stroke_width="@dimen/normal_width_1"
         app:lv_top_text_fill_color="@color/green"
         app:lv_top_text_stroke_color="@color/red" />
 
@@ -29,5 +28,9 @@
         android:layout_height="@dimen/normal_width_50"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/normal_width_10" />
+
+    <com.yunlong.samples.custom.loading.GitBookView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
