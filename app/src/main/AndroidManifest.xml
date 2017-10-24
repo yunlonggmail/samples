@@ -72,6 +72,32 @@
             </intent-filter>
         </activity>
 
+        <!--建造者(Builder)模式-->
+        <activity
+            android:name=".design.builder.BuilderMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.builder.Main" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".design.builder.BuilderImplMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.builder.ImplMain" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".design.builder.BuilderImplTestActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.builder.ImplTest" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <!--工厂设计模式-->
         <activity
             android:name=".design.factory.FactoryMainActivity"
@@ -132,6 +158,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <!--抽象工厂-->
         <activity
             android:name=".design.factory.abstraction.AbstractFactoryMainActivity"

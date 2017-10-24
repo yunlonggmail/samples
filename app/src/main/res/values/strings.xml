@@ -98,13 +98,24 @@
     <string name="nav_title_design_pattern_singleton_impl_list">单例模式模式具体实现列表</string>
     <string name="nav_title_design_pattern_singleton_impl_list_desc">单例模式具体实现的相关代码</string>
 
+    <!--建造者设计模式-->
+    <string name="nav_title_design_pattern_builder_main">建造者模式设计模式主页面</string>
+    <string name="nav_title_design_pattern_builder_main_desc">将一个复杂对象的构建和它的表示分离，是的同样的构建过程可以创建不同的表示</string>
+    <string name="nav_title_design_pattern_builder_impl_main">建造者模式具体实现主页面</string>
+    <string name="nav_title_design_pattern_builder_impl_main_desc">建造者模式具体实现的相关代码</string>
+    <string name="nav_title_design_pattern_builder_uml">建造者模式UML类图</string>
+    <string name="nav_title_design_pattern_builder_uml_desc">建造者模式UML类图图片展示</string>
+    <string name="nav_title_design_pattern_builder_impl_test">建造者模式测试主页面</string>
+    <string name="nav_title_design_pattern_builder_impl_test_desc">建造模式测试的页面，测试简单工厂功能</string>
+
+
     <!--工厂设计模式-->
     <string name="nav_title_design_pattern_factory_main">工厂设计模式主页面</string>
     <string name="nav_title_design_pattern_factory_main_desc">工厂设计模式：简单工厂设计模式，工厂方法设计模式，抽象工厂设计模式</string>
 
     <!--简单工厂-->
     <string name="nav_title_design_pattern_factory_simple_main">简单工厂设计模式页面</string>
-    <string name="nav_title_design_pattern_factory_simple_main_desc">简单工厂设计模式的UML类图、具体实现等</string>
+    <string name="nav_title_design_pattern_factory_simple_main_desc">定义一个工厂类，它可以根据参数的不同返回不同类的实例，被创建的实例通常都具有共同的父类。因此简单工厂模式用于创建实例的方法是静态方法，因此简单工厂模式又被称为静态工厂方法模式，它属于创建型模式</string>
     <string name="nav_title_design_pattern_factory_simple_uml">简单工厂模式UML类图</string>
     <string name="nav_title_design_pattern_factory_simple_uml_desc">简单工厂模式UML类图图片展示</string>
     <string name="nav_title_design_pattern_factory_simple_impl_main">简单工厂模式实现主页面</string>
@@ -114,7 +125,7 @@
 
     <!--工厂方法-->
     <string name="nav_title_design_pattern_factory_method_main">工厂方法设计模式页面</string>
-    <string name="nav_title_design_pattern_factory_method_main_desc">工厂方法设计模式的UML类图、具体实现等</string>
+    <string name="nav_title_design_pattern_factory_method_main_desc">定义一个用于创建对象的接口，让子类决定将哪一个类实例化。工厂方法模式让一个类的实例化延迟到其子类</string>
     <string name="nav_title_design_pattern_factory_method_uml">工厂方法模式UML类图</string>
     <string name="nav_title_design_pattern_factory_method_uml_desc">工厂方法模式UML类图图片展示</string>
     <string name="nav_title_design_pattern_factory_method_impl_main">工厂方法模式实现主页面</string>
@@ -124,7 +135,7 @@
 
     <!--抽象工厂-->
     <string name="nav_title_design_pattern_factory_abstract_main">抽象工厂设计模式页面</string>
-    <string name="nav_title_design_pattern_factory_abstract_main_desc">抽象工厂设计模式的UML类图、具体实现等</string>
+    <string name="nav_title_design_pattern_factory_abstract_main_desc">提供一个创建一系列相关或相互依赖对象的接口，而无须指定它们具体的类。抽象工厂模式又称为Kit模式，它是一种创建型模式</string>
     <string name="nav_title_design_pattern_factory_abstract_uml">抽象工厂模式UML类图</string>
     <string name="nav_title_design_pattern_factory_abstract_uml_desc">抽象工厂模式UML类图图片展示</string>
     <string name="nav_title_design_pattern_factory_abstract_impl_main">抽象工厂模式实现主页面</string>
@@ -134,7 +145,7 @@
 
     <!--策略设计模式-->
     <string name="nav_title_design_pattern_strategy_main">策略模式设计模式主页面</string>
-    <string name="nav_title_design_pattern_strategy_main_desc">根据客户需求，执行不同策略</string>
+    <string name="nav_title_design_pattern_strategy_main_desc">定义一系列算法类，将每一个算法封装起来，并让它们可以相互替换，策略模式让算法独立于使用它的客户变化</string>
     <string name="nav_title_design_pattern_strategy_impl_list">策略模式具体实现列表</string>
     <string name="nav_title_design_pattern_strategy_impl_list_desc">策略模式具体实现的相关代码</string>
     <string name="nav_title_design_pattern_strategy_uml">策略模式UML类图</string>
@@ -142,7 +153,7 @@
 
     <!--状态设计模式-->
     <string name="nav_title_design_pattern_state_main">状态模式设计模式主页面</string>
-    <string name="nav_title_design_pattern_state_main_desc">环境具有不同的状态，不同的状态有不同的行为</string>
+    <string name="nav_title_design_pattern_state_main_desc">允许一个对象在其内部状态改变时，改变它的行为，对象看起来似乎修改了它的类。</string>
     <string name="nav_title_design_pattern_state_uml">状态模式UML类图</string>
     <string name="nav_title_design_pattern_state_uml_desc">状态模式UML类图图片展示</string>
     <string name="nav_title_design_pattern_state_impl_main">状态模式实现主页面</string>
@@ -184,6 +195,18 @@
     <string name="a_design_pattern_singleton_lazy_title_desc">懒汉式实现单例设计模式</string>
     <string name="a_design_pattern_singleton_sic_title">SIC单例</string>
     <string name="a_design_pattern_singleton_sic_title_desc">静态内部类(Static Inner Class)实现单例设计模式</string>
+
+    <!--建造者设计模式-->
+    <string name="a_design_pattern_builder_test_product">具体产品</string>
+    <string name="a_design_pattern_builder_test_product_concrete_null">还没有生产具体的产品</string>
+    <string name="a_design_pattern_builder_impl_builder">抽象建造者</string>
+    <string name="a_design_pattern_builder_impl_builder_desc">抽象建造者类：为创建一个产品Product对象的各个部件指定的抽象接口</string>
+    <string name="a_design_pattern_builder_impl_product">产品角色</string>
+    <string name="a_design_pattern_builder_impl_product_desc">产品角色类：被构建的复杂对象，包含多个组成部件，具体建造者创建该产品的内部表示并定义它的装配过程</string>
+    <string name="a_design_pattern_builder_impl_concrete_builder">具体建造者</string>
+    <string name="a_design_pattern_builder_impl_concrete_builder_desc">具体建造者类：实现了Builder接口，实现各个部件的具体构造和装配方法，定义并明确它所创建的复杂对象。</string>
+    <string name="a_design_pattern_builder_impl_concrete_director">指挥者</string>
+    <string name="a_design_pattern_builder_impl_concrete_director_dec">指挥者类：指挥产品的具体构建过程，可以有多个构建过程，也可以使用多个指挥者类来管理多个构建过程</string>
 
     <!--工厂设计模式-->
     <!--简单工厂设计模式-->

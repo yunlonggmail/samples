@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
+import com.yunlong.samples.design.builder.BuilderMainActivity;
 import com.yunlong.samples.design.factory.FactoryMainActivity;
 import com.yunlong.samples.design.singleton.SingletonMainActivity;
 import com.yunlong.samples.design.state.StateMainActivity;
@@ -70,6 +71,7 @@ public class DesignPatternMainActivity extends BaseActivity {
 
     protected void setData() {
         addSingleton();
+        addBuilder();
         addFactory();
         addStrategy();
         addState();
@@ -83,6 +85,17 @@ public class DesignPatternMainActivity extends BaseActivity {
         ylMain.activityIntent = SingletonMainActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_design_pattern_singleton_main);
         ylMain.desc = getString(R.string.nav_title_design_pattern_singleton_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 添加单例设计模式
+     */
+    protected void addBuilder() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = BuilderMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_design_pattern_builder_main);
+        ylMain.desc = getString(R.string.nav_title_design_pattern_builder_main_desc);
         dataList.add(ylMain);
     }
 
