@@ -97,6 +97,32 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <!--原型(Prototype)模式-->
+        <activity
+            android:name=".design.prototype.PrototypeMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.prototype.Main" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".design.prototype.PrototypeImplMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.prototype.ImplMain" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".design.prototype.PrototypeImplTestActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.prototype.ImplTest" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
 
         <!--工厂设计模式-->
         <activity

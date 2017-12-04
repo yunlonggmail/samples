@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/i_tool_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_normal_f"
+        android:padding="@dimen/normal_width_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/normal_width_5"
+                android:textColor="@color/color_normal_3"
+                android:textSize="@dimen/text_size_normal_4" />
+
+            <Button
+                android:id="@+id/btn_prototype_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button_bg"
+                android:padding="@dimen/normal_width_5"
+                android:text="@string/a_design_pattern_prototype_test_copy"
+                android:textColor="@color/color_normal_3"
+                android:textSize="@dimen/text_size_normal_4" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

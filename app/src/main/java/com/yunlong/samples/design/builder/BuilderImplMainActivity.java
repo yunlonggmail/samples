@@ -7,7 +7,7 @@ import com.yunlong.samples.model.YLMain;
 
 /**
  * Created by shiyunlong on 2017/8/1.
- * 状态设计模式主页面
+ * 建造者模式模式实现主页面
  */
 
 public class BuilderImplMainActivity extends BaseLoadFileListActivity {

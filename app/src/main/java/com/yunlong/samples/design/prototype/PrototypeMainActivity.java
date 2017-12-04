@@ -1,4 +1,4 @@
-package com.yunlong.samples.design.builder;
+package com.yunlong.samples.design.prototype;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,16 +18,15 @@ import java.util.List;
 import butterknife.Bind;
 
 /**
- * Created by shiyunlong on 2017/8/1.
- * 建造者设计模式主页面
+ * Created by shiyunlong on 2017/12/4.
+ * 原型模式主界面
  */
 
-public class BuilderMainActivity extends BaseActivity {
-
+public class PrototypeMainActivity extends BaseActivity {
     /**
      * 隐式意图
      */
-    public static final String INTENT_ACTION = "com.yunlong.samples.design.pattern.builder.Main";
+    public static final String INTENT_ACTION = "com.yunlong.samples.design.pattern.prototype.Main";
     /**
      * 数据
      */
@@ -50,7 +49,7 @@ public class BuilderMainActivity extends BaseActivity {
 
     @Override
     protected void initTitleBar() {
-        titleBar.setTitle(R.string.nav_title_design_pattern_builder_main);
+        titleBar.setTitle(R.string.nav_title_design_pattern_prototype_main);
         super.initTitleBar();
     }
 
@@ -77,14 +76,14 @@ public class BuilderMainActivity extends BaseActivity {
      */
     protected void addBuilderUML() {
         YLDesignPatternModel ylDesignPatternModel = new YLDesignPatternModel();
-        ylDesignPatternModel.title = getString(R.string.nav_title_design_pattern_builder_uml);
-        ylDesignPatternModel.desc = getString(R.string.nav_title_design_pattern_builder_uml_desc);
-        ylDesignPatternModel.umlPath = "design_pattern/builder_uml.png";
+        ylDesignPatternModel.title = getString(R.string.nav_title_design_pattern_prototype_uml);
+        ylDesignPatternModel.desc = getString(R.string.nav_title_design_pattern_prototype_uml_desc);
+        ylDesignPatternModel.umlPath = "design_pattern/prototype_uml.png";
 
         YLMain ylMain = new YLMain();
         ylMain.activityIntent = LoadUMLActivity.INTENT_ACTION;
-        ylMain.name = getString(R.string.nav_title_design_pattern_builder_uml);
-        ylMain.desc = getString(R.string.nav_title_design_pattern_builder_uml_desc);
+        ylMain.name = getString(R.string.nav_title_design_pattern_prototype_uml);
+        ylMain.desc = getString(R.string.nav_title_design_pattern_prototype_uml_desc);
         Bundle extras = new Bundle();
         extras.putParcelable(LoadFileConfig.DESIGN_PATTERN_FILE_INFO, ylDesignPatternModel);
         ylMain.extras = extras;
@@ -92,14 +91,13 @@ public class BuilderMainActivity extends BaseActivity {
     }
 
     /**
-     * 添加建造者模式列表代码
+     * 添加原型模式列表代码
      */
     protected void addBuilderImpl() {
         YLMain ylMain = new YLMain();
-        ylMain.activityIntent = BuilderImplMainActivity.INTENT_ACTION;
-        ylMain.name = getString(R.string.nav_title_design_pattern_builder_impl_main);
-        ylMain.desc = getString(R.string.nav_title_design_pattern_builder_impl_main_desc);
+        ylMain.activityIntent = PrototypeImplMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_design_pattern_prototype_impl_main);
+        ylMain.desc = getString(R.string.nav_title_design_pattern_prototype_impl_main_desc);
         dataList.add(ylMain);
     }
-
 }

@@ -108,6 +108,15 @@
     <string name="nav_title_design_pattern_builder_impl_test">建造者模式测试主页面</string>
     <string name="nav_title_design_pattern_builder_impl_test_desc">建造模式测试的页面，测试简单工厂功能</string>
 
+    <!--原型设计模式-->
+    <string name="nav_title_design_pattern_prototype_main">原型模式设计模式主页面</string>
+    <string name="nav_title_design_pattern_prototype_main_desc">使用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。原型模式是一种对象创建型模式。</string>
+    <string name="nav_title_design_pattern_prototype_impl_main">原型模式具体实现主页面</string>
+    <string name="nav_title_design_pattern_prototype_impl_main_desc">原型模式具体实现的相关代码</string>
+    <string name="nav_title_design_pattern_prototype_uml">原型模式UML类图</string>
+    <string name="nav_title_design_pattern_prototype_uml_desc">原型模式UML类图图片展示</string>
+    <string name="nav_title_design_pattern_prototype_impl_test">原型模式测试主页面</string>
+    <string name="nav_title_design_pattern_prototype_impl_test_desc">建造模式测试的页面，测试简单工厂功能</string>
 
     <!--工厂设计模式-->
     <string name="nav_title_design_pattern_factory_main">工厂设计模式主页面</string>
@@ -207,6 +216,16 @@
     <string name="a_design_pattern_builder_impl_concrete_builder_desc">具体建造者类：实现了Builder接口，实现各个部件的具体构造和装配方法，定义并明确它所创建的复杂对象。</string>
     <string name="a_design_pattern_builder_impl_concrete_director">指挥者</string>
     <string name="a_design_pattern_builder_impl_concrete_director_dec">指挥者类：指挥产品的具体构建过程，可以有多个构建过程，也可以使用多个指挥者类来管理多个构建过程</string>
+
+    <!--原型设计模式-->
+    <string name="a_design_pattern_prototype_test_copy">拷贝产品</string>
+    <string name="a_design_pattern_prototype_test_copy_error">拷贝产品出现错误</string>
+    <string name="a_design_pattern_prototype_impl_prototype">原型接口</string>
+    <string name="a_design_pattern_prototype_impl_prototype_desc">原型接口类：指定的原型接口，所有的原型都是它的子类，但是这个类一般在多个相同或类似的原型存在时调用</string>
+    <string name="a_design_pattern_prototype_impl_concrete_prototype">具体原型</string>
+    <string name="a_design_pattern_prototype_impl_concrete_prototype_desc">具体原型角色类：被构建的复杂对象，通过clone方法来实现具体原型的copy，来满足某些特定条件或者快速创建具体类</string>
+    <string name="a_design_pattern_prototype_impl_concrete_prototype_part">具体原型的Part</string>
+    <string name="a_design_pattern_prototype_impl_concrete_prototype_part_desc">具体原型的Part：用来演示原型针对内部对象的深层拷贝。</string>
 
     <!--工厂设计模式-->
     <!--简单工厂设计模式-->

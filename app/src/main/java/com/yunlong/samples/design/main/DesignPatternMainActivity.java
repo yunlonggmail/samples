@@ -7,6 +7,8 @@ import com.yunlong.lib.base.BaseActivity;
 import com.yunlong.samples.R;
 import com.yunlong.samples.design.builder.BuilderMainActivity;
 import com.yunlong.samples.design.factory.FactoryMainActivity;
+import com.yunlong.samples.design.prototype.PrototypeMainActivity;
+import com.yunlong.samples.design.prototype.impl.Prototype;
 import com.yunlong.samples.design.singleton.SingletonMainActivity;
 import com.yunlong.samples.design.state.StateMainActivity;
 import com.yunlong.samples.design.strategy.StrategyMainActivity;
@@ -72,6 +74,7 @@ public class DesignPatternMainActivity extends BaseActivity {
     protected void setData() {
         addSingleton();
         addBuilder();
+        addPrototype();
         addFactory();
         addStrategy();
         addState();
@@ -89,13 +92,24 @@ public class DesignPatternMainActivity extends BaseActivity {
     }
 
     /**
-     * 添加单例设计模式
+     * 添加建造者设计模式
      */
     protected void addBuilder() {
         YLMain ylMain = new YLMain();
         ylMain.activityIntent = BuilderMainActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_design_pattern_builder_main);
         ylMain.desc = getString(R.string.nav_title_design_pattern_builder_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 添加原型设计模式
+     */
+    protected void addPrototype() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = PrototypeMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_design_pattern_prototype_main);
+        ylMain.desc = getString(R.string.nav_title_design_pattern_prototype_main_desc);
         dataList.add(ylMain);
     }
 
@@ -122,7 +136,7 @@ public class DesignPatternMainActivity extends BaseActivity {
     }
 
     /**
-     * 添加策略模式
+     * 添加状态模式
      */
     protected void addState() {
         YLMain ylMain = new YLMain();

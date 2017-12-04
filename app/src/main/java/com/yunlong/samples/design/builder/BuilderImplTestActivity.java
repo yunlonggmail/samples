@@ -15,7 +15,7 @@ import butterknife.Bind;
 
 /**
  * Created by shiyunlong on 2017/8/10.
- * 简单工厂测试代码
+ * 建造者模式测试代码
  */
 
 public class BuilderImplTestActivity extends BaseActivity implements View.OnClickListener {
