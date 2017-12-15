@@ -1,1 +1,1 @@
-include ':app', ':sampleClient', ':sampleLibrary', ':base'
+include ':app', ':sampleClient', ':sampleLibrary', ':base', ':qrcode'

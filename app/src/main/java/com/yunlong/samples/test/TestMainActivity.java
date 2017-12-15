@@ -1,9 +1,13 @@
 package com.yunlong.samples.test;
 
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 
 import com.yunlong.lib.base.BaseActivity;
+import com.yunlong.qrcode.CaptureActivity;
 import com.yunlong.samples.R;
 import com.yunlong.samples.main.MainDataAdapter;
 import com.yunlong.samples.model.YLMain;
@@ -17,7 +21,7 @@ import butterknife.Bind;
  * Created by shiyunlong on 2017/6/19.
  * 测试主页面
  */
-public class TestMainActivity extends BaseActivity {
+public class TestMainActivity extends BaseActivity implements View.OnClickListener {
 
     /**
      * 隐式意图
@@ -38,6 +42,9 @@ public class TestMainActivity extends BaseActivity {
      */
     private List<YLMain> dataList = new ArrayList<>();
 
+    @Bind(R.id.btn_qr)
+    Button btnQr;
+
     @Override
     protected int getResourceId() {
         return R.layout.a_test_main;
@@ -51,7 +58,7 @@ public class TestMainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
+        btnQr.setOnClickListener(this);
     }
 
     @Override
@@ -76,6 +83,16 @@ public class TestMainActivity extends BaseActivity {
         ylMain.name = getString(R.string.nav_title_test_a);
         ylMain.desc = getString(R.string.nav_title_test_a_desc);
         dataList.add(ylMain);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_qr:
+                Intent intent = new Intent(this, CaptureActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }
 

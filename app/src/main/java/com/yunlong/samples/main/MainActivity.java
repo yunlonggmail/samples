@@ -182,5 +182,4 @@ public class MainActivity extends BaseActivity {
         ylMain.desc = getString(R.string.nav_title_test_main_desc);
         dataList.add(ylMain);
     }
-
 }
