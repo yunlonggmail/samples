@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.yunlong.base.R;
+import com.yunlong.lib.utils.LogUtils;
 
 import butterknife.ButterKnife;
 
@@ -14,6 +15,7 @@ import butterknife.ButterKnife;
  * 基础Activity
  */
 public abstract class BaseActivity extends AppCompatActivity {
+    public static final String TAG = "com.yunlong.lib.base.BaseActivity";
     /**
      * ToolBar
      */
@@ -27,6 +29,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        LogUtils.D(TAG," BaseActivity onCreate");
         init();
         initTitleBar();
         initView();

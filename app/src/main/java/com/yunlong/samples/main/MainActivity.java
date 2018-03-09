@@ -15,6 +15,7 @@ import com.yunlong.samples.model.YLMain;
 import com.yunlong.samples.receiver.ReceiverMainActivity;
 import com.yunlong.samples.request.RequestMainActivity;
 import com.yunlong.samples.service.ServiceMainActivity;
+import com.yunlong.samples.study.StudyMainActivity;
 import com.yunlong.samples.systemfunction.SystemFunctionMainActivity;
 import com.yunlong.samples.test.TestMainActivity;
 
@@ -71,6 +72,7 @@ public class MainActivity extends BaseActivity {
         addSystemFunction();
         addAnimation();
         addTest();
+        addStudy();
     }
 
     /**
@@ -180,6 +182,17 @@ public class MainActivity extends BaseActivity {
         ylMain.activityIntent = TestMainActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_test_main);
         ylMain.desc = getString(R.string.nav_title_test_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * 学习相关主界面
+     */
+    protected void addStudy() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = StudyMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_study_main);
+        ylMain.desc = getString(R.string.nav_title_study_main_desc);
         dataList.add(ylMain);
     }
 }

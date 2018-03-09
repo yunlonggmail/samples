@@ -189,6 +189,13 @@
     <string name="nav_title_copy_desc">复制页面</string>
 
 
+    <!--学习-->
+    <string name="nav_title_study_main">学习主界面</string>
+    <string name="nav_title_study_main_desc">学习测试等相关界面</string>
+    <string name="nav_title_study_custom_view">自定义控件</string>
+    <string name="nav_title_study_custom_view_desc">自定义控件的生命周期，相关方法调用等</string>
+
+
     <!--设计模式-->
     <string name="a_design_pattern_file_empty">文件不存在</string>
     <string name="a_design_pattern_uml_image_empty">UML类图不存在，请仔细检查链接</string>
