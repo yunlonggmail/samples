@@ -271,6 +271,15 @@
             </intent-filter>
         </activity>
 
+        <!--责任链设计模式-->
+        <activity
+            android:name=".design.responsibility.ResponsibilityMainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.design.pattern.responsibility.Main" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <!-- 增量更新 -->
         <activity
