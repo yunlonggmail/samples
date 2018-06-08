@@ -11,8 +11,22 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+
         ndk {
             moduleName = 'bspatch'
+        }
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                //生成多个版本的so文件
+                abiFilters 'arm64-v8a','armeabi-v7a','x86','x86_64'
+            }
         }
 
     }
@@ -36,15 +50,14 @@ android {
 
     }
     buildTypes {
-
         debug {
             //显示log
             buildConfigField "boolean", "LOG_DEBUG", "true"
             buildConfigField "boolean", "IS_PRODUCTION_ENVIRONMENT", rootProject.ext.build["DEBUG"]
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            jniDebuggable true
         }
-
         release {
             buildConfigField "boolean", "LOG_DEBUG", "false"
             buildConfigField "boolean", "IS_PRODUCTION_ENVIRONMENT", rootProject.ext.build["RELEASE"]
@@ -57,16 +70,25 @@ android {
             //签名
             signingConfig signingConfigs.release
             applicationVariants.all { variant ->
-                variant.outputs.each { output ->
-                    def outputFile = output.outputFile
-                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                        // 输出apk名称为yuguo_v1.0_wandoujia.apk
-                        def fileName = "yunlong_v${defaultConfig.versionName}_${rootProject.ext.build["RELEASE_SERVER_NAME"]}.apk"
-                        output.outputFile = new File(outputFile.parent, fileName)
-                    }
+//                variant.outputs.each { output ->
+//                    def outputFile = output.outputFile
+//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                        // 输出apk名称为yuguo_v1.0_wandoujia.apk
+//                        def fileName = "yunlong_v${defaultConfig.versionName}_${rootProject.ext.build["RELEASE_SERVER_NAME"]}.apk"
+//                        output.outputFile = new File(outputFile.parent, fileName)
+//                    }
+//                }
+
+                variant.outputs.all {
+                    outputFileName = "yunlong_v${defaultConfig.versionName}_${rootProject.ext.build["RELEASE_SERVER_NAME"]}.apk"
                 }
             }
+        }
+    }
 
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"  // 设置所要编写的c源码位置，以及编译后so文件的名字
         }
     }
 }

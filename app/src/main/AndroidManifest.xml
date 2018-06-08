@@ -771,6 +771,31 @@
         </activity>
 
 
+        <!--学习测试相关-->
+        <activity
+            android:name=".jnitest.JNIMainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.jni.Main" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".jnitest.JNITestActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="com.yunlong.samples.jni.Test" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
         <service
             android:name=".service.local.LocalService"
             android:enabled="true"

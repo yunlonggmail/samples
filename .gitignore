@@ -22,3 +22,4 @@ out/
 
 # Mac
 .DS_Store
+app/.externalNativeBuild

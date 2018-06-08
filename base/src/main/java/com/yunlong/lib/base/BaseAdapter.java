@@ -45,14 +45,14 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter<BaseAdapter.Vi
      * @param position:位置
      */
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         bindView(holder.itemView, position);
         final OnItemClickListener onItemClickListener = getOnItemClickListener();
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (onItemClickListener != null)
-                    onItemClickListener.onItemClick(v, position);
+                    onItemClickListener.onItemClick(v, holder.getAdapterPosition());
             }
         });
     }
@@ -79,7 +79,7 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter<BaseAdapter.Vi
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public ViewHolder(LayoutInflater inflater, ViewGroup parent, int resourceId) {
+        private ViewHolder(LayoutInflater inflater, ViewGroup parent, int resourceId) {
             super(inflater.inflate(resourceId, parent, false));
         }
     }

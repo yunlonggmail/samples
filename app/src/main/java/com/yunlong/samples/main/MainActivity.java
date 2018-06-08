@@ -11,6 +11,7 @@ import com.yunlong.samples.custom.CustomMainActivity;
 import com.yunlong.samples.design.main.DesignPatternMainActivity;
 import com.yunlong.samples.incremental.IncrementalUpdateActivity;
 import com.yunlong.samples.intent.IntentMainActivity;
+import com.yunlong.samples.jnitest.JNIMainActivity;
 import com.yunlong.samples.model.YLMain;
 import com.yunlong.samples.receiver.ReceiverMainActivity;
 import com.yunlong.samples.request.RequestMainActivity;
@@ -73,6 +74,7 @@ public class MainActivity extends BaseActivity {
         addAnimation();
         addTest();
         addStudy();
+        addJNI();
     }
 
     /**
@@ -193,6 +195,17 @@ public class MainActivity extends BaseActivity {
         ylMain.activityIntent = StudyMainActivity.INTENT_ACTION;
         ylMain.name = getString(R.string.nav_title_study_main);
         ylMain.desc = getString(R.string.nav_title_study_main_desc);
+        dataList.add(ylMain);
+    }
+
+    /**
+     * JNI相关主界面
+     */
+    protected void addJNI() {
+        YLMain ylMain = new YLMain();
+        ylMain.activityIntent = JNIMainActivity.INTENT_ACTION;
+        ylMain.name = getString(R.string.nav_title_jni_main_title);
+        ylMain.desc = getString(R.string.nav_title_jni_main_title_desc);
         dataList.add(ylMain);
     }
 }

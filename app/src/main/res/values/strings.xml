@@ -182,6 +182,11 @@
     <string name="nav_title_design_pattern_responsibility_uml">责任链模式UML类图</string>
     <string name="nav_title_design_pattern_responsibility_uml_desc">责任链模式UML类图图片展示</string>
 
+    <!--JNI-->
+    <string name="nav_title_jni_main_title">JNI主页面</string>
+    <string name="nav_title_jni_main_title_desc">JNI相关的测试主页面</string>
+    <string name="nav_title_jni_test_title">JNI主页面</string>
+    <string name="nav_title_jni_test_title_desc">JNI相关的测试主页面</string>
 
     <!--测试-->
     <string name="nav_title_test_main">测试主页面</string>
@@ -521,9 +526,13 @@
     <!--MD动画-->
     <string name="a_animation_md_ripple">涟漪效果</string>
 
+    <!--JNI-->
+    <string name="a_jni_test_dynamic_1">动态注册1</string>
+
     <!--Request-->
     <!--OKHttp-->
     <string name="a_request_ok_btn_get">GET请求</string>
+
 
     <!--Copy复制页面-->
     <string name="a_copy_tv">文本</string>

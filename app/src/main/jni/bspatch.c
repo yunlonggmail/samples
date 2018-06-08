@@ -35,25 +35,6 @@
 #include "bzip2/bzlib.h"
 
 
-JNIEXPORT jint JNICALL Java_com_yunlong_samples_incremental_BsPatch_bspatch
-        (JNIEnv *env, jclass cls,
-         jstring old, jstring new, jstring patch){
-    int argc = 4;
-    char * argv[argc];
-    argv[0] = "bspatch";
-    argv[1] = (char*) ((*env)->GetStringUTFChars(env, old, 0));
-    argv[2] = (char*) ((*env)->GetStringUTFChars(env, new, 0));
-    argv[3] = (char*) ((*env)->GetStringUTFChars(env, patch, 0));
-
-
-    int ret = patchMethod(argc, argv);
-
-    (*env)->ReleaseStringUTFChars(env, old, argv[1]);
-    (*env)->ReleaseStringUTFChars(env, new, argv[2]);
-    (*env)->ReleaseStringUTFChars(env, patch, argv[3]);
-    return ret;
-}
-
 static off_t offtin(u_char *buf)
 {
 	off_t y;
@@ -219,4 +200,23 @@ int patchMethod(int argc,char * argv[])
 	free(old);
 
 	return 0;
+}
+
+JNIEXPORT jint JNICALL Java_com_yunlong_samples_incremental_BsPatch_bspatch
+		(JNIEnv *env, jclass cls,
+		 jstring old, jstring new, jstring patch){
+	int argc = 4;
+	char * argv[argc];
+	argv[0] = "bspatch";
+	argv[1] = (char*) ((*env)->GetStringUTFChars(env, old, 0));
+	argv[2] = (char*) ((*env)->GetStringUTFChars(env, new, 0));
+	argv[3] = (char*) ((*env)->GetStringUTFChars(env, patch, 0));
+
+
+	int ret = patchMethod(argc, argv);
+
+	(*env)->ReleaseStringUTFChars(env, old, argv[1]);
+	(*env)->ReleaseStringUTFChars(env, new, argv[2]);
+	(*env)->ReleaseStringUTFChars(env, patch, argv[3]);
+	return ret;
 }
